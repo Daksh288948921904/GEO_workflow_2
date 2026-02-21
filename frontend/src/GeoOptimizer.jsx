@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-const API = "https://geo-workflow-git-main-dakshsingh791-3753s-projects.vercel.app";
+const API = "https://geo-workflow-2-production.up.railway.app";
 // ─── Styles ───────────────────────────────────────────────────────────────────
 const STYLES = `
   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
