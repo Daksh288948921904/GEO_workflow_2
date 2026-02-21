@@ -1,2 +1,12 @@
 fastapi
 uvicorn
+requests
+beautifulsoup4
+lxml
+python-dotenv
+openai
+langchain
+langchain-openai
+langgraph
+pydantic
+httpx
