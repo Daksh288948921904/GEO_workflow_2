@@ -1596,11 +1596,9 @@ export default function App() {
       if (step >= CRAWL_STEPS.length) clearInterval(ticker);
     }, 700);
 
-    const API = process.env.REACT_APP_API_URL || "http://localhost:8000";
-
     try {
       // 1. Crawl the page
-      const crawlRes = await fetch(`${API}/crawl_product`, {
+      const crawlRes = await fetch("http://localhost:8000/crawl_product", {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({ url })
@@ -1613,7 +1611,7 @@ export default function App() {
       setSavedFilename(filename);
 
       // 2. Score + build LLM context
-      const ctxRes = await fetch(`${API}/geo_context`, {
+      const ctxRes = await fetch("http://localhost:8000/geo_context", {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({ filename })
@@ -1647,9 +1645,8 @@ export default function App() {
       if (step >= GEO_STEPS.length) clearInterval(ticker);
     }, 1200);
 
-    const API = process.env.REACT_APP_API_URL || "http://localhost:8000";
     try {
-      const geoRes = await fetch(`${API}/geo_recommendation`, {
+      const geoRes = await fetch("http://localhost:8000/geo_recommendation", {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({ filename: savedFilename })

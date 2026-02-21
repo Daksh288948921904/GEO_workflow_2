@@ -1,0 +1,79 @@
+{
+  "page_identity": {
+    "url": "https://www.nike.com/t/air-force-1-07-mens-shoes-jBrhbr/CW2288-111",
+    "title": "Nike Air Force 1 '07 Men's Shoes. Nike.com",
+    "meta_description": "Find the Nike Air Force 1 '07 Men's Shoes at Nike.com.  Free delivery and returns."
+  },
+  "product_summary": {
+    "name": "",
+    "brand": "",
+    "price": "$100",
+    "currency": "",
+    "availability": "",
+    "rating": null,
+    "review_count": null
+  },
+  "content_metrics": {
+    "word_count": 1067,
+    "heading_count": 98,
+    "feature_count": 9,
+    "specification_count": 0
+  },
+  "ai_visibility_summary": {
+    "final_score": 27,
+    "max_possible": 100,
+    "ai_readiness_pct": 27.0,
+    "readiness_band": "Critical — Not AI-Ready"
+  },
+  "section_scores": {
+    "schema": 6,
+    "entity": 0,
+    "content": 14,
+    "trust": 11,
+    "extractability": 6
+  },
+  "priority_order": [
+    "entity",
+    "schema",
+    "extractability",
+    "trust",
+    "content"
+  ],
+  "weak_areas": {
+    "schema": [
+      "name",
+      "currency",
+      "brand",
+      "availability",
+      "price_format_bonus",
+      "product_schema"
+    ],
+    "entity": [
+      "name",
+      "brand",
+      "sku",
+      "category",
+      "gtin"
+    ],
+    "content": [
+      "specifications",
+      "image_alt_text",
+      "faq"
+    ],
+    "trust": [
+      "has_warranty_info",
+      "mentions_secure_payment"
+    ],
+    "extractability": [
+      "specs_table",
+      "meta_title",
+      "meta_description",
+      "canonical_url",
+      "hreflang"
+    ]
+  },
+  "penalties": {
+    "missing_product_name": -10
+  },
+  "content_excerpt": "Nike Air Force 1 '07 Men's Shoes. Nike.com Skip to main content Accessibility at Nike Find a Store Help Help Order Status Shipping & Delivery Returns Order Cancellation Size Charts Contact Us Membership Promotions & Discounts Product Advice Send Us Feedback Join Us Sign In Men New & Featured New Arrivals Best Sellers Latest Drops Team USA Collection SNKRS Launch Calendar Shop All Sale Shoes All Shoes Basketball Football Jordan Lifestyle Retro Running Running Shoes $100 & Under Soccer Training & Gym Custom Shoes Clothing All Clothing Hoodies & Sweatshirts Jordan Matching Sets Outerwear Pants Sh Key features: Shown:White/White.Style:CW2288-111.Leather upper with perforated toe box is breathable and comfortable..Originally designed for performance hoops, Nike Air cushioning adds lightweight, all-day comfort..Rubber outsole with heritage hoops pivot circles delivers traction and durability..Padded collar"
+}

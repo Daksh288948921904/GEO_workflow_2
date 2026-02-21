@@ -1,0 +1,93 @@
+{
+  "page_identity": {
+    "url": "https://www.levi.com/US/en_US/clothing/men/jeans/straight/501-original-fit-mens-jeans/p/005010193",
+    "title": "",
+    "meta_description": ""
+  },
+  "product_summary": {
+    "name": "",
+    "brand": "",
+    "price": null,
+    "currency": "",
+    "availability": "",
+    "rating": null,
+    "review_count": null
+  },
+  "content_metrics": {
+    "word_count": 5,
+    "heading_count": 0,
+    "feature_count": 0,
+    "specification_count": 0
+  },
+  "ai_visibility_summary": {
+    "final_score": 0,
+    "max_possible": 100,
+    "ai_readiness_pct": 0.0,
+    "readiness_band": "Critical — Not AI-Ready"
+  },
+  "section_scores": {
+    "schema": 0,
+    "entity": 0,
+    "content": 0,
+    "trust": 1,
+    "extractability": 0
+  },
+  "priority_order": [
+    "schema",
+    "entity",
+    "content",
+    "extractability",
+    "trust"
+  ],
+  "weak_areas": {
+    "schema": [
+      "name",
+      "price",
+      "currency",
+      "brand",
+      "availability",
+      "price_format_bonus",
+      "schema_markup",
+      "product_schema"
+    ],
+    "entity": [
+      "name",
+      "brand",
+      "sku",
+      "category",
+      "gtin"
+    ],
+    "content": [
+      "word_count",
+      "headings",
+      "features",
+      "specifications",
+      "image_alt_text",
+      "faq"
+    ],
+    "trust": [
+      "has_return_policy",
+      "has_warranty_info",
+      "has_shipping_info",
+      "mentions_secure_payment",
+      "has_contact_page",
+      "mentions_reviews"
+    ],
+    "extractability": [
+      "schema_present",
+      "heading_hierarchy",
+      "specs_table",
+      "meta_title",
+      "meta_description",
+      "canonical_url",
+      "hreflang"
+    ]
+  },
+  "penalties": {
+    "missing_price": -5,
+    "missing_product_name": -10,
+    "no_schema_markup": -5,
+    "thin_content": -8
+  },
+  "content_excerpt": "Powered and protected by Privacy"
+}
