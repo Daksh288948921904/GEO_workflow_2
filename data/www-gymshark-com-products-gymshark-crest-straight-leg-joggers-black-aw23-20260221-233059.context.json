@@ -1,0 +1,67 @@
+{
+  "page_identity": {
+    "url": "https://www.gymshark.com/products/gymshark-crest-straight-leg-joggers-black-aw23",
+    "title": "Gymshark Crest Straight Leg Joggers - Black | Gymshark",
+    "meta_description": "Shop the Crest Straight Leg Joggers in black. With next day delivery and free returns, shop online today at Gymshark."
+  },
+  "product_summary": {
+    "name": "Crest Straight Leg Joggers",
+    "brand": "Gymshark | We Do Gym",
+    "price": 44,
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "rating": 4.2,
+    "review_count": 254
+  },
+  "content_metrics": {
+    "word_count": 1414,
+    "heading_count": 81,
+    "feature_count": 4,
+    "specification_count": 0
+  },
+  "ai_visibility_summary": {
+    "final_score": 58,
+    "max_possible": 100,
+    "ai_readiness_pct": 58.0,
+    "readiness_band": "Fair — Needs Improvement"
+  },
+  "section_scores": {
+    "schema": 20,
+    "entity": 11,
+    "content": 12,
+    "trust": 9,
+    "extractability": 6
+  },
+  "priority_order": [
+    "extractability",
+    "trust",
+    "entity",
+    "content",
+    "schema"
+  ],
+  "weak_areas": {
+    "entity": [
+      "category",
+      "gtin"
+    ],
+    "content": [
+      "specifications",
+      "image_alt_text",
+      "faq"
+    ],
+    "trust": [
+      "has_warranty_info",
+      "mentions_secure_payment",
+      "has_contact_page"
+    ],
+    "extractability": [
+      "specs_table",
+      "meta_title",
+      "meta_description",
+      "canonical_url",
+      "hreflang"
+    ]
+  },
+  "penalties": {},
+  "content_excerpt": "Gymshark Crest Straight Leg Joggers - Black | Gymshark Pause slide rotation 15% Student Discount ‍🎓 GYMSHARK66 is back. Change your life in 66 days. Free standard shipping on orders over $75 🚚 Refer A Friend To Earn $10 Off Your Next Purchase Of $50+ 👭 Get 10% off your first order when you sign up to our emails ✉️ 15% Student Discount ‍🎓 GYMSHARK66 is back. Change your life in 66 days. Free standard shipping on orders over $75 🚚 Refer A Friend To Earn $10 Off Your Next Purchase Of $50+ 👭 Get 10% off your first order when you sign up to our emails ✉️ 15% Student Discount ‍🎓 Accessibility Statem Key features: Estimated Delivery 4-7working days. *Once your order has shipped..Free Standard Delivery on orders $75.Gymshark Ribbed Tank 3pk - White/Black/Stone Grey MarlWhite/Black/Stone Grey MarlRegular Price:$28.80.Gymshark Crest Straight Leg Joggers - BlackBlackRegular Price:$44"
+}

@@ -8,10 +8,11 @@ from urllib.parse import urlparse
 from scoring import AIScoringEngine
 from llm_context import LLMContextBuilder
 from geo import build_geo_graph
-#app title
-app = FastAPI(title="Product Crawler Webpage")
 from fastapi.middleware.cors import CORSMiddleware
 
+
+#app title
+app = FastAPI(title="Product Crawler Webpage")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],
@@ -104,31 +105,28 @@ def geo_context(request: ScoreRequest):
 
     with open(file_path, "r", encoding="utf-8") as f:
         crawl_data = json.load(f)
+
     scorer = AIScoringEngine(crawl_data)
     score_result = scorer.compute_score()
+
 
     context_builder = LLMContextBuilder(crawl_data, score_result)
     llm_context = context_builder.build_context()
 
     context_filename = request.filename.replace(".json", ".context.json")
     context_path = os.path.join(DATA_FOLDER, context_filename)
-
     with open(context_path, "w", encoding="utf-8") as f:
         json.dump(llm_context, f, indent=2, ensure_ascii=False)
 
-    return {
-        "message": "LLM context created successfully",
-        "context_file": context_filename,
-        "ai_readiness_pct": llm_context.get("ai_visibility_summary", {}).get("ai_readiness_pct"),
-        "readiness_band": llm_context.get("ai_visibility_summary", {}).get("readiness_band"),
-        "llm_context": llm_context
-    }
+    return {"llm_context": llm_context}
+
+    
 @app.post("/geo_recommendation")
 def geo_recommendation(request: ScoreRequest):
 
     context_filename = request.filename.replace(".json", ".context.json")
     context_path = os.path.join(DATA_FOLDER, context_filename)
-
+    
     if not os.path.exists(context_path):
         raise HTTPException(status_code=404, detail="Context file not found")
 
@@ -155,13 +153,20 @@ def geo_recommendation(request: ScoreRequest):
     with open(geo_path, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
 
-    # ----------------------------------------------------------
-    # Return Response
-    # ----------------------------------------------------------
     return {
-        "message": "GEO recommendation generated successfully",
-        "geo_report_file": geo_filename,
-        "executive_summary": result.get("final_report"),
-        "ai_readiness_pct": llm_context.get("ai_visibility_summary", {}).get("ai_readiness_pct"),
-        "readiness_band": llm_context.get("ai_visibility_summary", {}).get("readiness_band")
-    }
+    "message": "GEO recommendation generated successfully",
+    "geo_report_file": geo_filename,
+
+    # Executive summary (final_report from report_builder agent)
+    "executive_summary": result.get("final_report"),
+
+    # All 4 agent outputs — frontend renders each in its own card
+    "technical_analysis": result.get("technical_analysis"),
+    "content_analysis":   result.get("content_analysis"),
+    "prioritized_plan":   result.get("prioritized_plan"),
+
+    # Scores for the pill badges
+    "ai_readiness_pct": llm_context.get("ai_visibility_summary", {}).get("ai_readiness_pct"),
+    "readiness_band":   llm_context.get("ai_visibility_summary", {}).get("readiness_band")
+}
+

@@ -1,0 +1,58 @@
+{
+  "page_info": {
+    "url": "https://www.levi.com/US/en_US/clothing/men/jeans/straight/501-original-fit-mens-jeans/p/005010193",
+    "final_url": "https://www.levi.com/US/en_US/clothing/men/jeans/straight/501-original-fit-mens-jeans/p/005010193",
+    "status_code": 200,
+    "canonical_url": "",
+    "title": "",
+    "meta_description": "",
+    "https": true,
+    "load_time_ms": 504,
+    "page_type": "UNKNOWN",
+    "crawl_timestamp": "2026-02-21T17:46:45.800642"
+  },
+  "product": {
+    "name": "",
+    "brand": "",
+    "sku": "",
+    "price": null,
+    "currency": "",
+    "availability": "",
+    "rating": null,
+    "review_count": null
+  },
+  "content": {
+    "headings": [],
+    "features": [],
+    "specifications": {},
+    "word_count": 5
+  },
+  "schema_data": [],
+  "links": {
+    "internal": [],
+    "external": [
+      {
+        "url": "https://www.akamai.com/privacy",
+        "anchor_text": "Privacy"
+      }
+    ]
+  },
+  "trust_signals": {
+    "has_return_policy": false,
+    "has_refund_policy": false,
+    "has_warranty_info": false,
+    "has_shipping_info": false,
+    "has_cancellation_policy": false,
+    "uses_https": true,
+    "mentions_secure_payment": false,
+    "has_cod_option": false,
+    "has_contact_page": false,
+    "has_about_page": false,
+    "mentions_phone": false,
+    "mentions_email": false,
+    "mentions_reviews": false,
+    "mentions_testimonials": false,
+    "official_store_claim": false
+  },
+  "clean_text": "Powered and protected by Privacy"
+}
