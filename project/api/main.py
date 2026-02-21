@@ -18,9 +18,10 @@ app = FastAPI(title="Product Crawler Webpage")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3001",
-        "https://your-app.vercel.app",   
-        "https://*.vercel.app",
+        # "http://localhost:3001",
+        # "https://your-app.vercel.app",   
+        # "https://*.vercel.app",
+        "*"
     ],
     allow_methods=["*"],
     allow_headers=["*"],
