@@ -246,7 +246,7 @@ function ScoreArc({ pct, band }) {
       if (t < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
-  }, [pct]);
+  }, [pct, fullArc]);
 
   const c = pct >= 85 ? "#00f5c4" : pct >= 70 ? "#00d4aa" : pct >= 50 ? "#f5a623" : pct >= 30 ? "#f57c23" : "#f54b4b";
 
@@ -824,7 +824,7 @@ function MiniScoreArc({ pct, color }) {
       if (t < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
-  }, [pct]);
+  }, [pct, fullArc]);
 
   return (
     <svg width={80} height={80} style={{ overflow:"visible" }}>
