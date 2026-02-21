@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+const API = "https://geo-workflow-git-main-dakshsingh791-3753s-projects.vercel.app";
 // ─── Styles ───────────────────────────────────────────────────────────────────
 const STYLES = `
   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
@@ -1598,7 +1598,7 @@ export default function App() {
 
     try {
       // 1. Crawl the page
-      const crawlRes = await fetch("https://geo-workflow-git-main-dakshsingh791-3753s-projects.vercel.app", {
+      const crawlRes = await fetch(`${API}/crawl_product`, {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({ url })
@@ -1611,7 +1611,7 @@ export default function App() {
       setSavedFilename(filename);
 
       // 2. Score + build LLM context
-      const ctxRes = await fetch("http://localhost:8000/geo_context", {
+      const ctxRes = await fetch(`${API}/geo_context`, {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({ filename })
@@ -1646,7 +1646,7 @@ export default function App() {
     }, 1200);
 
     try {
-      const geoRes = await fetch("http://localhost:8000/geo_recommendation", {
+      const geoRes = await fetch(`${API}/geo_recommendation`, {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({ filename: savedFilename })
