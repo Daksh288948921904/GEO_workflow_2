@@ -1598,7 +1598,7 @@ export default function App() {
 
     try {
       // 1. Crawl the page
-      const crawlRes = await fetch("http://localhost:8000/crawl_product", {
+      const crawlRes = await fetch("https://geo-workflow-git-main-dakshsingh791-3753s-projects.vercel.app", {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({ url })
