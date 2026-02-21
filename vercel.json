@@ -13,10 +13,10 @@
       }
     ],
     "routes": [
-  { "src": "/crawl_product",      "dest": "project/api/main.py" },
-  { "src": "/score_product",      "dest": "project/api/main.py" },
-  { "src": "/geo_context",        "dest": "project/api/main.py" },
-  { "src": "/geo_recommendation", "dest": "project/api/main.py" },
-  { "src": "/(.*)",               "dest": "/index.html" }
-]
+      { "src": "/crawl_product",     "dest": "project/api/main.py" },
+      { "src": "/score_product",     "dest": "project/api/main.py" },
+      { "src": "/geo_context",       "dest": "project/api/main.py" },
+      { "src": "/geo_recommendation","dest": "project/api/main.py" },
+      { "src": "/(.*)",              "dest": "/index.html" }
+    ]
   }

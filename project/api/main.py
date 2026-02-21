@@ -1,15 +1,16 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from crawler import ProductCrawler
+
 import json
 import os
 from datetime import datetime
 from urllib.parse import urlparse
-from scoring import AIScoringEngine
-from llm_context import LLMContextBuilder
+from api.product_crawler import ProductCrawler
+from api.scoring import AIScoringEngine
+from api.llm_context import LLMContextBuilder
+from api.geo import build_geo_graph
 from dotenv import load_dotenv
 load_dotenv()
-from geo import build_geo_graph
 from fastapi.middleware.cors import CORSMiddleware
 
 
