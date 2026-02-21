@@ -12,7 +12,7 @@ class AIScoringEngine:
         self.meta     = crawl_data.get("meta", {})
 
     # ------------------------------------------------------------------ 
-    #  Section 1 — Schema Completenesss                   
+    #  Section 1 — Schema Completeness                     
     # ------------------------------------------------------------------ 
     def score_schema(self) -> dict:
         score = 0

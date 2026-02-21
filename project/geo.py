@@ -7,9 +7,6 @@ import os
 
 load_dotenv()
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-if not OPENAI_API_KEY:
-    raise ValueError("OPENAI_API_KEY not found in environment variables")
 
 
 class GEOState(TypedDict):
@@ -281,8 +278,10 @@ Keep the whole report under 600 words. No filler sentences."""
 
 # ==============================================================
 # Build LangGraph Workflow
-# ==============================================================
 def build_geo_graph():
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise ValueError("OPENAI_API_KEY not found in environment variables")
     builder = StateGraph(GEOState)
 
     builder.add_node("technical_audit",  technical_auditor)

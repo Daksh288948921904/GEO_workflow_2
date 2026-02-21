@@ -7,10 +7,24 @@ from datetime import datetime
 from urllib.parse import urlparse
 from scoring import AIScoringEngine
 from llm_context import LLMContextBuilder
+from dotenv import load_dotenv
+load_dotenv()
+from geo import build_geo_graph
+from fastapi.middleware.cors import CORSMiddleware
+
 
 #app title
 app = FastAPI(title="Product Crawler Webpage")
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3001",
+        "https://your-app.vercel.app",   
+        "https://*.vercel.app",
+    ],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 #routing to data to data folder
 DATA_FOLDER="data"
 
@@ -101,21 +115,24 @@ def geo_context(request: ScoreRequest):
     scorer = AIScoringEngine(crawl_data)
     score_result = scorer.compute_score()
 
+
     context_builder = LLMContextBuilder(crawl_data, score_result)
     llm_context = context_builder.build_context()
 
-    return {
-        "llm_context": llm_context
-<<<<<<< HEAD
-    }
-=======
-    }
+    context_filename = request.filename.replace(".json", ".context.json")
+    context_path = os.path.join(DATA_FOLDER, context_filename)
+    with open(context_path, "w", encoding="utf-8") as f:
+        json.dump(llm_context, f, indent=2, ensure_ascii=False)
+
+    return {"llm_context": llm_context}
+
+    
 @app.post("/geo_recommendation")
 def geo_recommendation(request: ScoreRequest):
 
     context_filename = request.filename.replace(".json", ".context.json")
     context_path = os.path.join(DATA_FOLDER, context_filename)
-
+    
     if not os.path.exists(context_path):
         raise HTTPException(status_code=404, detail="Context file not found")
 
@@ -158,4 +175,4 @@ def geo_recommendation(request: ScoreRequest):
     "ai_readiness_pct": llm_context.get("ai_visibility_summary", {}).get("ai_readiness_pct"),
     "readiness_band":   llm_context.get("ai_visibility_summary", {}).get("readiness_band")
 }
->>>>>>> 88f7141 (full flow)
+

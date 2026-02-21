@@ -1,15 +1,17 @@
-# Ignore JSON outputs
-project/data/
-*.json
-
-# Ignore Python cache
+# Python
+.venv/
 __pycache__/
 *.pyc
 
-# Ignore virtual env
-.venv/
-.env
+# Node
+node_modules/
+build/
+dist/
 
-.env.env
+# Env
 .env
-*.env
+.env.production
+.env.local
+
+# Data
+project/data/
