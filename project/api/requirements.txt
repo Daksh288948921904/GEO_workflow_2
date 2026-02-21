@@ -11,3 +11,4 @@ langgraph
 pydantic
 httpx
 extruct
+readability-lxml 
