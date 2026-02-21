@@ -1,0 +1,65 @@
+{
+  "page_identity": {
+    "url": "https://www.ikea.com/us/en/p/billy-bookcase-white-20522046/",
+    "title": "BILLY bookcase, white, 311/2x11x791/2\"  - IKEA",
+    "meta_description": "BILLY bookcase, white, 311/2x11x791/2\" BILLY bookcase is a beloved icon that never goes out of style. Thanks to its versatility you can use it in many different ways at home – regardless of whether you store books or everyday items in it. Adjustable shelves can be arranged according to your needs."
+  },
+  "product_summary": {
+    "name": "BILLY Bookcase - white 31 1/2x11x79 1/2 \"",
+    "brand": "IKEA",
+    "price": "79",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "rating": "4.6",
+    "review_count": "2606"
+  },
+  "content_metrics": {
+    "word_count": 1853,
+    "heading_count": 30,
+    "feature_count": 10,
+    "specification_count": 0
+  },
+  "ai_visibility_summary": {
+    "final_score": 66,
+    "max_possible": 100,
+    "ai_readiness_pct": 66.0,
+    "readiness_band": "Fair — Needs Improvement"
+  },
+  "section_scores": {
+    "schema": 20,
+    "entity": 11,
+    "content": 16,
+    "trust": 13,
+    "extractability": 6
+  },
+  "priority_order": [
+    "extractability",
+    "entity",
+    "trust",
+    "content",
+    "schema"
+  ],
+  "weak_areas": {
+    "entity": [
+      "category",
+      "gtin"
+    ],
+    "content": [
+      "specifications",
+      "image_alt_text",
+      "faq"
+    ],
+    "trust": [
+      "has_warranty_info"
+    ],
+    "extractability": [
+      "specs_table",
+      "meta_title",
+      "meta_description",
+      "canonical_url",
+      "hreflang"
+    ]
+  },
+  "penalties": {},
+  "content_excerpt": "BILLY bookcase, white, 311/2x11x791/2\" - IKEA Skip to main content Accessibility EN US English Enter ZIP code Select store Products Rooms Deals Design & ideas Services Clear the search input field Search Hej! Log in or sign up Hej! IK Hej {{firstName}}! Favorites Shopping bag phone Need help shopping or planning? Call 1-888-888-4532 (8am - 11:59pm ET) for expert assistance. Products Storage & organization Shelving furniture Bookshelves & bookcases BILLY Bookcase 6 BILLY images Skip images Image zoomed out, normal view Best seller Image zoomed out, normal view Image zoomed out, normal view Imag Key features: Product details.Measurements.Questions and answers(65).Width:31 1/2 \".Height:79 1/2 \".Max load/shelf:66 lb"
+}
