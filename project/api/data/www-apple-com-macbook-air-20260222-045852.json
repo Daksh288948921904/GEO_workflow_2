@@ -1,0 +1,860 @@
+{
+  "page_info": {
+    "url": "https://www.apple.com/macbook-air/",
+    "final_url": "https://www.apple.com/macbook-air/",
+    "status_code": 200,
+    "canonical_url": "https://www.apple.com/macbook-air/",
+    "title": "MacBook Air 13-inch and MacBook Air 15-inch - Apple",
+    "meta_description": "",
+    "https": true,
+    "load_time_ms": 1755,
+    "page_type": "PRODUCT",
+    "crawl_timestamp": "2026-02-21T23:28:52.472688"
+  },
+  "product": {
+    "name": "MacBook Air 13-inch and MacBook Air 15-inch",
+    "brand": "",
+    "sku": "",
+    "price": null,
+    "currency": "",
+    "availability": "",
+    "rating": null,
+    "review_count": null
+  },
+  "content": {
+    "headings": [
+      {
+        "level": "h1",
+        "text": "MacBook Air"
+      },
+      {
+        "level": "h2",
+        "text": "DESIGN"
+      },
+      {
+        "level": "h2",
+        "text": "Performance and battery life"
+      },
+      {
+        "level": "h2",
+        "text": "More about M4 chip and Performance"
+      },
+      {
+        "level": "h2",
+        "text": "Apple Intelligence.Do more. Effort less."
+      },
+      {
+        "level": "h2",
+        "text": "Mac + iPhone"
+      },
+      {
+        "level": "h2",
+        "text": "New to Mac?"
+      },
+      {
+        "level": "h2",
+        "text": "MacOS"
+      },
+      {
+        "level": "h2",
+        "text": "Display"
+      },
+      {
+        "level": "h2",
+        "text": "Camera and audio"
+      },
+      {
+        "level": "h2",
+        "text": "Ports and Connectivity"
+      },
+      {
+        "level": "h2",
+        "text": "Security"
+      },
+      {
+        "level": "h2",
+        "text": "There’s never been a better time to upgrade."
+      },
+      {
+        "level": "h2",
+        "text": "Accessories"
+      },
+      {
+        "level": "h2",
+        "text": "Help Me Choose"
+      },
+      {
+        "level": "h2",
+        "text": "Designed with theearthin mind."
+      },
+      {
+        "level": "h2",
+        "text": "Which laptop is right for you?"
+      },
+      {
+        "level": "h2",
+        "text": "Apple Trade In"
+      },
+      {
+        "level": "h2",
+        "text": "Apple Card"
+      },
+      {
+        "level": "h2",
+        "text": "Education Pricing"
+      },
+      {
+        "level": "h2",
+        "text": "Apple at Work"
+      },
+      {
+        "level": "h2",
+        "text": "Apple and Education"
+      },
+      {
+        "level": "h2",
+        "text": "MacBook Air and the environment."
+      },
+      {
+        "level": "h2",
+        "text": "Recycled Material"
+      },
+      {
+        "level": "h2",
+        "text": "Renewable Electricity"
+      },
+      {
+        "level": "h2",
+        "text": "Package and Ship"
+      },
+      {
+        "level": "h2",
+        "text": "Our values lead the way."
+      },
+      {
+        "level": "h2",
+        "text": "Apple Footer"
+      },
+      {
+        "level": "h3",
+        "text": "Two perfectly portable sizes."
+      },
+      {
+        "level": "h3",
+        "text": "A new color is in the air."
+      },
+      {
+        "level": "h3",
+        "text": "M4 compared to previous MacBook Air models."
+      },
+      {
+        "level": "h3",
+        "text": "M4 compared to a PC laptop with Intel Core Ultra 7."
+      },
+      {
+        "level": "h3",
+        "text": "Great powers come with greatprivacy."
+      },
+      {
+        "level": "h3",
+        "text": "Mac + iPhone"
+      },
+      {
+        "level": "h3",
+        "text": "Setup is a breeze."
+      },
+      {
+        "level": "h3",
+        "text": "Access files anywhere with iCloud."
+      },
+      {
+        "level": "h3",
+        "text": "Packed with powerful apps."
+      },
+      {
+        "level": "h3",
+        "text": "Mac is built to last."
+      },
+      {
+        "level": "h3",
+        "text": "Never used a Mac?"
+      },
+      {
+        "level": "h3",
+        "text": "Liquid Retina display"
+      },
+      {
+        "level": "h3",
+        "text": "Three-mic array."
+      },
+      {
+        "level": "h3",
+        "text": "Immersive sound system."
+      },
+      {
+        "level": "h3",
+        "text": "Touch ID"
+      },
+      {
+        "level": "h3",
+        "text": "Explore Mac accessories."
+      },
+      {
+        "level": "h3",
+        "text": "Find the best Mac for you."
+      },
+      {
+        "level": "h3",
+        "text": "MacBook Air13” and 15”M4 chip"
+      },
+      {
+        "level": "h3",
+        "text": "MacBook Pro 14” and 16”M5, M4 Pro,or M4 Max chip"
+      },
+      {
+        "level": "h3",
+        "text": "Get credit toward a new MacBook Air."
+      },
+      {
+        "level": "h3",
+        "text": "Get 3% Daily Cash back with Apple Card."
+      },
+      {
+        "level": "h3",
+        "text": "Save on a newMacBook Air."
+      },
+      {
+        "level": "h3",
+        "text": "Made with55% recycled materialby weight."
+      },
+      {
+        "level": "h3",
+        "text": "Manufactured with30% renewable electricity."
+      },
+      {
+        "level": "h3",
+        "text": "Ships in100% fiber-based packaging."
+      },
+      {
+        "level": "h3",
+        "text": "A plan as innovative as our products."
+      },
+      {
+        "level": "h3",
+        "text": "Privacy. That’s Apple."
+      },
+      {
+        "level": "h3",
+        "text": "Innovation that’s accessible by design."
+      },
+      {
+        "level": "h3",
+        "text": "Pay monthly at 0% APR"
+      },
+      {
+        "level": "h3",
+        "text": "Fast delivery or pickup"
+      },
+      {
+        "level": "h3",
+        "text": "Get help buying"
+      },
+      {
+        "level": "h3",
+        "text": "Shop and LearnShop and Learn"
+      },
+      {
+        "level": "h3",
+        "text": "Apple WalletApple Wallet"
+      },
+      {
+        "level": "h3",
+        "text": "AccountAccount"
+      },
+      {
+        "level": "h3",
+        "text": "EntertainmentEntertainment"
+      },
+      {
+        "level": "h3",
+        "text": "Apple StoreApple Store"
+      },
+      {
+        "level": "h3",
+        "text": "For BusinessFor Business"
+      },
+      {
+        "level": "h3",
+        "text": "For EducationFor Education"
+      },
+      {
+        "level": "h3",
+        "text": "For HealthcareFor Healthcare"
+      },
+      {
+        "level": "h3",
+        "text": "For GovernmentFor Government"
+      },
+      {
+        "level": "h3",
+        "text": "Apple ValuesApple Values"
+      },
+      {
+        "level": "h3",
+        "text": "About AppleAbout Apple"
+      }
+    ],
+    "features": [
+      "AI image upscaling",
+      "Excel calculations",
+      "Photo editing",
+      "Video editing",
+      "Code compiling on battery",
+      "Web browsing",
+      "Writing Tools",
+      "Image Playground",
+      "Setup is a breeze.Easily move files, apps, and more from your old PC or Mac with Migration Assistant. And if you need any help, Apple Support is always just an online chat, phone call, or in‑store appointment away.",
+      "Access files anywhere with iCloud.iCloud lets you store all your photos, contacts, and documents so they’re available on all your devices. Start a to‑do list on your iPhone and check off items on your MacBook Air — and so much more.",
+      "Packed with powerful apps.Mac comes with apps like FaceTime, Freeform, and Keynote that let you get to work creating and collaborating on your next big idea.",
+      "Mac is built to last.Made with durable recycled aluminum enclosures, Mac laptops are ready for just about anything. And free macOS software updates help your Mac work reliably and securely for years to come.",
+      "The text \"Yep, Mac does that.\" with raised-hands emojiYep, Macdoesthat.Never used a Mac?No problem. Switching to Mac from PC is quick and easy.Learn more",
+      "Up to23xfaster performance.4",
+      "Up to 6 more hours battery life.25Up to 18 hours total.1",
+      "Apple Intelligence",
+      "Neural Engine to enable AI features.",
+      "Up to2xfaster performance.5",
+      "A bigger, brighter Liquid Retina display.",
+      "Support for up to two external displays."
+    ],
+    "specifications": {},
+    "word_count": 6462
+  },
+  "schema_data": [
+    {
+      "@context": "http://schema.org",
+      "@id": "https://www.apple.com/#organization",
+      "@type": "Organization",
+      "name": "Apple",
+      "url": "https://www.apple.com/",
+      "logo": "https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png?202602101114",
+      "subOrganization": {
+        "@type": "Organization",
+        "name": "Apple Support",
+        "url": "https://support.apple.com",
+        "@id": "https://support.apple.com/#organization"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-692-7753",
+          "contactType": "sales",
+          "areaServed": "US"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-275-2273",
+          "contactType": "technical support",
+          "areaServed": "US",
+          "availableLanguage": [
+            "EN",
+            "ES"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-275-2273",
+          "contactType": "customer support",
+          "areaServed": "US",
+          "availableLanguage": [
+            "EN",
+            "ES"
+          ]
+        }
+      ],
+      "sameAs": [
+        "http://www.wikidata.org/entity/Q312",
+        "https://www.youtube.com/user/Apple",
+        "https://www.linkedin.com/company/apple",
+        "https://www.facebook.com/Apple",
+        "https://www.twitter.com/Apple"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": "Product",
+      "@id": "https://www.apple.com/macbook-air/#product",
+      "manufacturer": {
+        "@id": "https://www.apple.com/#organization"
+      },
+      "brand": {
+        "@id": "https://www.apple.com/mac/#brand"
+      },
+      "name": "MacBook Air 13-inch and MacBook Air 15-inch",
+      "description": "MacBook Air laptop with the superfast M4 chip. Built for Apple Intelligence. Lightweight, with all-day battery life. Now in a new Sky Blue color.",
+      "url": "https://www.apple.com/macbook-air/",
+      "mainEntityOfPage": "https://www.apple.com/macbook-air/",
+      "image": "https://www.apple.com/v/macbook-air/x/images/meta/macbook_air_mx__ez5y0k5yy7au_og.png",
+      "potentialAction": {
+        "@type": "BuyAction",
+        "seller": {
+          "@id": "https://www.apple.com/#organization"
+        },
+        "url": [
+          "https://www.apple.com/us/shop/goto/buy_mac/macbook_air"
+        ]
+      }
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "url": "https://www.apple.com/",
+        "anchor_text": "Apple"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/store",
+        "anchor_text": "Store"
+      },
+      {
+        "url": "https://www.apple.com/mac/",
+        "anchor_text": "Mac"
+      },
+      {
+        "url": "https://www.apple.com/ipad/",
+        "anchor_text": "iPad"
+      },
+      {
+        "url": "https://www.apple.com/iphone/",
+        "anchor_text": "iPhone"
+      },
+      {
+        "url": "https://www.apple.com/watch/",
+        "anchor_text": "Watch"
+      },
+      {
+        "url": "https://www.apple.com/apple-vision-pro/",
+        "anchor_text": "Vision"
+      },
+      {
+        "url": "https://www.apple.com/airpods/",
+        "anchor_text": "AirPods"
+      },
+      {
+        "url": "https://www.apple.com/tv-home/",
+        "anchor_text": "TV & Home"
+      },
+      {
+        "url": "https://www.apple.com/entertainment/",
+        "anchor_text": "Entertainment"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/buy_accessories",
+        "anchor_text": "Accessories"
+      },
+      {
+        "url": "https://www.apple.com/us/search",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/bag",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.apple.com/macbook-air/",
+        "anchor_text": "MacBook Air"
+      },
+      {
+        "url": "https://www.apple.com/macbook-air/specs/",
+        "anchor_text": "Tech Specs"
+      },
+      {
+        "url": "https://www.apple.com/macbook-air/compare/",
+        "anchor_text": "Compare"
+      },
+      {
+        "url": "https://www.apple.com/macbook-air/mac-does-that/",
+        "anchor_text": "Switch from PC to Mac"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/buy_mac/macbook_air",
+        "anchor_text": "BuyMacBook Air 13 and 15 inch"
+      },
+      {
+        "url": "https://www.apple.com/us-edu/store",
+        "anchor_text": "Shop"
+      },
+      {
+        "url": "https://www.apple.com/105/media/us/macbook-air/2025/0833fe28-c438-4dc4-8edc-e39ef30df5f9/ar/macbook-air-13in-sky-blue.usdz",
+        "anchor_text": "View MacBook Air 13” in AR"
+      },
+      {
+        "url": "https://www.apple.com/105/media/us/macbook-air/2025/0833fe28-c438-4dc4-8edc-e39ef30df5f9/ar/macbook-air-15in-sky-blue.usdz",
+        "anchor_text": "View MacBook Air 15” in AR"
+      },
+      {
+        "url": "https://www.apple.com/105/media/us/macbook-air/2025/0833fe28-c438-4dc4-8edc-e39ef30df5f9/ar/macbook-air-13in-silver.usdz",
+        "anchor_text": "View MacBook Air 13” in AR"
+      },
+      {
+        "url": "https://www.apple.com/105/media/us/macbook-air/2025/0833fe28-c438-4dc4-8edc-e39ef30df5f9/ar/macbook-air-15in-silver.usdz",
+        "anchor_text": "View MacBook Air 15” in AR"
+      },
+      {
+        "url": "https://www.apple.com/105/media/us/macbook-air/2025/0833fe28-c438-4dc4-8edc-e39ef30df5f9/ar/macbook-air-13in-starlight.usdz",
+        "anchor_text": "View MacBook Air 13” in AR"
+      },
+      {
+        "url": "https://www.apple.com/105/media/us/macbook-air/2025/0833fe28-c438-4dc4-8edc-e39ef30df5f9/ar/macbook-air-15in-starlight.usdz",
+        "anchor_text": "View MacBook Air 15” in AR"
+      },
+      {
+        "url": "https://www.apple.com/105/media/us/macbook-air/2025/0833fe28-c438-4dc4-8edc-e39ef30df5f9/ar/macbook-air-13in-midnight.usdz",
+        "anchor_text": "View MacBook Air 13” in AR"
+      },
+      {
+        "url": "https://www.apple.com/105/media/us/macbook-air/2025/0833fe28-c438-4dc4-8edc-e39ef30df5f9/ar/macbook-air-15in-midnight.usdz",
+        "anchor_text": "View MacBook Air 15” in AR"
+      },
+      {
+        "url": "https://www.apple.com/apple-intelligence/",
+        "anchor_text": "Learn more about Apple Intelligence"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/trade_in#mac",
+        "anchor_text": "See what your device is worth"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/mac/accessories",
+        "anchor_text": "Shop"
+      },
+      {
+        "url": "https://www.apple.com/mac/best-mac/#help-me-choose",
+        "anchor_text": "Get started"
+      },
+      {
+        "url": "https://www.apple.com/environment/",
+        "anchor_text": "Learn more about Apple and the environment"
+      },
+      {
+        "url": "https://www.apple.com/mac/compare/",
+        "anchor_text": "Compare all Mac models"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/buy_mac/macbook_pro",
+        "anchor_text": "Buy"
+      },
+      {
+        "url": "https://www.apple.com/macbook-pro/",
+        "anchor_text": "Learn more"
+      },
+      {
+        "url": "https://www.apple.com/apple-card/",
+        "anchor_text": "Learn more"
+      },
+      {
+        "url": "https://www.apple.com/business/",
+        "anchor_text": "Learn about Apple at Work"
+      },
+      {
+        "url": "https://www.apple.com/business/mac/",
+        "anchor_text": "Learn more about Mac for business"
+      },
+      {
+        "url": "https://www.apple.com/education/",
+        "anchor_text": "Learn about Apple and Education"
+      },
+      {
+        "url": "https://www.apple.com/environment/pdf/products/notebooks/M4_MacBook_Air_PER_March2025.pdf",
+        "anchor_text": "Learn more in our Product Environmental Report (PDF)"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/trade_in/#recycle",
+        "anchor_text": "Learn how to trade in or recycle devices"
+      },
+      {
+        "url": "https://www.apple.com/privacy/",
+        "anchor_text": "Learn more about privacy"
+      },
+      {
+        "url": "https://www.apple.com/accessibility/",
+        "anchor_text": "Learn more about accessibility"
+      },
+      {
+        "url": "https://www.apple.com/apple-card/monthly-installments/",
+        "anchor_text": "Learn more"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/shipping_and_returns",
+        "anchor_text": "Learn more"
+      },
+      {
+        "url": "https://www.apple.com/batteries/",
+        "anchor_text": "apple.com/batteries"
+      },
+      {
+        "url": "https://www.apple.com/airtag/",
+        "anchor_text": "AirTag"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/giftcards",
+        "anchor_text": "Gift Cards"
+      },
+      {
+        "url": "https://www.apple.com/wallet/",
+        "anchor_text": "Wallet"
+      },
+      {
+        "url": "https://www.apple.com/apple-pay/",
+        "anchor_text": "Apple Pay"
+      },
+      {
+        "url": "https://www.apple.com/apple-cash/",
+        "anchor_text": "Apple Cash"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/account",
+        "anchor_text": "Apple Store Account"
+      },
+      {
+        "url": "https://www.apple.com/apple-one/",
+        "anchor_text": "Apple One"
+      },
+      {
+        "url": "https://www.apple.com/apple-tv/",
+        "anchor_text": "Apple TV"
+      },
+      {
+        "url": "https://www.apple.com/apple-music/",
+        "anchor_text": "Apple Music"
+      },
+      {
+        "url": "https://www.apple.com/apple-arcade/",
+        "anchor_text": "Apple Arcade"
+      },
+      {
+        "url": "https://www.apple.com/apple-fitness-plus/",
+        "anchor_text": "Apple Fitness+"
+      },
+      {
+        "url": "https://www.apple.com/apple-news/",
+        "anchor_text": "Apple News+"
+      },
+      {
+        "url": "https://www.apple.com/apple-podcasts/",
+        "anchor_text": "Apple Podcasts"
+      },
+      {
+        "url": "https://www.apple.com/apple-books/",
+        "anchor_text": "Apple Books"
+      },
+      {
+        "url": "https://www.apple.com/app-store/",
+        "anchor_text": "App Store"
+      },
+      {
+        "url": "https://www.apple.com/retail/",
+        "anchor_text": "Find a Store"
+      },
+      {
+        "url": "https://www.apple.com/retail/geniusbar/",
+        "anchor_text": "Genius Bar"
+      },
+      {
+        "url": "https://www.apple.com/today/",
+        "anchor_text": "Today at Apple"
+      },
+      {
+        "url": "https://www.apple.com/today/groups/",
+        "anchor_text": "Group Reservations"
+      },
+      {
+        "url": "https://www.apple.com/today/camp/",
+        "anchor_text": "Apple Camp"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/special_deals",
+        "anchor_text": "Certified Refurbished"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/trade_in",
+        "anchor_text": "Apple Trade In"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/payment_plan",
+        "anchor_text": "Financing"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/buy_iphone/carrier_offers",
+        "anchor_text": "Carrier Deals at Apple"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/order/list",
+        "anchor_text": "Order Status"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/help",
+        "anchor_text": "Shopping Help"
+      },
+      {
+        "url": "https://www.apple.com/retail/business/",
+        "anchor_text": "Shop for Business"
+      },
+      {
+        "url": "https://www.apple.com/education/k12/how-to-buy/",
+        "anchor_text": "Shop for K-12"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/educationrouting",
+        "anchor_text": "Shop for College"
+      },
+      {
+        "url": "https://www.apple.com/healthcare/",
+        "anchor_text": "Apple and Healthcare"
+      },
+      {
+        "url": "https://www.apple.com/government/",
+        "anchor_text": "Apple and Government"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/eppstore/veteransandmilitary",
+        "anchor_text": "Shop for Veterans and Military"
+      },
+      {
+        "url": "https://www.apple.com/us_epp_67909/store",
+        "anchor_text": "Shop for State and Local Employees"
+      },
+      {
+        "url": "https://www.apple.com/us_epp_55499/store",
+        "anchor_text": "Shop for Federal Employees"
+      },
+      {
+        "url": "https://www.apple.com/education-initiative/",
+        "anchor_text": "Education"
+      },
+      {
+        "url": "https://www.apple.com/diversity/",
+        "anchor_text": "Inclusion and Diversity"
+      },
+      {
+        "url": "https://www.apple.com/racial-equity-justice-initiative/",
+        "anchor_text": "Racial Equity and Justice"
+      },
+      {
+        "url": "https://www.apple.com/supply-chain/",
+        "anchor_text": "Supply Chain Innovation"
+      },
+      {
+        "url": "https://www.apple.com/newsroom/",
+        "anchor_text": "Newsroom"
+      },
+      {
+        "url": "https://www.apple.com/leadership/",
+        "anchor_text": "Apple Leadership"
+      },
+      {
+        "url": "https://www.apple.com/careers/us/",
+        "anchor_text": "Career Opportunities"
+      },
+      {
+        "url": "https://www.apple.com/compliance/",
+        "anchor_text": "Ethics & Compliance"
+      },
+      {
+        "url": "https://www.apple.com/apple-events/",
+        "anchor_text": "Events"
+      },
+      {
+        "url": "https://www.apple.com/contact/",
+        "anchor_text": "Contact Apple"
+      },
+      {
+        "url": "https://www.apple.com/choose-country-region/",
+        "anchor_text": "United States"
+      },
+      {
+        "url": "https://www.apple.com/legal/privacy/",
+        "anchor_text": "Privacy Policy"
+      },
+      {
+        "url": "https://www.apple.com/legal/internet-services/terms/site.html",
+        "anchor_text": "Terms of Use"
+      },
+      {
+        "url": "https://www.apple.com/us/shop/goto/help/sales_refunds",
+        "anchor_text": "Sales and Refunds"
+      },
+      {
+        "url": "https://www.apple.com/legal/",
+        "anchor_text": "Legal"
+      },
+      {
+        "url": "https://www.apple.com/sitemap/",
+        "anchor_text": "Site Map"
+      }
+    ],
+    "external": [
+      {
+        "url": "https://support.apple.com/?cid=gn-ols-home-hp-tab",
+        "anchor_text": "Support"
+      },
+      {
+        "url": "https://support.apple.com/en-us/102338",
+        "anchor_text": "Learn more about Optimized Battery Charging"
+      },
+      {
+        "url": "https://contactretail.apple.com/?pg=COM:macbook-air&ap=COM&c=us&l=en&ag=FASTPASS",
+        "anchor_text": "Contact us"
+      },
+      {
+        "url": "https://www.goldmansachs.com/terms-and-conditions/Apple-Card-Customer-Agreement.pdf",
+        "anchor_text": "Apple Card Customer Agreement"
+      },
+      {
+        "url": "https://support.apple.com/121115",
+        "anchor_text": "support.apple.com/121115"
+      },
+      {
+        "url": "https://support.apple.com/102730",
+        "anchor_text": "here"
+      },
+      {
+        "url": "https://account.apple.com/",
+        "anchor_text": "Manage Your Apple Account"
+      },
+      {
+        "url": "https://www.icloud.com",
+        "anchor_text": "iCloud.com"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/apple-store/id375380948",
+        "anchor_text": "Apple Store App"
+      },
+      {
+        "url": "https://investor.apple.com/",
+        "anchor_text": "Investors"
+      },
+      {
+        "url": "https://locate.apple.com/",
+        "anchor_text": "other retailer"
+      }
+    ]
+  },
+  "trust_signals": {
+    "has_return_policy": false,
+    "has_refund_policy": true,
+    "has_warranty_info": false,
+    "has_shipping_info": true,
+    "has_cancellation_policy": false,
+    "uses_https": true,
+    "mentions_secure_payment": true,
+    "has_cod_option": true,
+    "has_contact_page": true,
+    "has_about_page": true,
+    "mentions_phone": true,
+    "mentions_email": false,
+    "mentions_reviews": false,
+    "mentions_testimonials": false,
+    "official_store_claim": false
+  },
+  "clean_text": "MacBook Air 13-inch and MacBook Air 15-inch - Apple Apple Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support 0 + MacBook Air Local Nav Open Menu Local Nav Close Menu Overview Tech Specs Compare Switch from PC to Mac Buy MacBook Air 13 and 15 inch Buy MacBook Air with education savings. * Shop MacBook Air Speed of lightness. Built for Apple Intelligence. Buy ** MacBook Air is the world’s most popular laptop for a reason. Actually, for a lot of reasons. It delivers up to 18 hours of battery life. 1 The M4 chip unlocks a whole new level of performance for work and play. Apple Intelligence is built in to help you get things done effortlessly. 2 And it now comes in a stunning Sky Blue color. With the perfectly portable MacBook Air, you’ll be ready to take on just about anything, anywhere. DESIGN Built to go places. Remarkably light and less than half an inch thin, MacBook Air fits easily into your on-the-go lifestyle — and your bag. MacBook Air with M4 is made with over 50 percent recycled materials and has a durable recycled aluminum enclosure. 13” display 15” display Two perfectly portable sizes. The 13‑inch MacBook Air is the ultimate on-the-go laptop, and the 15‑inch model gives you even more space onscreen for multitasking. 3 View MacBook Air 13” in AR View MacBook Air 15” in AR View MacBook Air 13” in AR View MacBook Air 15” in AR View MacBook Air 13” in AR View MacBook Air 15” in AR View MacBook Air 13” in AR View MacBook Air 15” in AR A new color is in the air. Now with Sky Blue, four beautiful colors will have you on cloud nine. And every MacBook Air comes with a color-matched MagSafe charging cable. color picker Sky Blue Silver Starlight Midnight Incredibly light and thin, MacBook Air fits easily in your backpack. With up to 18 hours of battery life, 1 you can get work done anywhere you go. The impressive display on MacBook Air makes TV, movies, and games look truly striking. MacBook Air 13” MacBook Air 13” MacBook Air 13” Incredibly light and thin, MacBook Air fits easily in your backpack. With up to 18 hours of battery life, 1 you can get work done anywhere you go. The impressive display on MacBook Air makes TV, movies, and games look truly striking. Performance and battery life M4. The chip that zips. Up to 23 x faster than fastest Intel‑based MacBook Air 4 Up to 2 x faster than MacBook Air (M1) 5 Up to 18 hrs battery life 1 Multitasker. Multifaster. MacBook Air with M4 brings even more speed and fluidity to everything you do, like working between loads of apps and tabs, editing videos, or playing games like Sid Meier’s Civilization® VII. All with a silent, fanless design. Neural Engine. Blazing fast for AI. Thanks to the faster Neural Engine in the M4 chip, MacBook Air has even more powerful AI capabilities to enhance everything you do. From automatic camera frame centering to AI image upscaling to running the latest large language models, you’ll be more productive and creative than ever. Live a full battery life. MacBook Air has up to 18 hours of battery life. And it supports fast charge, getting up to 50 percent in around 30 minutes. 6 So you can power through anything you’re working on without worrying about your battery. Go inside M4 More about M4 chip and Performance M4. The chip that zips. Apple silicon combines a powerful CPU and GPU, memory, and more on a single chip, making all your apps — from Microsoft 365 Copilot to Adobe Creative Cloud — run faster while requiring less power. Sid Meier’s Civilization® VII The M4 chip in MacBook Air makes graphics and gaming look better than ever. With second-generation hardware-accelerated ray tracing, you get more realistic images for truly immersive gaming. And Dynamic Caching drives a huge performance boost for pro apps and games. So everything you do feels less like work and more like play. M4 compared to previous MacBook Air models. 13” model 15” model AI image upscaling / Excel calculations / Gaming / Photo editing / Video editing Faster AI photo resolution enhancement 7 13‑inch MacBook Air with M4 23 x 13‑inch MacBook Air with M3 13‑inch MacBook Air with M1 13‑inch MacBook Air with quad-core Intel Core i7 (baseline) Faster spreadsheet calculation performance 8 13‑inch MacBook Air with M4 4.7 x 13‑inch MacBook Air with M3 13‑inch MacBook Air with M1 13‑inch MacBook Air with quad-core Intel Core i7 (baseline) Faster gaming performance 9 13‑inch MacBook Air with M4 1.6 x 13‑inch MacBook Air with M3 13‑inch MacBook Air with M1 (baseline) Faster image filters and effects performance 10 13‑inch MacBook Air with M4 3.6 x 13‑inch MacBook Air with M3 13‑inch MacBook Air with M1 13‑inch MacBook Air with quad-core Intel Core i7 (baseline) Faster scene edit detection performance 11 13‑inch MacBook Air with M4 18 x 13‑inch MacBook Air with M3 13‑inch MacBook Air with M1 13‑inch MacBook Air with quad-core Intel Core i7 (baseline) AI image upscaling / Excel calculations / Gaming / Photo editing / Video editing Faster AI photo resolution enhancement 12 15‑inch MacBook Air with M4 23 x 15‑inch MacBook Air with M3 13‑inch MacBook Air with M1 13‑inch MacBook Air with quad-core Intel Core i7 (baseline) Faster spreadsheet calculation performance 13 15‑inch MacBook Air with M4 4.7 x 15‑inch MacBook Air with M3 13‑inch MacBook Air with M1 13‑inch MacBook Air with quad-core Intel Core i7 (baseline) Faster gaming performance 14 15‑inch MacBook Air with M4 1.9 x 15‑inch MacBook Air with M3 13‑inch MacBook Air with M1 (baseline) Faster image filters and effects performance 15 15‑inch MacBook Air with M4 3.6 x 15‑inch MacBook Air with M3 13‑inch MacBook Air with M1 13‑inch MacBook Air with quad-core Intel Core i7 (baseline) Faster scene edit detection performance 16 15‑inch MacBook Air with M4 18 x 15‑inch MacBook Air with M3 13‑inch MacBook Air with M1 13‑inch MacBook Air with quad-core Intel Core i7 (baseline) M4 compared to a PC laptop with Intel Core Ultra 7. AI image upscaling / Code compiling on battery / Photo editing / Web browsing / Video editing Faster AI photo resolution enhancement 17 MacBook Air with M4 6 x PC laptop with Intel Core Ultra 7 (baseline) More project builds per charge 18 MacBook Air with M4 2 x PC laptop with Intel Core Ultra 7 (baseline) Faster photo editing performance 19 MacBook Air with M4 2.2 x PC laptop with Intel Core Ultra 7 (baseline) Faster web application responsiveness 20 MacBook Air with M4 1.6 x PC laptop with Intel Core Ultra 7 (baseline) Faster scene edit detection performance 21 MacBook Air with M4 1.9 x PC laptop with Intel Core Ultra 7 (baseline) Apple Intelligence. Do more. Effort less. Apple Intelligence is the personal intelligence system that helps you write, express yourself, and get things done effortlessly. With groundbreaking privacy protections, it gives you peace of mind that no one else can access your data — not even Apple. 2 Learn more about Apple Intelligence Writing Tools Image Playground Siri Use Apple Intelligence to proofread your text and rewrite different versions until the tone and wording are just right, and summarize selected text with a click. Or use Compose to tap directly into ChatGPT to create content from scratch. Create fun, original images based on a description, a concept, or even a person from your Photos library. With an all-new design, richer language understanding, and expansive product knowledge about your devices, Siri is more helpful than ever. Siri can even tap into ChatGPT to bring additional answers right to you. Great powers come with great privacy. Apple Intelligence is designed to protect your privacy at every step. It’s integrated into the core of your Mac through on-device processing. So it’s aware of your personal information without collecting your personal information. And with groundbreaking Private Cloud Compute, Apple Intelligence can draw on larger server-based models, running on Apple silicon, to handle more complex requests for you while protecting your privacy. Mac + iPhone Dream team. Learn more about Mac + iPhone Mac + iPhone iPhone Mirroring. See and use your iPhone apps from your Mac without having to reach for your iPhone. Easily drag and drop files between devices. All while your iPhone stays locked — so no one else can access it or see what you’re doing. 22 Answer calls and texts. Your calls and texts come right to your laptop, so there’s no need to switch devices when you’re in the zone. 23 Scan documents. Use your iPhone to take a picture or scan a document and have it automatically appear on your MacBook Air. If you love iPhone, you’ll love Mac. Mac is designed to be just as easy to learn as iPhone. Whether you’re using iPhone Mirroring to view and control your iPhone from your Mac, 22 copying text on your iPhone to paste on your Mac, or locating devices with Find My — when you use Mac with iPhone, they work together like magic. New to Mac? Setup is a breeze. Easily move files, apps, and more from your old PC or Mac with Migration Assistant. And if you need any help, Apple Support is always just an online chat, phone call, or in‑store appointment away. Access files anywhere with iCloud. iCloud lets you store all your photos, contacts, and documents so they’re available on all your devices. Start a to‑do list on your iPhone and check off items on your MacBook Air — and so much more. Packed with powerful apps. Mac comes with apps like FaceTime, Freeform, and Keynote that let you get to work creating and collaborating on your next big idea. Mac is built to last. Made with durable recycled aluminum enclosures, Mac laptops are ready for just about anything. And free macOS software updates help your Mac work reliably and securely for years to come. The text \"Yep, Mac does that.\" with raised-hands emoji Yep, Mac does that. Never used a Mac? No problem. Switching to Mac from PC is quick and easy. Learn more MacOS Let your apps fly. With tens of thousands of apps optimized for Apple silicon, all your favorites run lightning fast in macOS, including Microsoft 365 Copilot, Adobe Creative Cloud, and Google Workspace with Gemini. And regular, free macOS software updates keep things running smoothly. Display Love at every sight. Learn more about the Liquid Retina display Liquid Retina display 500 nits of brightness. Work comfortably in a range of lighting environments. P3 wide color. Enjoy an accurate and vivid range of colors for viewing and editing photos and videos. True Tone technology. True Tone adjusts the warmth of your display to match the ambient light, for a more natural viewing experience. The Liquid Retina display on MacBook Air supports 1 billion colors and has up to 2x the resolution of comparable PC laptops. Photos and videos pop with rich contrast and sharp detail, and text appears supercrisp. Camera and audio When you move, it moves. Center Stage Desk View Stay in frame during video calls, even as you move around or when more people join your frame. Share a top-down view of your workspace while staying onscreen — great if you’re tutoring online or showing off your latest project. Three-mic array. MacBook Air provides enhanced voice clarity in audio and video calls while minimizing background noise. Immersive sound system. The speakers on MacBook Air support Spatial Audio along with Dolby Atmos, so you can enjoy a three-dimensional soundstage for music and movies. Ports and Connectivity Become well connected. MagSafe Two Thunderbolt 4 ports Headphone jack The MagSafe charging cable attaches and detaches magnetically, preventing any unintended flights. Two Thunderbolt 4 ports let you connect high-speed accessories and charge your Mac. The headphone jack supports high‑impedance headphones. And Wi‑Fi 6E provides up to 2x faster throughput compared with Wi‑Fi 6. 24 Turn MacBook Air into the perfect workspace by connecting up to two external displays. The extra screen space makes working with multiple documents or apps a breeze. Security Hold down the fort with just a finger. Touch ID The backlit Magic Keyboard comes with full-height function keys and Touch ID, giving you a fast, easy, and secure way to unlock your Mac, sign in to accounts, and authorize payments for purchases — all at the touch of your finger. There’s never been a better time to upgrade. Select your current MacBook Air: Additional help Don’t know which model you have? Click the Apple logo in the upper left of your screen and choose About This Mac. MacBook Air (Intel-based) MacBook Air (M1) Here’s what you get with the new MacBook Air with M4. Up to 23x faster performance. 4 Up to 6 more hours battery life. 25 Up to 18 hours total. 1 Apple Intelligence Neural Engine to enable AI features. Up to 2x faster performance. 5 A bigger, brighter Liquid Retina display. Support for up to two external displays. 12MP Center Stage camera with Desk View. Get credit toward a new MacBook Air when you trade in an eligible device. 26 See what your device is worth Accessories Explore Mac accessories. Shop Help Me Choose Find the best Mac for you. Get started Designed with the earth in mind. Recycled materials. A greener supply chain. Responsible packaging. MacBook Air was engineered to be as light on the environment as it is in your hands. Learn more about Apple and the environment Which laptop is right for you? Compare all Mac models MacBook Air 13” and 15” M4 chip ** 13.6-inch or 15.3-inch Liquid Retina display 27 Apple M4 chip Apple Intelligence 2 16GB to 32GB unified memory 256GB to 2TB storage 28 Up to 18 hours battery life 1 Touch ID Buy MacBook Pro 14” and 16” M5, M4 Pro, or M4 Max chip ** 14.2-inch or 16.2-inch Liquid Retina XDR display 27 Apple M5, M4 Pro, or M4 Max chip Apple Intelligence 2 16GB to 128GB unified memory 512GB to 8TB storage 28 Up to 24 hours battery life 29 Touch ID Buy Learn more Apple Trade In Get credit toward a new MacBook Air. Just trade in your eligible computer for credit or recycle it for free. It’s good for you and the planet. 26 See what your device is worth Apple Card Get 3% Daily Cash back with Apple Card. And pay over time, interest-free when you choose to check out at Apple with Apple Card Monthly Installments. † Learn more Education Pricing Save on a new MacBook Air. Students and educators can save exclusively through the Apple Store. * Shop Apple at Work Get the power to take your business to the next level. Learn about Apple at Work Learn more about Mac for business Apple and Education Helping educators and students move the world forward. Learn about Apple and Education MacBook Air and the environment. Learn more in our Product Environmental Report (PDF) Made with 55% recycled material by weight. Recycled Material Our approach. Using recycled materials, like 95% recycled lithium in the battery, reduces the need to mine new material, which avoids the carbon emissions and environmental impacts of mining. Learn more in our Product Environmental Report (PDF) How you can help. You can protect the earth’s precious resources by trading in, passing down, or recycling devices and accessories you no longer use. You can bring them into any Apple Store for free, secure recycling. We also offer other ways to recycle, including mail-in options. Learn how to trade in or recycle devices Manufactured with 30% renewable electricity. Renewable Electricity Our approach. Using electricity from renewable sources — like wind and solar — instead of fossil fuels across our global supply chain significantly reduces carbon emissions from manufacturing Apple products. Learn more in our Product Environmental Report (PDF) How you can help. You can extend the lifespan of your batteries and Apple products by using Optimized Battery Charging. It works by learning your charging habits and delaying the final charge — from 80% to 100% — until you are likely to need it. Learn more about Optimized Battery Charging Ships in 100% fiber-based packaging. Package and Ship Our approach. MacBook Air comes in a 100% fiber-based box as part of our commitment to remove plastic from the packaging of all Apple products. Learn more in our Product Environmental Report (PDF) How you can help. New Apple products come in paper packaging that’s 100% fiber-based. In most places, you can put the entire box into your household recycling bin. You can also bring Apple packaging to any Apple Store and we’ll recycle it for free. Learn more about recycling Our values lead the way. A plan as innovative as our products. We’re committed to bringing net emissions to zero across our entire carbon footprint by 2030. Learn more about environment Privacy. That’s Apple. Privacy is a fundamental human right. Every product and service is designed to help keep your data safe and secure. Learn more about privacy Innovation that’s accessible by design. Our products and services are designed for everyone, with built-in features to help you do what you love, your way. Learn more about accessibility Apple Footer Pay monthly at 0% APR You can pay over time when you choose to check out at Apple with Apple Card Monthly Installments.† Learn more Fast delivery or pickup Enjoy two-hour delivery from an Apple Store, free delivery, or easy pickup. Learn more Get help buying Have a question? Call a Specialist or chat online. Contact us * Education pricing is available to current and newly accepted college students and their parents, as well as faculty, staff, and homeschool teachers of all grade levels. For more information, visit apple.com/us-edu/store . ** Financing available to qualified customers, subject to credit approval and credit limit, and requires you to select Apple Card Monthly Installments (ACMI) as your payment type at checkout at Apple. Financing terms vary by product. Taxes and shipping on items purchased using ACMI are subject to your card’s variable APR, not the ACMI 0% APR. ACMI is not available for purchases made at special storefronts or when using such special discounts in-store at Apple, except ACMI is available at the Education storefront and with the Education discount. The last month’s payment for each product will be the product’s purchase price, less all other payments at the monthly payment amount. ACMI is subject to change at any time for any reason, including but not limited to installment term lengths and eligible products. See the Apple Card Customer Agreement for more information about ACMI. Testing conducted by Apple in January 2025 using preproduction 13-inch MacBook Air systems with Apple M4, 10-core CPU, and 8-core GPU, and preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, and 10-core GPU, all configured with 16GB of RAM and 256GB SSD. Wireless web battery life tested by browsing 25 popular websites while connected to Wi-Fi. Video streaming battery life tested with 1080p content in Safari while connected to Wi-Fi. All systems tested with display brightness set to 8 clicks from bottom and keyboard backlight off. Battery life varies by use and configuration. See apple.com/batteries for more information. Apple Intelligence is available in beta. Some features may not be available in all regions or languages. For feature and language availability and system requirements, see support.apple.com/121115 . Screen size is measured diagonally. The displays on the 13-inch and 15-inch MacBook Air have rounded corners at the top. When measured as a standard rectangular shape, the screens are 13.6 inches and 15.3 inches diagonally (actual viewable area is less). Testing conducted by Apple in January 2025 using preproduction 13-inch and 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, as well as production 1.2GHz quad-core Intel Core i7-based MacBook Air systems with Intel Iris Plus Graphics and 16GB of RAM, all configured with 2TB SSD. Tested using Super Resolution with Pixelmator Pro 3.6.14 and a 4.4MB image. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 13-inch and 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, as well as production MacBook Air systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, all configured with 2TB SSD. Adobe Photoshop 2025 26.2.0 tested using the following filters and functions: radial blur, content aware scale, diffuse, find edges, and blur more. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 13-inch MacBook Air systems with Apple M4, 10-core CPU, and 8-core GPU, and preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, and 10-core GPU, all configured with 16GB of RAM and 256GB SSD. Tested with Apple 70W USB-C Power Adapter (Model A2743) with USB-C to MagSafe 3 Cable (Model A2363). Fast-charge testing conducted with drained MacBook Air units. Times measured from the beginning of wake from hibernate, or from the appearance of the Apple logo as the unit started up. Charge time varies with settings and environmental factors; actual results will vary. Testing conducted by Apple in January 2025 using preproduction 13-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 13-inch MacBook Air systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production MacBook Air systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.2GHz quad-core Intel Core i7-based MacBook Air systems with Intel Iris Plus Graphics and 16GB of RAM, all configured with 2TB SSD. Tested using Super Resolution with Pixelmator Pro 3.6.14 and a 4.4MB image. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 13-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 13-inch MacBook Air systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production MacBook Air systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.2GHz quad-core Intel Core i7-based MacBook Air systems with Intel Iris Plus Graphics and 16GB of RAM, all configured with 2TB SSD. Tested with a selection of tasks using Microsoft Excel v16.93.1. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 13-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 13-inch MacBook Air systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, and production MacBook Air systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, all configured with 2TB SSD. Death Stranding Director’s Cut v1.004 FPS performance tested at 1920x1080 resolution with Very High quality preset and FPS limit set to 240. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 13-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 13-inch MacBook Air systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production MacBook Air systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.2GHz quad-core Intel Core i7-based MacBook Air systems with Intel Iris Plus Graphics and 16GB of RAM, all configured with 2TB SSD. Adobe Photoshop 2025 26.2.0 tested using the following filters and functions: radial blur, content aware scale, diffuse, find edges, and blur more. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 13-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 13-inch MacBook Air systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production MacBook Air systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.2GHz quad-core Intel Core i7-based MacBook Air systems with Intel Iris Plus Graphics and 16GB of RAM, all configured with 2TB SSD. Adobe Premiere Pro 2025 25.1.0 tested with Scene Edit Detection using a 2-minute and 19-second project with Apple ProRes 422 HQ media, at 1920x1080 resolution and 23.98 frames per second. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 15-inch MacBook Air systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production MacBook Air systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.2GHz quad-core Intel Core i7-based MacBook Air systems with Intel Iris Plus Graphics and 16GB of RAM, all configured with 2TB SSD. Tested using Super Resolution with Pixelmator Pro 3.6.14 and a 4.4MB image. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 15-inch MacBook Air systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production MacBook Air systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.2GHz quad-core Intel Core i7-based MacBook Air systems with Intel Iris Plus Graphics and 16GB of RAM, all configured with 2TB SSD. Tested with a selection of tasks using Microsoft Excel v16.93.1. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 15-inch MacBook Air systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, and production MacBook Air systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, all configured with 2TB SSD. Death Stranding Director’s Cut v1.004 FPS performance tested at 1920x1080 resolution with Very High quality preset and FPS limit set to 240. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 15-inch MacBook Air systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production MacBook Air systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.2GHz quad-core Intel Core i7-based MacBook Air systems with Intel Iris Plus Graphics and 16GB of RAM, all configured with 2TB SSD. Adobe Photoshop 2025 26.2.0 tested using the following filters and functions: radial blur, content aware scale, diffuse, find edges, and blur more. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 15-inch MacBook Air systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production MacBook Air systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.2GHz quad-core Intel Core i7-based MacBook Air systems with Intel Iris Plus Graphics and 16GB of RAM, all configured with 2TB SSD. Adobe Premiere Pro 2025 25.1.0 tested with Scene Edit Detection using a 2-minute and 19-second project with Apple ProRes 422 HQ media, at 1920x1080 resolution and 23.98 frames per second. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, 16GB of RAM, and 256GB SSD, as well as production Intel Core Ultra 7 200V Series-based PC systems with Intel Arc Graphics, 16GB of RAM, 1TB SSD, and the latest version of Windows 11 available at the time of testing. Adobe Photoshop 2025 26.3.0 tested using the super zoom filter at 2x zoom on a 7.1MB image. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, 16GB of RAM, and 256GB SSD, as well as production Intel Core Ultra 7 200V Series-based PC systems with Intel Arc Graphics, 16GB of RAM, 1TB SSD, and the latest version of Windows 11 available at the time of testing. Open source project built on macOS with Xcode 16.2 with Apple Clang 16.0.0; open source project built on Windows with Clang 18.1.8. Tested with equivalent display brightness settings for all units. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, 16GB of RAM, and 256GB SSD, as well as production Intel Core Ultra 7 200V Series-based PC systems with Intel Arc Graphics, 16GB of RAM, 1TB SSD, and the latest version of Windows 11 available at the time of testing. Tested with Affinity Photo 2 v2.5.7 using the built-in benchmark version 25000. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, 16GB of RAM, and 256GB SSD, as well as production Intel Core Ultra 7 200V Series-based PC systems with Intel Arc Graphics, 16GB of RAM, 1TB SSD, and the latest version of Windows 11 available at the time of testing. Speedometer 3.0 performance benchmark tested with prerelease Safari 18.3 on macOS Sequoia, and both Chrome 132.0.6834.162 and Edge 132.0.2957.140 on Windows 11 Pro, with WPA2 Wi-Fi network connection. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Testing conducted by Apple in January 2025 using preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, 10-core GPU, 16GB of RAM, and 256GB SSD, as well as production Intel Core Ultra 7 200V Series-based PC systems with Intel Arc Graphics, 16GB of RAM, 1TB SSD, and the latest version of Windows 11 available at the time of testing. Adobe Premiere Pro 2025 25.1.0 tested with Scene Edit Detection using a 3-minute and 27-second project with H.264 media at 3840x2160 resolution and 30 frames per second. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air. Available on Mac computers with Apple silicon and Intel-based Mac computers with a T2 Security Chip. Requires that your iPhone and Mac are signed in with the same Apple Account using two-factor authentication, your iPhone and Mac are near each other and have Bluetooth and Wi-Fi turned on, and your Mac is not using AirPlay or Sidecar. Some iPhone features (e.g., camera and microphone) are not compatible with iPhone Mirroring. SMS requires an iPhone or iPad with iOS 8.1 or later or iPadOS. iPhone calls require an iPhone with iOS 8 or later. Speeds are based on theoretical throughput and may vary. Wi‑Fi 6E available in countries and regions where supported. Compared with 1.1GHz dual-core Intel Core i3-based MacBook Air. Testing conducted by Apple in February 2020 using preproduction 1.1GHz dual-core Intel Core i3-based MacBook Air systems with 8GB of RAM and 256GB SSD. The iTunes movie playback test measures battery life by playing back HD 1080p content. Testing conducted by Apple in January 2025 using preproduction 13-inch MacBook Air systems with Apple M4, 10-core CPU, and 8-core GPU, and preproduction 15-inch MacBook Air systems with Apple M4, 10-core CPU, and 10-core GPU, all configured with 16GB of RAM and 256GB SSD. Video streaming battery life tested with 1080p content. Equivalent display brightness settings used for all units. Battery life varies by use and configuration. See apple.com/batteries for more information. Trade-in values will vary based on the condition, year, and configuration of your eligible trade-in device. Not all devices are eligible for credit. You must be at least the age of majority to be eligible to trade in for credit or for an Apple Gift Card. Trade-in value may be applied toward qualifying new device purchase, or added to an Apple Gift Card. Actual value awarded is based on receipt of a qualifying device matching the description provided when estimate was made. Sales tax may be assessed on full value of a new device purchase. In-store trade-in requires presentation of a valid photo ID (local law may require saving this information). Offer may not be available in all stores, and may vary between in-store and online trade-in. Some stores may have additional requirements. Apple or its trade-in partners reserve the right to refuse, cancel, or limit quantity of any trade-in transaction for any reason. More details are available from Apple’s trade-in partner for trade-in and recycling of eligible devices. Restrictions and limitations may apply. Screen size is measured diagonally. The displays on the 13-inch and 15-inch MacBook Air and the 14-inch and 16-inch MacBook Pro have rounded corners at the top. When measured as a standard rectangular shape, the screens are 13.6 inches, 15.3 inches, 14.2 inches, and 16.2 inches diagonally (actual viewable area is less). 1GB = 1 billion bytes and 1TB = 1 trillion bytes; actual formatted capacity less. Testing conducted by Apple August through October 2024 using preproduction 16-inch MacBook Pro systems with Apple M4 Pro, 14-core CPU, 20-core GPU, 48GB of RAM, and 512GB SSD. Wireless web battery life tested by browsing 25 popular websites while connected to Wi-Fi. Video streaming battery life tested with 1080p content in Safari while connected to Wi-Fi. All systems tested with display brightness set to 8 clicks from bottom and keyboard backlight off. Battery life varies by use and configuration. See apple.com/batteries for more information. † Apple Card Monthly Installments (ACMI) is a 0% APR payment option that is only available if you select it at checkout in the U.S. for eligible products purchased at Apple Store locations, apple.com , the Apple Store app, or by calling 1‑800‑MY‑APPLE, and is subject to credit approval and credit limit. See here for more information about eligible products. Existing customers: See your Customer Agreement for your variable APR. As of January 1, 2026, the variable APR on new Apple Card accounts ranges from 17.49% to 27.74%. You must elect to use ACMI at checkout. If you buy an ACMI‑eligible product with a one-time payment on Apple Card at checkout, that purchase is subject to your Apple Card’s variable APR, not the ACMI 0% APR. Taxes and shipping on items purchased using ACMI are subject to your Apple Card’s variable APR, not the ACMI 0% APR. In order to buy an iPhone with ACMI, you must select one of the following carriers (prepaid carrier plans are not supported): AT&T, Boost Mobile, T‑Mobile, or Verizon. An iPhone purchased with ACMI is always unlocked, so you can switch carriers at any time, subject to your carrier’s terms. ACMI is not available for purchases made at the following special storefronts or when using these discounts in-store at Apple: Apple Employee Purchase Plan; participating corporate Employee Purchase Programs; Apple at Work for small businesses; Government and Veterans and Military Purchase Programs; or on refurbished devices. The last month’s payment for each product will be the product’s purchase price, less all other payments at the monthly payment amount. ACMI is subject to change at any time for any reason, including but not limited to installment term lengths and eligible products. See the Apple Card Customer Agreement for more information about ACMI. To access and use all Apple Card features and products available only to Apple Card users, you must add Apple Card to Wallet on an iPhone or iPad that supports and has the latest version of iOS or iPadOS. Apple Card is subject to credit approval, available only for qualifying applicants in the United States, and issued by Goldman Sachs Bank USA, Salt Lake City Branch. Apple Payments Services LLC, a subsidiary of Apple Inc., is a service provider of Goldman Sachs Bank USA for Apple Card and Savings accounts. Neither Apple Inc. nor Apple Payments Services LLC is a bank. All communications from Apple and Goldman Sachs Bank USA about Apple Card (including transactional and marketing communications) and customer service support are available in English. Certain communications about Apple Card can be viewed in another language depending on your device language settings. If you reside in the U.S. Virgin Islands, American Samoa, Guam, Northern Mariana Islands, or U.S. Minor Outlying Islands, please call Goldman Sachs at 877-255-5923 with questions about Apple Card. iMovie, GarageBand, Pages, Numbers, and Keynote are available on the Mac App Store. Downloading apps requires an Apple Account and a device that is compatible with the OS version required for each app. Software and content may be sold separately. Title availability is subject to change.  Apple Mac MacBook Air Shop and Learn Shop and Learn Store Mac iPad iPhone Watch Vision AirPods TV & Home AirTag Accessories Gift Cards Apple Wallet Apple Wallet Wallet Apple Card Apple Pay Apple Cash Account Account Manage Your Apple Account Apple Store Account iCloud.com Entertainment Entertainment Apple One Apple TV Apple Music Apple Arcade Apple Fitness+ Apple News+ Apple Podcasts Apple Books App Store Apple Store Apple Store Find a Store Genius Bar Today at Apple Group Reservations Apple Camp Apple Store App Certified Refurbished Apple Trade In Financing Carrier Deals at Apple Order Status Shopping Help For Business For Business Apple and Business Shop for Business For Education For Education Apple and Education Shop for K-12 Shop for College For Healthcare For Healthcare Apple and Healthcare For Government For Government Apple and Government Shop for Veterans and Military Shop for State and Local Employees Shop for Federal Employees Apple Values Apple Values Accessibility Education Environment Inclusion and Diversity Privacy Racial Equity and Justice Supply Chain Innovation About Apple About Apple Newsroom Apple Leadership Career Opportunities Investors Ethics & Compliance Events Contact Apple More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE (1-800-692-7753). United States Copyright © 2026 Apple Inc. All rights reserved. Privacy Policy Terms of Use Sales and Refunds Legal Site Map"
+}

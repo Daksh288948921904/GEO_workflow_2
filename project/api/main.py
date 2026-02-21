@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-
+import uvicorn
 import json
 import os
 from datetime import datetime
@@ -173,3 +173,5 @@ def geo_recommendation(request: ScoreRequest):
     "readiness_band":   llm_context.get("ai_visibility_summary", {}).get("readiness_band")
 }
 
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8080, timeout_keep_alive=120)
