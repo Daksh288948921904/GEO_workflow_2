@@ -1,0 +1,403 @@
+<div align="center">
+
+```
+ ██████╗ ███████╗███╗   ██╗██╗   ██╗
+██╔════╝ ██╔════╝████╗  ██║╚██╗ ██╔╝
+██║  ███╗█████╗  ██╔██╗ ██║ ╚████╔╝ 
+██║   ██║██╔══╝  ██║╚██╗██║  ╚██╔╝  
+╚██████╔╝███████╗██║ ╚████║   ██║   
+ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   
+```
+
+**GEO Intelligence Engine**
+
+*Make your product pages visible to AI. Before your competitors do.*
+
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
+[![LangGraph](https://img.shields.io/badge/LangGraph-Multi--Agent-FF6B35?style=flat-square)](https://langchain-ai.github.io/langgraph)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-412991?style=flat-square&logo=openai&logoColor=white)](https://openai.com)
+[![License](https://img.shields.io/badge/License-MIT-00f5c4?style=flat-square)](LICENSE)
+
+[Live Demo](#) · [Report Bug](#) · [Request Feature](#)
+
+</div>
+
+---
+
+## What is GENY?
+
+ChatGPT, Perplexity, and Google SGE now answer product questions directly — without sending users to your page. If your product page isn't structured for AI, **you are invisible**.
+
+**GENY** crawls any product page, scores it across 5 AI readiness dimensions, and runs a 4-agent AI pipeline that tells you exactly what HTML, schema, and content changes to make — with copy-paste fixes.
+
+```
+Your product URL  →  GENY crawls it  →  Scores AI visibility  →  4 agents analyze it  →  Executive report with exact fixes
+```
+
+---
+
+## The Problem GENY Solves
+
+| What users ask AI | What happens without GEO | What happens with GENY |
+|---|---|---|
+| "Best running shoes under ₹5000?" | AI ignores your page, cites competitor | Your page gets cited |
+| "Does this bookcase fit in 80cm space?" | AI can't extract your specs | AI reads your specs table directly |
+| "Is this product warrantied?" | No warranty schema → not cited | JSON-LD warranty field → cited |
+| "Where can I buy X brand tank top?" | Missing entity signals → invisible | GTIN + brand schema → knowledge graph |
+
+---
+
+## Demo
+
+<div align="center">
+
+| Landing | Score Screen | GEO Report |
+|---------|-------------|------------|
+| GENY hero with URL input | Animated arc + 5 dimension bars | 4-card markdown report with tables |
+
+</div>
+
+---
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                        GENY Frontend                         │
+│                    React · localhost:3000                     │
+│                                                              │
+│  Input → Crawling → Score → GEO Loading → GEO Report        │
+│          (7 steps)  (arc)   (radar + agents)  (4 cards)      │
+└────────────────────┬────────────────────────────────────────┘
+                     │ HTTP (fetch)
+                     ▼
+┌─────────────────────────────────────────────────────────────┐
+│                      GENY Backend                            │
+│                   FastAPI · port 8000                        │
+│                                                              │
+│  POST /crawl_product  →  ProductCrawler                      │
+│  POST /geo_context    →  AIScoringEngine + LLMContextBuilder │
+│  POST /geo_recommendation → LangGraph 4-Agent Pipeline       │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+          ┌──────────┴──────────┐
+          ▼                     ▼
+   data/*.json          OpenAI GPT-4o-mini
+   (crawl + context      (4 agent calls
+    saved locally)        per report)
+```
+
+---
+
+## 4-Agent AI Pipeline
+
+GENY uses a **LangGraph StateGraph** where each agent receives the full structured context and builds on the previous agent's output.
+
+```
+llm_context dict
+      │
+      ▼
+┌─────────────────┐
+│  Agent 1        │  ← System: "Senior AI SEO technical auditor"
+│  Technical      │  → Exact HTML/JSON-LD snippets for every failing signal
+│  Auditor        │  → Copy-paste fixes for canonical, hreflang, schema
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Agent 2        │  ← System: "World-class GEO content strategist"  
+│  Content        │  → 6 real FAQ Q&As with JSON-LD schema block
+│  Strategist     │  → Missing content sections with actual text to add
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Agent 3        │  ← System: "Senior AI visibility consultant"
+│  Prioritizer    │  → Priority table: Quick Wins vs Structural
+│                 │  → Score projection: current → after wins → after all
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Agent 4        │  ← System: "Strategic AI optimization advisor (CMO audience)"
+│  Report         │  → Executive summary referencing exact scores
+│  Builder        │  → What happens if you fix nothing
+└─────────────────┘
+         │
+         ▼
+  { technical_analysis, content_analysis,
+    prioritized_plan, executive_summary }
+```
+
+---
+
+## Scoring System
+
+GENY scores pages out of **100 points** across 5 dimensions:
+
+| Dimension | Max | What it measures |
+|-----------|-----|-----------------|
+| **Schema Markup** | 20 | JSON-LD Product schema, price, brand, availability, ratings |
+| **Entity Clarity** | 15 | Product name quality, brand, SKU, category, GTIN |
+| **Content Depth** | 25 | Word count, headings, features, specifications, FAQ |
+| **Trust Signals** | 20 | Return policy, warranty, shipping, HTTPS, reviews, contact |
+| **Extractability** | 20 | Canonical URL, meta tags, specs table, hreflang, heading hierarchy |
+
+**Readiness Bands:**
+```
+85–100  Excellent   ██████████  AI engines will cite this page
+70–84   Good        ████████░░  Minor fixes needed
+50–69   Fair        █████░░░░░  Significant gaps — losing citations
+30–49   Poor        ███░░░░░░░  Major structural issues
+0–29    Critical    █░░░░░░░░░  Essentially invisible to AI
+```
+
+---
+
+## Project Structure
+
+```
+geny/
+│
+├── project/                    # Backend
+│   ├── crawler.py              # ProductCrawler — scrapes pages
+│   ├── scoring.py              # AIScoringEngine — 100pt scoring
+│   ├── llm_context.py          # LLMContextBuilder — structured context
+│   ├── geo.py                  # LangGraph 4-agent pipeline
+│   ├── main.py                 # FastAPI app — 4 endpoints
+│   ├── data/                   # Saved crawl + context JSON files
+│   ├── requirements.txt
+│   ├── Procfile                # For Railway deployment
+│   └── .env                    # OPENAI_API_KEY (never commit)
+│
+└── frontend/                   # React frontend
+    ├── src/
+    │   ├── GeoOptimizer.jsx    # Entire frontend — single component
+    │   ├── index.js            # React entry point
+    │   └── App.js              # Mounts GeoOptimizer
+    ├── public/
+    │   └── index.html
+    └── package.json
+```
+
+---
+
+## Quick Start
+
+### Prerequisites
+- Python 3.10+
+- Node.js 18+
+- OpenAI API key
+
+### 1. Clone & Setup Backend
+
+```bash
+git clone https://github.com/daksh-lgtm/GEO_workflow.git
+cd GEO_workflow/project
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Create .env file
+echo "OPENAI_API_KEY=sk-your-key-here" > .env
+
+# Create data folder
+mkdir -p data
+
+# Run backend
+uvicorn main:app --reload --port 8000
+```
+
+Backend is live at `http://localhost:8000`  
+Swagger docs at `http://localhost:8000/docs`
+
+### 2. Setup Frontend
+
+```bash
+cd ../frontend
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm start
+```
+
+Frontend is live at `http://localhost:3000`
+
+### 3. Analyze a Product
+
+1. Open `http://localhost:3000`
+2. Paste any product URL (Amazon, Flipkart, Gymshark, IKEA...)
+3. Click **Analyze** — GENY crawls + scores in ~10s
+4. Review the AI Visibility Score (arc gauge + 5 bars)
+5. Click **GEO Optimize Now** — 4 agents run in ~45–90s
+6. Get your full report with exact copy-paste fixes
+
+---
+
+## API Reference
+
+### `POST /crawl_product`
+Crawls a product page and saves raw data.
+
+```json
+// Request
+{ "url": "https://www.gymshark.com/products/power-cut-off-tank" }
+
+// Response
+{
+  "message": "Product crawled successfully",
+  "saved_to": "data/gymshark-com-products-...-20250221.json",
+  "product_name": "Power Cut Off Tank",
+  "url": "https://www.gymshark.com/products/power-cut-off-tank"
+}
+```
+
+### `POST /geo_context`
+Scores the crawled page and builds LLM context.
+
+```json
+// Request
+{ "filename": "gymshark-com-products-...-20250221.json" }
+
+// Response
+{
+  "ai_readiness_pct": 58.0,
+  "readiness_band": "Fair — Needs Improvement",
+  "llm_context": {
+    "ai_visibility_summary": { "final_score": 58, "max_possible": 100 },
+    "section_scores": { "schema": 18, "entity": 9, "content": 14, "trust": 11, "extractability": 6 },
+    "weak_areas": { "entity": ["category","gtin"], "extractability": ["canonical_url","hreflang"] },
+    "priority_order": ["extractability", "entity", "content", "trust", "schema"]
+  }
+}
+```
+
+### `POST /geo_recommendation`
+Runs the 4-agent LangGraph pipeline.
+
+```json
+// Request
+{ "filename": "gymshark-com-products-...-20250221.json" }
+
+// Response
+{
+  "executive_summary": "The Gymshark Power Cut Off Tank scores 58/100...",
+  "technical_analysis": "## Missing Canonical URL\n**Why it matters...",
+  "content_analysis":   "### Missing Specifications Table\n...",
+  "prioritized_plan":   "### Quick Wins\n| # | Change | Score gain |...",
+  "ai_readiness_pct": 58.0,
+  "readiness_band": "Fair — Needs Improvement"
+}
+```
+
+---
+
+## Frontend Phases
+
+The React app has 5 phases with distinct UI for each:
+
+```
+input        →  URL entry, GENY hero, example pills
+crawling     →  7-step progress indicator, SpinLoader
+score        →  ScoreArc gauge + 5 ScoreBars + breakdown cards + GEO CTA
+geo_loading  →  Radar animation + 4-agent pipeline + live data stream + insight carousel
+geo_done     →  Product banner + 4 GeoCards (Executive/Technical/Content/Priority)
+```
+
+---
+
+## Environment Variables
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `OPENAI_API_KEY` | ✅ Yes | Your OpenAI API key |
+| `REACT_APP_API_URL` | ✅ Production | Backend URL for deployed frontend |
+
+**Never commit your `.env` file.** GitHub will block the push and your key is compromised.
+
+---
+
+## Deployment
+
+### Backend → Railway
+
+```bash
+# In project/ root — make sure these exist:
+# requirements.txt  (pip freeze > requirements.txt)
+# Procfile          (web: uvicorn main:app --host 0.0.0.0 --port $PORT)
+
+# Push to GitHub, then:
+# Railway → New Project → Deploy from GitHub → Add OPENAI_API_KEY variable
+```
+
+### Frontend → Vercel
+
+```bash
+cd frontend
+vercel
+
+# In Vercel dashboard → Settings → Environment Variables:
+# REACT_APP_API_URL = https://your-app.railway.app
+```
+
+Update CORS in `main.py` to include your Vercel URL:
+```python
+allow_origins=[
+    "http://localhost:3000",
+    "https://your-app.vercel.app",
+    "https://*.vercel.app"
+]
+```
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 18, inline CSS, SVG animations |
+| Backend | FastAPI, Python 3.10+ |
+| AI Pipeline | LangGraph, OpenAI GPT-4o-mini |
+| Web Scraping | requests, BeautifulSoup4, lxml |
+| Schema Parsing | extruct, json-ld |
+| Deployment | Vercel (frontend) + Railway (backend) |
+| Fonts | Syne · Space Mono · DM Sans (Google Fonts) |
+
+---
+
+## Roadmap
+
+- [ ] Competitor comparison — score your page vs top 3 competitors side by side
+- [ ] Bulk URL analysis — upload a CSV of product URLs
+- [ ] Auto-fix generator — output a ready-to-deploy HTML patch file
+- [ ] Score history — track improvements over time per URL
+- [ ] Shopify / WooCommerce plugin
+- [ ] Perplexity & ChatGPT citation tracking
+- [ ] Webhook support — trigger re-analysis on product updates
+- [ ] White-label reports — export as PDF for clients
+
+---
+
+## Contributing
+
+1. Fork the repo
+2. Create your branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+<div align="center">
+
+Built with ⚡ by **Daksh**
+
+*If GENY helped you, give it a star ★*
+
+**[⬆ Back to top](#)**
+
+</div>
