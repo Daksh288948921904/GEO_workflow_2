@@ -1,22 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "project/api/main.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "50mb" }
-      },
-      {
-        "src": "frontend/package.json",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "build" }
-      }
-    ],
-    "routes": [
-      { "src": "/crawl_product",     "dest": "project/api/main.py" },
-      { "src": "/score_product",     "dest": "project/api/main.py" },
-      { "src": "/geo_context",       "dest": "project/api/main.py" },
-      { "src": "/geo_recommendation","dest": "project/api/main.py" },
-      { "src": "/(.*)",              "dest": "/index.html" }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
