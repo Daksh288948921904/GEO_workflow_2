@@ -1,0 +1,904 @@
+{
+  "page_info": {
+    "url": "https://www.ikea.com/us/en/p/billy-bookcase-white-20522046/",
+    "final_url": "https://www.ikea.com/us/en/p/billy-bookcase-white-20522046/",
+    "status_code": 200,
+    "canonical_url": "https://www.ikea.com/us/en/p/billy-bookcase-white-20522046/",
+    "title": "BILLY bookcase, white, 311/2x11x791/2\"  - IKEA",
+    "meta_description": "BILLY bookcase, white, 311/2x11x791/2\" BILLY bookcase is a beloved icon that never goes out of style. Thanks to its versatility you can use it in many different ways at home – regardless of whether you store books or everyday items in it. Adjustable shelves can be arranged according to your needs.",
+    "https": true,
+    "load_time_ms": 2543,
+    "page_type": "PRODUCT",
+    "crawl_timestamp": "2026-02-21T07:44:08.306857"
+  },
+  "product": {
+    "name": "BILLY Bookcase - white 31 1/2x11x79 1/2 \"",
+    "brand": "IKEA",
+    "sku": "205.220.46",
+    "price": "79",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "rating": "4.6",
+    "review_count": "2606"
+  },
+  "content": {
+    "headings": [
+      {
+        "level": "h1",
+        "text": "BILLYBookcase, white,31 1/2x11x79 1/2 \""
+      },
+      {
+        "level": "h2",
+        "text": "Design it yourself"
+      },
+      {
+        "level": "h2",
+        "text": "How to get it"
+      },
+      {
+        "level": "h2",
+        "text": "More ways to pay"
+      },
+      {
+        "level": "h2",
+        "text": "Product details"
+      },
+      {
+        "level": "h2",
+        "text": "Measurements"
+      },
+      {
+        "level": "h2",
+        "text": "Reviews"
+      },
+      {
+        "level": "h2",
+        "text": "Customer reviews"
+      },
+      {
+        "level": "h2",
+        "text": "Accessories for BILLY"
+      },
+      {
+        "level": "h2",
+        "text": "As seen on Instagram"
+      },
+      {
+        "level": "h2",
+        "text": "Related products"
+      },
+      {
+        "level": "h2",
+        "text": "Recommended for you"
+      },
+      {
+        "level": "h2",
+        "text": "Get the look"
+      },
+      {
+        "level": "h2",
+        "text": "More from the BILLY bookcases"
+      },
+      {
+        "level": "h2",
+        "text": "Footer"
+      },
+      {
+        "level": "h3",
+        "text": "Good to know"
+      },
+      {
+        "level": "h3",
+        "text": "Materials and care"
+      },
+      {
+        "level": "h3",
+        "text": "Material"
+      },
+      {
+        "level": "h3",
+        "text": "Care"
+      },
+      {
+        "level": "h3",
+        "text": "Safety and compliance"
+      },
+      {
+        "level": "h3",
+        "text": "Assembly and documents"
+      },
+      {
+        "level": "h3",
+        "text": "Assembly instructions"
+      },
+      {
+        "level": "h3",
+        "text": "Advice and care instructions"
+      },
+      {
+        "level": "h3",
+        "text": "Packaging"
+      },
+      {
+        "level": "h3",
+        "text": "Join IKEA Family"
+      },
+      {
+        "level": "h3",
+        "text": "Join IKEA Business Network"
+      },
+      {
+        "level": "h3",
+        "text": "Help"
+      },
+      {
+        "level": "h3",
+        "text": "Shop & Learn"
+      },
+      {
+        "level": "h3",
+        "text": "About IKEA"
+      },
+      {
+        "level": "h3",
+        "text": "Legal"
+      },
+      {
+        "level": "h4",
+        "text": "BILLY"
+      }
+    ],
+    "features": [
+      "Product details",
+      "Measurements",
+      "Questions and answers(65)",
+      "Width:31 1/2 \"",
+      "Height:79 1/2 \"",
+      "Max load/shelf:66 lb",
+      "Width:11 ¾ \"",
+      "Length:81 ¼ \"",
+      "Weight:87 lb 10 oz",
+      "Package(s):1"
+    ],
+    "specifications": {},
+    "word_count": 1878
+  },
+  "schema_data": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Products",
+          "item": "https://www.ikea.com/us/en/cat/products-products/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Storage & organization",
+          "item": "https://www.ikea.com/us/en/cat/storage-organization-st001/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Shelving furniture",
+          "item": "https://www.ikea.com/us/en/cat/bookcases-shelving-units-st002/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Bookshelves & bookcases",
+          "item": "https://www.ikea.com/us/en/cat/bookcases-10382/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "2606"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "IKEA"
+      },
+      "category": "Bookshelves & bookcases",
+      "color": "white",
+      "depth": "11 \"",
+      "description": "BILLY Bookcase - white 31 1/2x11x79 1/2 \". Adjustable shelves can be arranged according to your needs. A simple unit can be enough storage for a limited space or the foundation for a larger storage solution if your needs change. 1 stationary shelf and 4 adjustable shelves included.",
+      "height": "79 1/2 \"",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.ikea.com/us/en/images/products/billy-bookcase-white__0625599_pe692385_s5.jpg",
+          "height": "2000px",
+          "width": "2000px"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.ikea.com/us/en/images/products/billy-bookcase-white__1237507_pe917999_s5.jpg",
+          "height": "2000px",
+          "width": "2000px"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.ikea.com/us/en/images/products/billy-bookcase-white__1424760_pe979354_s5.jpg",
+          "height": "2000px",
+          "width": "2000px"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.ikea.com/us/en/images/products/billy-bookcase-white__1237435_pe917974_s5.jpg",
+          "height": "2000px",
+          "width": "2000px"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.ikea.com/us/en/images/products/billy-bookcase-white__1237565_pe918022_s5.jpg",
+          "height": "2000px",
+          "width": "2000px"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.ikea.com/us/en/images/products/billy-bookcase-white__0723342_pe733920_s5.jpg",
+          "height": "2000px",
+          "width": "2000px"
+        }
+      ],
+      "material": "Wood (including board)",
+      "mpn": "205.220.46",
+      "name": "BILLY Bookcase - white 31 1/2x11x79 1/2 \"",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "price": "79",
+        "priceCurrency": "USD",
+        "seller": {
+          "@type": "Organization",
+          "name": "IKEA",
+          "url": "https://www.ikea.com/us/en/"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "US"
+          }
+        },
+        "url": "https://www.ikea.com/us/en/p/billy-bookcase-white-20522046/"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Jason"
+          },
+          "datePublished": "2026-02-19",
+          "name": "Super Easy Assembly - Perfect Bookcase!",
+          "reviewBody": "The BILLY bookcase is hands down one of the easiest pieces of furniture I have ever assembled. The instructions were crystal clear with simple step-by-step diagrams that made the entire process a breeze. All the parts were perfectly labeled and fit together seamlessly. I had the entire bookcase put together in under 30 minutes with just basic tools. The snap-on back panel design is a fantastic improvement that saves even more time. If you are new to furniture assembly or just want something hassle-free, the BILLY bookcase is the way to go. Highly recommended for its effortless assembly and great quality!",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Lauren"
+          },
+          "datePublished": "2026-02-16",
+          "name": "Nice feel, easy to assemble",
+          "reviewBody": "Definitely has a sleek feel, and the color looks good. Instructions were clear, and assembly took about 40 minutes. I actually bought two because of the price and the size. I wish it was a little easier to move the shelves, but I can’t complain otherwise",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 4
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Jason"
+          },
+          "datePublished": "2026-02-09",
+          "name": "Extremely Easy to Assemble!",
+          "reviewBody": "The BILLY bookcase was incredibly easy to assemble. The instructions were clear, and I was able to put it together quickly without any hassle. The new snap-on back panel design made the process even simpler, and I appreciate how sturdy and versatile the bookcase is. Highly recommended for anyone looking for a straightforward assembly experience.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Jason"
+          },
+          "datePublished": "2026-02-09",
+          "name": "Incredibly Easy to Assemble!",
+          "reviewBody": "The BILLY bookcase was surprisingly easy to put together. The instructions were clear and all parts fit perfectly. I was able to assemble it quickly and without any frustration, which is a huge plus for furniture assembly.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Jason"
+          },
+          "datePublished": "2026-02-08",
+          "name": "Incredibly Easy to Assemble!",
+          "reviewBody": "I was extremely impressed with how easy the BILLY bookcase was to put together. The instructions were clear, and I managed to assemble it quickly and without any frustration. The ease of assembly is a major selling point for this product.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Addison"
+          },
+          "datePublished": "2026-02-05",
+          "name": "Great",
+          "reviewBody": "Great bookcase. Easy to put together. Only issue is the backing bulges away from the shelves and let's papers slide down. Also, bulges are of course unsightly.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 4
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Bonnie"
+          },
+          "datePublished": "2026-01-31",
+          "name": "Love these!",
+          "reviewBody": "These bookcases worked perfectly to complete our wall on each side of our Murphy bed in a spare bedroom. With added 1/2 glass doors, they make the perfect storage and display space.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Denise"
+          },
+          "datePublished": "2026-01-30",
+          "name": "Easy to assemble and perfect for my needs",
+          "reviewBody": "The BILLY bookcase was incredibly easy to assemble. The instructions were clear, and I was able to put it together quickly without any hassle. The new snap-on back panel design made the process even simpler, and I appreciate how sturdy and versatile the bookcase is. Highly recommended for anyone looking for a straightforward assembly experience.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Jing"
+          },
+          "datePublished": "2026-01-29",
+          "name": "Good bookcase",
+          "reviewBody": "Best bookcase I purchased, easy to install.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Bryon"
+          },
+          "datePublished": "2026-01-27",
+          "name": "Great bookcase!",
+          "reviewBody": "Love the look and width of the bookcase",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Amanda"
+          },
+          "datePublished": "2026-01-27",
+          "name": "Great",
+          "reviewBody": "Bought to replace my old target bookcases and it was a breeze to put together and holds more of my books.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Eddie"
+          },
+          "datePublished": "2026-01-26",
+          "name": "Really Like These Bookcases",
+          "reviewBody": "Remodeled my office library. Due to the size I was able to mix in the smaller Billy with the larger bookcase combination. Worked out very well.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Nancy"
+          },
+          "datePublished": "2026-01-21",
+          "name": "Great shelf with slimeline, frees up floor space",
+          "reviewBody": "I have several Kallax units, great if you have bins, but if you have smaller items, books and binders, this is vastly superior. Tall with good capacity. Has freed up significant real estate! Great for home libraries and craft rooms.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Stacy"
+          },
+          "datePublished": "2026-01-20",
+          "name": "Great display case",
+          "reviewBody": "The Billy book shelf with the doors added makes the perfect display case.  My husband loves it.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Lee"
+          },
+          "datePublished": "2026-01-18",
+          "name": "Great bookcase",
+          "reviewBody": "This is a great bookcase for storage and for displaying and organizing your personal items. The price is right and the assembly is quick and straight forward. Great for housing vinyl records.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Cj"
+          },
+          "datePublished": "2026-01-17",
+          "name": "Great bookcase",
+          "reviewBody": "I bought these for my basement. I have a lot of books. They brighten an otherwise dark area. They are solid and easily hold hundreds of books. They are incredibly easy to put together.  But not easy to lift. 🤪",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Emily"
+          },
+          "datePublished": "2026-01-17",
+          "name": "Buyer Beware: Product Changed",
+          "reviewBody": "I loved my previous Billy bookcases and bought another after the new year. They changed the product! The backing board used to be seamless and now has two lines running vertically that are very obvious. Makes the product look cheap. They also changed the finish of the edges to a different texture and it just isn't the same. Kind of threw my project off and had to rethink placement because they do not look good next to the old versions. So sad with this update. I hope they take feedback and at least change back to the seamless backing style.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 2
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Marci"
+          },
+          "datePublished": "2026-01-15",
+          "name": "Disappointing Changes",
+          "reviewBody": "We have a billy bookcase purchased in 2024 and one purchased this year and the differences are really disappointing. \n\nThe facing/trim of the newer version came dented and scratched because they no longer use the plastic trim. I understand the desire for less plastic, but they just added more plastic by changing the way the backing is attached. \n\nThe back on the newer version is loose and the demarcation of the folds are clearly more visible when compared to the previous version. It looks cheap and is not the quality I have come to expect from IKEA.\n\nI have been using IKEA products for a long time, and previously they have been reliable for affordability and consistency. Unfortunately, there seems to be discrepancies in their quality control with a focus on profitability versus longevity of their furniture. I hope that IKEA will consider improving these things because the billy bookcase has long been a staple in many households.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 2
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Laura"
+          },
+          "datePublished": "2026-01-13",
+          "name": "Versatile and durable.",
+          "reviewBody": "I love the Billy Bookcases! I use them to display my LEGO builds and I have 1 at work for my books!",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "William"
+          },
+          "datePublished": "2026-01-10",
+          "name": "one of the bookcases had defected part",
+          "reviewBody": "One of the bookcases came with defected part",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 3
+          }
+        }
+      ],
+      "sku": "205.220.46",
+      "url": "https://www.ikea.com/us/en/p/billy-bookcase-white-20522046/",
+      "width": "31 1/2 \""
+    },
+    {
+      "@context": "http://schema.org/",
+      "@type": "3DModel",
+      "encoding": [
+        {
+          "@type": "MediaObject",
+          "contentUrl": "https://web-api.ikea.com/dimma/assets/1.2/20522046/PS01_S01_NV01/rqp3/glb_draco/856bc2c06b41e3dbf4176988ed50c3de-20522046_PS01_S01_NV01_RQP3_4.0.glb?cn=pip",
+          "encodingFormat": "model/gltf-binary"
+        },
+        {
+          "@type": "MediaObject",
+          "contentUrl": "https://web-api.ikea.com/dimma/assets/1.2/20522046/PS01_S01_NV01/rqp2/glb_draco/2c4c3bd922ebb45e9d7b5f8bc6528ef0-20522046_PS01_S01_NV01_RQP2_4.0.glb?cn=pip",
+          "encodingFormat": "model/gltf-binary"
+        },
+        {
+          "@type": "MediaObject",
+          "contentUrl": "https://web-api.ikea.com/dimma/assets/1.2/20522046/PS01_S01_NV01/rqp1/glb_draco/af923036034ecfc3f7285e37315e02d1-20522046_PS01_S01_NV01_RQP1_4.0.glb?cn=pip",
+          "encodingFormat": "model/gltf-binary"
+        },
+        {
+          "@type": "MediaObject",
+          "contentUrl": "https://web-api.ikea.com/dimma/assets/geomagical/20522046/PS01_S01_NV_01/simple/glb_draco/78d23739066043998d734250a3b91cfd-G-20522046-2e11633d9a48fbccb344d9d983d3bc2a808992db-simple+draco.glb?cn=pip",
+          "encodingFormat": "model/gltf-binary"
+        },
+        {
+          "@type": "MediaObject",
+          "contentUrl": "https://web-api.ikea.com/dimma/assets/1.2/20522046/PS01_S01_NV01/rqp3/glb/97ad64aa9b55a20679ab8aaca4675c39-20522046_PS01_S01_NV01_RQP3_4.0.glb?cn=pip",
+          "encodingFormat": "model/gltf-binary"
+        },
+        {
+          "@type": "MediaObject",
+          "contentUrl": "https://web-api.ikea.com/dimma/assets/1.2/20522046/PS01_S01_NV01/rqp2/glb/6806c9481f8ca9c49f0538561a55d133-20522046_PS01_S01_NV01_RQP2_4.0.glb?cn=pip",
+          "encodingFormat": "model/gltf-binary"
+        },
+        {
+          "@type": "MediaObject",
+          "contentUrl": "https://web-api.ikea.com/dimma/assets/1.2/20522046/PS01_S01_NV01/rqp1/glb/196febf355502843ee7c5a0cb4da9447-20522046_PS01_S01_NV01_RQP1_4.0.glb?cn=pip",
+          "encodingFormat": "model/gltf-binary"
+        },
+        {
+          "@type": "MediaObject",
+          "contentUrl": "https://web-api.ikea.com/dimma/assets/1.2/20522046/PS01_S01_NV01/rqp3/gltf/41b3692449df6607e024c8a53112e41c-20522046_PS01_S01_NV01_RQP3_4.0.gltf?cn=pip",
+          "encodingFormat": "model/gltf"
+        },
+        {
+          "@type": "MediaObject",
+          "contentUrl": "https://web-api.ikea.com/dimma/assets/1.2/20522046/PS01_S01_NV01/rqp2/gltf/dbc95940fab6d652af8a2131ec85f436-20522046_PS01_S01_NV01_RQP2_4.0.gltf?cn=pip",
+          "encodingFormat": "model/gltf"
+        },
+        {
+          "@type": "MediaObject",
+          "contentUrl": "https://web-api.ikea.com/dimma/assets/1.2/20522046/PS01_S01_NV01/rqp1/gltf/17f961cf7d4ad838414ef1e0206ec338-20522046_PS01_S01_NV01_RQP1_4.0.gltf?cn=pip",
+          "encodingFormat": "model/gltf"
+        }
+      ],
+      "image": "",
+      "name": "BILLY"
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/accessibility/",
+        "anchor_text": "Accessibility"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.ikea.com/us/en/cat/products-products/",
+        "anchor_text": "Products"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/rooms/",
+        "anchor_text": "Rooms"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/offers/",
+        "anchor_text": "Deals"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/ideas/",
+        "anchor_text": "Design & ideas"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/services/",
+        "anchor_text": "Services"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/profile/login/",
+        "anchor_text": "Hej! Log in or sign up"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/favorites/",
+        "anchor_text": "Favorites"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/shoppingcart/",
+        "anchor_text": "Shopping bag"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/shopping-at-ikea/remote-shopping/#2f124b90-6154-11ef-9a37-a3b1f3e9ccbf",
+        "anchor_text": "phoneNeed help shopping or planning? Call 1-888-888-4532 (8am - 11:59pm ET) for expert assistance."
+      },
+      {
+        "url": "https://www.ikea.com/us/en/cat/storage-organization-st001/",
+        "anchor_text": "Storage & organization"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/cat/bookcases-shelving-units-st002/",
+        "anchor_text": "Shelving furniture"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/cat/bookcases-10382/",
+        "anchor_text": "Bookshelves & bookcases"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/cat/billy-series-28102/",
+        "anchor_text": "More from the BILLY series"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/p/billy-bookcase-black-oak-effect-40477340/#content",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.ikea.com/us/en/p/billy-bookcase-brown-walnut-effect-50508652/#content",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.ikea.com/us/en/p/billy-bookcase-dark-brown-oak-effect-80492782/#content",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.ikea.com/us/en/p/billy-bookcase-oak-effect-10508932/#content",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.ikea.com/addon-app/storageone/billy/web/latest/us/en/?productId=20522046#20522046",
+        "anchor_text": "Design it yourselfDesign your own BILLY Bookcase"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/p/billy-bookcase-white-20522046/",
+        "anchor_text": "Join for free or log in"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/assembly_instructions/billy-bookcase-white__AA-2289108-3-100.pdf",
+        "anchor_text": "BILLY Bookcase205.220.46"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/manuals/billy-bookcase-white__AA-2180177-2-2.pdf",
+        "anchor_text": "BILLY Bookcase205.220.46"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/ikea-family/",
+        "anchor_text": "See more"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/profile/login",
+        "anchor_text": "Join or log in"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/ikea-business/network/",
+        "anchor_text": "See more"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/business-profile/register-network",
+        "anchor_text": "Join or log in"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/",
+        "anchor_text": "Customer service"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/faq/",
+        "anchor_text": "FAQ"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/track-manage-order/",
+        "anchor_text": "My orders"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/support/",
+        "anchor_text": "Contact Us"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/product-support/recalls/",
+        "anchor_text": "Product Recalls"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/returns-claims/",
+        "anchor_text": "Return Policy"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/returns-claims/guarantee/",
+        "anchor_text": "Warranties"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/create-a-better-ikea-experience-together-pub5465b2c0/",
+        "anchor_text": "Feedback"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/stores/",
+        "anchor_text": "Find a Location"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/ikea-business/",
+        "anchor_text": "IKEA for Business"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/planners/",
+        "anchor_text": "IKEA Planning Tools"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/catalogues/",
+        "anchor_text": "IKEA Brochures"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/gift-registry/",
+        "anchor_text": "IKEA Gift Registry"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/product-support/buying-guides/",
+        "anchor_text": "Buying guides"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/payment-options/",
+        "anchor_text": "Payment options"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/gift-cards-pub3d1efe50/",
+        "anchor_text": "Gift Cards"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/services/finance-options/ikea-credit-cards-pub9b4272b0/",
+        "anchor_text": "IKEA Credit Cards"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/services/finance-options/introducing-afterpay-pub5503e420/",
+        "anchor_text": "Cash App Afterpay"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/mobile-apps/",
+        "anchor_text": "Explore the New IKEA App"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/this-is-ikea/",
+        "anchor_text": "This is IKEA"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/newsroom/",
+        "anchor_text": "Newsroom"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/life-at-home/",
+        "anchor_text": "Life at Home"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/safety-at-home/",
+        "anchor_text": "Safety at Home"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/privacy-and-security-pub8a9dd8e1/",
+        "anchor_text": "Privacy & Security"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/privacy-policy/",
+        "anchor_text": "Privacy policy"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/terms-conditions/",
+        "anchor_text": "Terms and conditions"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/privacy-policy/ikea-smaland-privacy-notice-pubf7ed5e70/",
+        "anchor_text": "IKEA SMÅLAND Privacy notice"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/cookie-policy/",
+        "anchor_text": "Cookie policy"
+      },
+      {
+        "url": "https://www.ikea.com/us/en/customer-service/privacy-policy/#0bab4520-16a6-11ee-8ddc-edd1c826c198",
+        "anchor_text": "California Notice at Collection"
+      }
+    ],
+    "external": [
+      {
+        "url": "https://d.comenity.net/ikea/",
+        "anchor_text": "IKEA Credit Card Management"
+      },
+      {
+        "url": "https://seeacareerwithus.com/",
+        "anchor_text": "Careers"
+      },
+      {
+        "url": "https://ikeafoundation.org/",
+        "anchor_text": "IKEA Foundation"
+      },
+      {
+        "url": "https://info.ikea-usa.com/registration/",
+        "anchor_text": "IKEA Children’s Product Registration"
+      },
+      {
+        "url": "https://www.facebook.com/IKEAUSA",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.instagram.com/IKEAUSA/",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.pinterest.com/IKEAUSA/",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://x.com/IKEAUSA",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.youtube.com/user/IKEAUSA",
+        "anchor_text": ""
+      }
+    ]
+  },
+  "trust_signals": {
+    "has_return_policy": true,
+    "has_refund_policy": false,
+    "has_warranty_info": false,
+    "has_shipping_info": true,
+    "has_cancellation_policy": false,
+    "uses_https": true,
+    "mentions_secure_payment": true,
+    "has_cod_option": true,
+    "has_contact_page": true,
+    "has_about_page": false,
+    "mentions_phone": true,
+    "mentions_email": false,
+    "mentions_reviews": true,
+    "mentions_testimonials": false,
+    "official_store_claim": false
+  },
+  "clean_text": "BILLY bookcase, white, 311/2x11x791/2\" - IKEA Skip to main content Accessibility EN US English Enter ZIP code Select store Products Rooms Deals Design & ideas Services Clear the search input field Search Hej! Log in or sign up Hej! IK Hej {{firstName}}! Favorites Shopping bag phone Need help shopping or planning? Call 1-888-888-4532 (8am - 11:59pm ET) for expert assistance. Products Storage & organization Shelving furniture Bookshelves & bookcases BILLY Bookcase 6 BILLY images Skip images Image zoomed out, normal view Best seller Image zoomed out, normal view Image zoomed out, normal view Image zoomed out, normal view Image zoomed out, normal view Image zoomed out, normal view All media More from the BILLY series BILLY Bookcase, white, 31 1/2x11x79 1/2 \" $ 79 . 00 Price $ 79.00 (2606) | Q&A (65) Choose color White Design it yourself Design your own BILLY Bookcase How to get it Delivery Checking availability... Store Checking availability... Available services Collect 79 points with IKEA Family Join for free or log in | Explore what you can get It's OK to change your mind Return within 365 days for a full refund*. Learn more Low Price Guarantee Price drops? Get the difference back within 90 days with IKEA Family More ways to pay Checking payment options... BILLY bookcase is a beloved icon that never goes out of style. Thanks to its versatility you can use it in many different ways at home – regardless of whether you store books or everyday items in it. Article Number 205.220.46 Product details Measurements Questions and answers (65) Product details Adjustable shelves can be arranged according to your needs. A simple unit can be enough storage for a limited space or the foundation for a larger storage solution if your needs change. Designer Gillis Lundgren Article Number 205.220.46 Good to know Keep in mind that you need enough space between the top of the furniture and the ceiling to be able to anchor the product to the wall. 1 stationary shelf and 4 adjustable shelves included. May be used with doors; available in different colors and designs. May be completed with extra shelves to add storage space. Can be used with BILLY height extension unit in the same width for added storage vertically. Product is possible to recycle or use for energy recovery, if available in your community. Materials and care Material Main parts/ Side panel: Particleboard, Paper foil, Paper edging Plinth front: Particleboard, Paper foil Back: Fiberboard, Paint, Paper foil Care Wipe clean using a damp cloth and a mild cleaner. Wipe dry with a clean cloth. Safety and compliance WARNING! Tipping hazard – to reduce the risk of this furniture tipping over, it must be securely anchored. Use suitable screws and plugs for your home. If you are uncertain, seek professional advice. Assembly and documents Assembly instructions BILLY Bookcase 205.220.46 Advice and care instructions BILLY Bookcase 205.220.46 Measurements Width: 31 1/2 \" Depth: 11 \" Height: 79 1/2 \" Max load/shelf: 66 lb Packaging BILLY Bookcase Article Number 205.220.46 Width: 11 ¾ \" Height: 5 \" Length: 81 ¼ \" Weight: 87 lb 10 oz Package(s): 1 Reviews Super Easy Assembly - Perfect Bookcase! Jason The BILLY bookcase is hands down one of the easiest pieces of furniture I have ever assembled. The instructions were crystal clear with simple step-by-step diagrams that made the entire process a breeze. All the parts were perfectly labeled and fit together seamlessly. I had the entire bookcase put together in under 30 minutes with just basic tools. The snap-on back panel design is a fantastic improvement that saves even more time. If you are new to furniture assembly or just want something hassle-free, the BILLY bookcase is the way to go. Highly recommended for its effortless assembly and great quality! 5 Nice feel, easy to assemble Lauren Definitely has a sleek feel, and the color looks good. Instructions were clear, and assembly took about 40 minutes. I actually bought two because of the price and the size. I wish it was a little easier to move the shelves, but I can’t complain otherwise 4 Extremely Easy to Assemble! Jason The BILLY bookcase was incredibly easy to assemble. The instructions were clear, and I was able to put it together quickly without any hassle. The new snap-on back panel design made the process even simpler, and I appreciate how sturdy and versatile the bookcase is. Highly recommended for anyone looking for a straightforward assembly experience. 5 Incredibly Easy to Assemble! Jason The BILLY bookcase was surprisingly easy to put together. The instructions were clear and all parts fit perfectly. I was able to assemble it quickly and without any frustration, which is a huge plus for furniture assembly. 5 Incredibly Easy to Assemble! Jason I was extremely impressed with how easy the BILLY bookcase was to put together. The instructions were clear, and I managed to assemble it quickly and without any frustration. The ease of assembly is a major selling point for this product. 5 Great Addison Great bookcase. Easy to put together. Only issue is the backing bulges away from the shelves and let's papers slide down. Also, bulges are of course unsightly. 4 Love these! Bonnie These bookcases worked perfectly to complete our wall on each side of our Murphy bed in a spare bedroom. With added 1/2 glass doors, they make the perfect storage and display space. 5 Easy to assemble and perfect for my needs Denise The BILLY bookcase was incredibly easy to assemble. The instructions were clear, and I was able to put it together quickly without any hassle. The new snap-on back panel design made the process even simpler, and I appreciate how sturdy and versatile the bookcase is. Highly recommended for anyone looking for a straightforward assembly experience. 5 Good bookcase Jing Best bookcase I purchased, easy to install. 5 Great bookcase! Bryon Love the look and width of the bookcase 5 Great Amanda Bought to replace my old target bookcases and it was a breeze to put together and holds more of my books. 5 Really Like These Bookcases Eddie Remodeled my office library. Due to the size I was able to mix in the smaller Billy with the larger bookcase combination. Worked out very well. 5 Great shelf with slimeline, frees up floor space Nancy I have several Kallax units, great if you have bins, but if you have smaller items, books and binders, this is vastly superior. Tall with good capacity. Has freed up significant real estate! Great for home libraries and craft rooms. 5 Great display case Stacy The Billy book shelf with the doors added makes the perfect display case. My husband loves it. 5 Great bookcase Lee This is a great bookcase for storage and for displaying and organizing your personal items. The price is right and the assembly is quick and straight forward. Great for housing vinyl records. 5 Great bookcase Cj I bought these for my basement. I have a lot of books. They brighten an otherwise dark area. They are solid and easily hold hundreds of books. They are incredibly easy to put together. But not easy to lift. 🤪 5 Buyer Beware: Product Changed Emily I loved my previous Billy bookcases and bought another after the new year. They changed the product! The backing board used to be seamless and now has two lines running vertically that are very obvious. Makes the product look cheap. They also changed the finish of the edges to a different texture and it just isn't the same. Kind of threw my project off and had to rethink placement because they do not look good next to the old versions. So sad with this update. I hope they take feedback and at least change back to the seamless backing style. 2 Disappointing Changes Marci We have a billy bookcase purchased in 2024 and one purchased this year and the differences are really disappointing. The facing/trim of the newer version came dented and scratched because they no longer use the plastic trim. I understand the desire for less plastic, but they just added more plastic by changing the way the backing is attached. The back on the newer version is loose and the demarcation of the folds are clearly more visible when compared to the previous version. It looks cheap and is not the quality I have come to expect from IKEA. I have been using IKEA products for a long time, and previously they have been reliable for affordability and consistency. Unfortunately, there seems to be discrepancies in their quality control with a focus on profitability versus longevity of their furniture. I hope that IKEA will consider improving these things because the billy bookcase has long been a staple in many households. 2 Versatile and durable. Laura I love the Billy Bookcases! I use them to display my LEGO builds and I have 1 at work for my books! 5 one of the bookcases had defected part William One of the bookcases came with defected part 3 Customer reviews 4.6 Average rating 2606 Reviews Show all reviews Skip customer reviews Incredibly Easy to Assemble! 5 The BILLY bookcase was surprisingly easy to put together. The instructions were clear and all parts fit perfectly. I was able to assemble it quickly and without any frustration, which is a huge plus for furniture assembly. Jason, United States Great bookcase 5 Loved the quality. Feels very solid. Easy to assemble and looks great. Drona boxes for organisation fit perfectly. Rob, New Zealand Incredibly Easy to Assemble! 5 I was extremely impressed with how easy the BILLY bookcase was to put together. The instructions were clear, and I managed to assemble it quickly and without any frustration. The ease of assembly is a major selling point for this product. Jason, United States Show all reviews 4.6 Average rating 2606 Reviews Show all reviews Accessories for BILLY Show all accessories Loading… As seen on Instagram See how our products look in real homes! Share your photos on Instagram with #MyIKEAUSA or tag @IKEAUSA for a chance to be seen here. Skip listing Related products Recommended for you Get the look Ideas based on your recently viewed products Skip listing More from the BILLY bookcases Footer Join IKEA Family Bring your ideas to life with special discounts, inspiration, and lots of good things in store. It's all free. See more Join or log in Join IKEA Business Network Enjoy a number of unique benefits to create a better life at work. See more Join or log in Help Customer service FAQ My orders Contact Us Product Recalls Return Policy Warranties Feedback Shop & Learn Find a Location IKEA Services IKEA Family IKEA for Business IKEA Planning Tools IKEA Brochures IKEA Gift Registry Buying guides Payment options Gift Cards IKEA Credit Card Management IKEA Credit Cards Cash App Afterpay Explore the New IKEA App About IKEA This is IKEA Careers Newsroom Life at Home IKEA Foundation Safety at Home Legal Privacy & Security Privacy policy Terms and conditions IKEA Children’s Product Registration Accessibility IKEA SMÅLAND Privacy notice EN US English Switch between dark and light themes © Inter IKEA Systems B.V. 1999-2026 Cookie policy Your privacy choices Privacy policy California Notice at Collection"
+}

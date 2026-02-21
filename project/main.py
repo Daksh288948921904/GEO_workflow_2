@@ -106,4 +106,56 @@ def geo_context(request: ScoreRequest):
 
     return {
         "llm_context": llm_context
+<<<<<<< HEAD
     }
+=======
+    }
+@app.post("/geo_recommendation")
+def geo_recommendation(request: ScoreRequest):
+
+    context_filename = request.filename.replace(".json", ".context.json")
+    context_path = os.path.join(DATA_FOLDER, context_filename)
+
+    if not os.path.exists(context_path):
+        raise HTTPException(status_code=404, detail="Context file not found")
+
+   
+    with open(context_path, "r", encoding="utf-8") as f:
+        llm_context = json.load(f)
+
+   
+    graph = build_geo_graph()
+
+    result = graph.invoke({
+        "llm_context": llm_context,
+        "technical_analysis": "",
+        "content_analysis": "",
+        "prioritized_plan": "",
+        "final_report": ""
+    })
+
+    
+    geo_filename = request.filename.replace(".json", ".geo.json")
+    geo_path = os.path.join(DATA_FOLDER, geo_filename)
+
+    
+    with open(geo_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+
+    return {
+    "message": "GEO recommendation generated successfully",
+    "geo_report_file": geo_filename,
+
+    # Executive summary (final_report from report_builder agent)
+    "executive_summary": result.get("final_report"),
+
+    # All 4 agent outputs — frontend renders each in its own card
+    "technical_analysis": result.get("technical_analysis"),
+    "content_analysis":   result.get("content_analysis"),
+    "prioritized_plan":   result.get("prioritized_plan"),
+
+    # Scores for the pill badges
+    "ai_readiness_pct": llm_context.get("ai_visibility_summary", {}).get("ai_readiness_pct"),
+    "readiness_band":   llm_context.get("ai_visibility_summary", {}).get("readiness_band")
+}
+>>>>>>> 88f7141 (full flow)

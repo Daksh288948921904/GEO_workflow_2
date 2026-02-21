@@ -1,0 +1,67 @@
+{
+  "page_identity": {
+    "url": "https://www.gymshark.com/products/gymshark-power-cut-off-tank-sleeveless-tops-black-aw25-1",
+    "title": "Gymshark Power Cut Off Tank - Black/Conditioning Red | Gymshark",
+    "meta_description": "Shop the Power Cut Off Tank in black/conditioning red. With next day delivery and free returns, shop online today at Gymshark."
+  },
+  "product_summary": {
+    "name": "Power Cut Off Tank",
+    "brand": "Gymshark | We Do Gym",
+    "price": 30,
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "rating": 3.4,
+    "review_count": 9
+  },
+  "content_metrics": {
+    "word_count": 1368,
+    "heading_count": 56,
+    "feature_count": 10,
+    "specification_count": 0
+  },
+  "ai_visibility_summary": {
+    "final_score": 60,
+    "max_possible": 100,
+    "ai_readiness_pct": 60.0,
+    "readiness_band": "Fair — Needs Improvement"
+  },
+  "section_scores": {
+    "schema": 20,
+    "entity": 11,
+    "content": 14,
+    "trust": 9,
+    "extractability": 6
+  },
+  "priority_order": [
+    "extractability",
+    "trust",
+    "entity",
+    "content",
+    "schema"
+  ],
+  "weak_areas": {
+    "entity": [
+      "category",
+      "gtin"
+    ],
+    "content": [
+      "specifications",
+      "image_alt_text",
+      "faq"
+    ],
+    "trust": [
+      "has_warranty_info",
+      "mentions_secure_payment",
+      "has_contact_page"
+    ],
+    "extractability": [
+      "specs_table",
+      "meta_title",
+      "meta_description",
+      "canonical_url",
+      "hreflang"
+    ]
+  },
+  "penalties": {},
+  "content_excerpt": "Gymshark Power Cut Off Tank - Black/Conditioning Red | Gymshark Pause slide rotation 15% Student Discount ‍🎓 GYMSHARK66 is back. Change your life in 66 days. Free standard shipping on orders over $75 🚚 Refer A Friend To Earn $10 Off Your Next Purchase Of $50+ 👭 Get 10% off your first order when you sign up to our emails ✉️ 15% Student Discount ‍🎓 GYMSHARK66 is back. Change your life in 66 days. Free standard shipping on orders over $75 🚚 Refer A Friend To Earn $10 Off Your Next Purchase Of $50+ 👭 Get 10% off your first order when you sign up to our emails ✉️ 15% Student Discount ‍🎓 Accessibili Key features: Strong oversized silhouette.Iconic Gymshark graphic makes your back look even bigger.Durable fabric lasts through every rep.Cut off sleeves show off your arms.Oversized fit.Model is 5'11\" and wears size L"
+}
