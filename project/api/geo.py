@@ -8,13 +8,12 @@ import os
 load_dotenv()
 
 
-
 class GEOState(TypedDict):
-    llm_context: Dict[str, Any]
+    llm_context:        Dict[str, Any]
     technical_analysis: str
-    content_analysis: str
-    prioritized_plan: str
-    final_report: str
+    content_analysis:   str
+    prioritized_plan:   str
+    executive_summary:  str
 
 
 def call_llm(system_prompt: str, user_prompt: str) -> str:
@@ -24,56 +23,137 @@ def call_llm(system_prompt: str, user_prompt: str) -> str:
         temperature=0.3,
         messages=[
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
+            {"role": "user",   "content": user_prompt},
         ],
     )
     return response.choices[0].message.content
 
 
-
 def extract_facts(ctx: dict) -> str:
+    """
+    Build a complete, grounded fact sheet for the LLM.
+    Every field the LLM might reference is pre-formatted here
+    so it never has to guess or hallucinate values.
+    """
     pi   = ctx.get("page_identity", {})
     ps   = ctx.get("product_summary", {})
     cm   = ctx.get("content_metrics", {})
     av   = ctx.get("ai_visibility_summary", {})
     ss   = ctx.get("section_scores", {})
+    bd   = ctx.get("breakdowns", {})
     wa   = ctx.get("weak_areas", {})
     pen  = ctx.get("penalties", {})
     po   = ctx.get("priority_order", [])
     exc  = ctx.get("content_excerpt", "")
+    specs = ctx.get("specifications", {})
+    faqs  = ctx.get("faqs", [])
+    ts    = ctx.get("trust_signals", {})
+
+    # Format currency symbol
+    curr = ps.get("currency", "INR")
+    sym  = {"INR": "₹", "USD": "$", "GBP": "£", "EUR": "€"}.get(curr, curr)
+    price_str = f"{sym}{ps.get('price', 'N/A')}"
+    rating_str = f"{ps.get('rating', 'N/A')} / 5.0 ({ps.get('review_count', '0')} reviews)"
+
+    # Build pass/fail breakdown so LLM knows exactly what exists vs missing
+    def signal_lines(section_bd: dict) -> str:
+        lines = []
+        for signal, score in section_bd.items():
+            status = "✓ PASS" if score > 0 else "✗ FAIL (score 0 — needs fix)"
+            lines.append(f"  {signal}: {score} pts  [{status}]")
+        return "\n".join(lines)
+
+    # Format specs compactly
+    specs_str = "None extracted" if not specs else "\n".join(
+        f"  {k}: {v}" for k, v in list(specs.items())[:15]
+    )
+
+    # Format FAQs compactly
+    faqs_str = "None extracted" if not faqs else "\n".join(
+        f"  Q: {f.get('question','')}\n  A: {f.get('answer','')[:120]}"
+        for f in faqs[:5]
+    )
+
+    # Format trust signals with pass/fail so LLM knows exactly what exists
+    def trust_lines(trust_dict: dict) -> str:
+        lines = []
+        for signal, value in trust_dict.items():
+            status = "✓ EXISTS" if value else "✗ MISSING"
+            lines.append(f"  {signal}: {value}  [{status}]")
+        return "\n".join(lines) if lines else "  No trust signal data"
 
     return f"""
-PAGE: {pi.get("url", "unknown")}
-TITLE: {pi.get("title", "")}
-META DESCRIPTION: {pi.get("meta_description", "")}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE FACTS (use ONLY these values — do not invent data)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-PRODUCT: {ps.get("name", "")} | Brand: {ps.get("brand", "")} | Price: {ps.get("currency","")} {ps.get("price","")}
-AVAILABILITY: {ps.get("availability","")} | Rating: {ps.get("rating","")} ({ps.get("review_count","")} reviews)
+URL:              {pi.get("url", "unknown")}
+TITLE:            {pi.get("title", "")}
+META DESCRIPTION: {pi.get("meta_description", "(missing)")}
 
-CONTENT METRICS:
-- Word count: {cm.get("word_count", 0)} words
-- Headings found: {cm.get("heading_count", 0)}
-- Feature bullets found: {cm.get("feature_count", 0)}
-- Specification rows found: {cm.get("specification_count", 0)}
+PRODUCT NAME:  {ps.get("name", "")}
+BRAND:         {ps.get("brand", "")}
+PRICE:         {price_str}
+AVAILABILITY:  {ps.get("availability", "")}
+RATING:        {rating_str}
+SKU:           {ps.get("sku", "not found")}
+GTIN:          {ps.get("gtin", "(missing — scores 0)") or "(missing — scores 0)"}
+CATEGORY:      {ps.get("category", "")}
 
+CONTENT ON PAGE:
+- Word count:     {cm.get("word_count", 0)} words
+- Headings:       {cm.get("heading_count", 0)} found
+- Feature bullets:{cm.get("feature_count", 0)} found
+- Spec rows:      {cm.get("specification_count", 0)} found
+- FAQs:           {len(faqs)} found
+
+SPECIFICATIONS EXTRACTED FROM PAGE:
+{specs_str}
+
+FAQs EXTRACTED FROM PAGE:
+{faqs_str}
+
+TRUST SIGNALS ON PAGE:
+{trust_lines(ts)}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 AI READINESS SCORE: {av.get("final_score","?")} / {av.get("max_possible","100")} ({av.get("ai_readiness_pct","?")}%) — {av.get("readiness_band","")}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-SECTION SCORES (out of their max):
-- Schema markup:    {ss.get("schema","?")} / 20
-- Entity clarity:   {ss.get("entity","?")} / 15
-- Content depth:    {ss.get("content","?")} / 25
-- Trust signals:    {ss.get("trust","?")} / 20
-- Extractability:   {ss.get("extractability","?")} / 20
+SCHEMA MARKUP  [{ss.get("schema","?")} / 20]:
+{signal_lines(bd.get("schema", {}))}
+
+ENTITY CLARITY [{ss.get("entity","?")} / 15]:
+{signal_lines(bd.get("entity", {}))}
+
+CONTENT DEPTH  [{ss.get("content","?")} / 25]:
+{signal_lines(bd.get("content", {}))}
+
+TRUST SIGNALS  [{ss.get("trust","?")} / 20]:
+{signal_lines(bd.get("trust", {}))}
+
+EXTRACTABILITY [{ss.get("extractability","?")} / 20]:
+{signal_lines(bd.get("extractability", {}))}
 
 PENALTY FLAGS: {json.dumps(pen) if pen else "none"}
 
-PRIORITY ORDER (worst first): {" → ".join(po)}
+PRIORITY ORDER (worst section first): {" → ".join(po)}
 
-SPECIFIC MISSING SIGNALS (these scored 0 and need fixing):
+SIGNALS SCORING 0 — THESE ARE THE ONLY THINGS TO FIX:
 {json.dumps(wa, indent=2)}
 
-CONTENT EXCERPT (actual page text sample):
-{exc[:800]}
+⚠️  CRITICAL RULES FOR THE LLM:
+1. ONLY recommend fixes for signals marked [✗ FAIL] above.
+2. DO NOT recommend fixing anything marked [✓ PASS] — it already exists.
+3. If canonical_url > 0, it EXISTS — do not say it is missing.
+4. If schema_markup > 0, JSON-LD EXISTS — do not say it is missing.
+5. If specs > 0, specifications EXIST — do not say they are missing.
+6. If faq > 0, FAQs EXIST — do not say they are missing.
+7. Always use the EXACT price ({price_str}), rating ({rating_str}), and product name from above.
+8. Never write "INR " or empty brackets. Use the real values.
+
+PAGE TEXT SAMPLE:
+{exc[:600]}
 """.strip()
 
 
@@ -82,29 +162,45 @@ CONTENT EXCERPT (actual page text sample):
 # ==============================================================
 def technical_auditor(state: GEOState) -> GEOState:
     facts = extract_facts(state["llm_context"])
+    wa    = state["llm_context"].get("weak_areas", {})
+    bd    = state["llm_context"].get("breakdowns", {})
+
+    # Build a specific list of only truly failing signals
+    failing = []
+    for section, signals in wa.items():
+        for sig in signals:
+            failing.append(f"{section}.{sig}")
 
     system = """You are a senior technical GEO (Generative Engine Optimization) engineer.
-Your job is to audit a real product page and tell the developer EXACTLY what code and HTML changes to make.
-Be brutally specific. Name the exact HTML tags, JSON-LD fields, and attribute values to add or change.
-Never give generic advice. Every recommendation must be a concrete website edit."""
+Audit ONLY the signals that score 0. Do not mention or recommend fixing anything that already has a score > 0.
+Be surgical: every fix must be a copy-paste-ready HTML or JSON-LD snippet using the ACTUAL product data provided.
+Never invent data. Never use placeholder values like YOUR_PRICE or YOUR_SKU — use the real values from the facts."""
 
     user = f"""Audit this product page for AI/GEO technical readiness.
 
 {facts}
 
-Your output MUST follow this exact structure for each issue:
+FAILING SIGNALS TO FIX (score = 0): {failing}
 
-## [Issue Name]
-**Why it matters for AI/LLMs:** [1-2 sentences on how this hurts AI visibility specifically]
-**Current state:** [what exists now on this page]
-**Exact fix:** [the literal HTML, JSON-LD snippet, or tag to add/change]
-**Score impact:** +X points in [section]
+For EACH failing signal above, write EXACTLY:
 
-Cover ALL of these failing signals: {json.dumps(state["llm_context"].get("weak_areas", {}))}
+## [Signal Name]
+1. **Why it matters for AI/LLMs:** [1 sentence — specific to this product]
+2. **Current state:** [what is actually on this page right now — reference the facts above]
+3. **Exact fix:** [complete, copy-paste ready HTML or JSON-LD using the real product name, brand, price, etc.]
+4. **Score impact:** +X points in [section]
 
-Also check: missing canonical URL, missing hreflang, incomplete JSON-LD Product schema, missing specs table HTML.
+STOP after covering all failing signals. Do NOT add extra sections for things that already pass.
+Do NOT say canonical URL is missing — it scores {bd.get("extractability",{}).get("canonical_url",0)} (exists).
+Do NOT say schema is missing — it scores {bd.get("schema",{}).get("schema_markup",0)} (exists).
+Do NOT say specs are missing — specification_count is in the facts above.
 
-Do not write paragraphs of explanation. Be surgical. A developer should be able to copy-paste your fixes."""
+TRUST SIGNAL GUIDANCE:
+- has_contact_page = False means the site has no /contact page linked from navigation/footer.
+  Fix: create a contact page at /contact or /contact-us and link it from the footer.
+  Provide the exact <a> tag and JSON-LD ContactPage schema to add.
+- has_return_policy, has_warranty_info etc: only flag these if they score 0 in breakdowns above.
+- For each trust fix, provide the exact HTML/schema — not generic advice."""
 
     state["technical_analysis"] = call_llm(system, user)
     return state
@@ -115,43 +211,70 @@ Do not write paragraphs of explanation. Be surgical. A developer should be able 
 # ==============================================================
 def content_strategist(state: GEOState) -> GEOState:
     facts = extract_facts(state["llm_context"])
-    ps    = state["llm_context"].get("product_summary", {})
+    ctx   = state["llm_context"]
+    ps    = ctx.get("product_summary", {})
+    bd    = ctx.get("breakdowns", {})
+    wa    = ctx.get("weak_areas", {})
+    faqs  = ctx.get("faqs", [])
+    specs = ctx.get("specifications", {})
 
-    system = """You are a GEO content strategist who specializes in making product pages get cited by AI search engines (ChatGPT, Perplexity, Google SGE).
-You know that LLMs cite pages that directly answer questions, have structured specs, and have FAQ schema.
-Give only page-level content changes — actual text, HTML structure, and schema to add to THIS specific product page."""
+    curr     = ps.get("currency", "INR")
+    sym      = {"INR": "₹", "USD": "$", "GBP": "£", "EUR": "€"}.get(curr, curr)
+    price_str = f"{sym}{ps.get('price', 'N/A')}"
+    rating_str = f"{ps.get('rating', 'N/A')} ({ps.get('review_count', '0')} reviews)"
+
+    faq_score   = bd.get("content", {}).get("faq", 0)
+    spec_score  = bd.get("content", {}).get("specifications", 0)
+    spec_count  = ctx.get("content_metrics", {}).get("specification_count", 0)
+    faq_count   = len(faqs)
+    trust_score = ctx.get("section_scores", {}).get("trust") or 0
+    ts          = ctx.get("trust_signals", {})
+    # Build trust status string for content prompt
+    trust_status = "\n".join(
+        f"  {k}: {'EXISTS' if v else 'MISSING'}"
+        for k, v in ts.items()
+    ) if ts else "  No trust data"
+
+    system = """You are a GEO content strategist who makes product pages get cited by AI search engines.
+Use ONLY the exact product data provided — never invent specs, prices, or features.
+Do not recommend adding content that already exists (check scores before recommending)."""
 
     user = f"""Analyze this product page for content gaps that prevent AI engines from citing it.
 
 {facts}
 
-The product is: {ps.get("name","this product")} by {ps.get("brand","this brand")}
+PRODUCT: {ps.get("name","this product")} by {ps.get("brand","this brand")}
+PRICE: {price_str} | RATING: {rating_str}
 
-## What to deliver:
+CONTENT STATUS:
+- Specifications: {"EXISTS ({} rows extracted)".format(spec_count) if spec_score > 0 else "MISSING — score 0"}
+- FAQs: {"EXISTS ({} Q&As extracted)".format(faq_count) if faq_score > 0 else "MISSING — score 0"}
+- Trust signals detail:
+{trust_status}
+- Weak areas: {json.dumps(wa)}
+
+## Deliver ONLY these sections:
 
 ### 1. Missing Content Sections
-For each missing section, write:
-- **Section name** (e.g. "Specifications Table")
-- **Why AI engines need it** (1 sentence)
-- **Exact content to add** (write the actual text/HTML, not just "add a table")
+Only list sections that are ACTUALLY missing (score = 0 in weak_areas).
+For each: explain why AI needs it, then write the EXACT HTML to add.
+Use real values: price = {price_str}, rating = {rating_str}.
+{"Skip specifications section — it already exists." if spec_score > 0 else "Write a specifications table using the spec data in the facts."}
+{"Skip FAQ section — it already exists." if faq_score > 0 else "Write a FAQ section with real Q&As from the facts."}
+{"Skip trust section — trust score is {}/20, passes.".format(trust_score) if trust_score >= 14 else "Address missing trust signals: " + ", ".join(k for k, v in ts.items() if not v and "has_" in k)}
 
-### 2. FAQ Schema — Write 6 real Q&As for THIS product
-Format each as:
-**Q: [specific question a buyer would ask]**
-A: [direct, factual answer using the product data above]
-
-These must be real questions about THIS specific product (dimensions, materials, compatibility, assembly, warranty).
-Include the JSON-LD FAQ schema block ready to paste into the page <head>.
+### 2. FAQ Schema (JSON-LD)
+{"FAQs already exist. Just verify the JSON-LD FAQPage schema is in <head> and provide the exact block." if faq_score > 0 else "Write 5 real Q&As using actual product features. Include complete JSON-LD FAQPage schema."}
+Use real product data — NOT placeholders.
 
 ### 3. Semantic Gap Analysis
-List 5 specific topics this page doesn't cover that users ask about this product category.
-For each topic: write the missing paragraph (2-3 sentences) to add to the page.
+List 4 topics this page doesn't cover. For each write a ready-to-paste paragraph (2-3 sentences) using real product data.
 
-### 4. Content Rewrite Suggestions
-The current meta description is: "{state["llm_context"].get("page_identity",{}).get("meta_description","")}"
-Rewrite it to be more AI-answerable (include key specs, use case, differentiator — under 160 chars).
+### 4. Meta Description Rewrite
+Current: "{ctx.get("page_identity",{}).get("meta_description","(missing)")}"
+Rewrite to under 160 chars. Include: key specs, exact price, brand, and main differentiator.
 
-Do not write generic tips. Write the actual content to add."""
+Never write "INR " or empty values. Use: {price_str}, {rating_str}."""
 
     state["content_analysis"] = call_llm(system, user)
     return state
@@ -161,52 +284,51 @@ Do not write generic tips. Write the actual content to add."""
 # Prioritizer
 # ==============================================================
 def prioritizer(state: GEOState) -> GEOState:
-    facts  = extract_facts(state["llm_context"])
-    wa     = state["llm_context"].get("weak_areas", {})
-    scores = state["llm_context"].get("section_scores", {})
+    facts = extract_facts(state["llm_context"])
+    ctx   = state["llm_context"]
+    wa    = ctx.get("weak_areas", {})
+    av    = ctx.get("ai_visibility_summary", {})
+    po    = ctx.get("priority_order", [])
 
     system = """You are a GEO implementation consultant.
-You turn technical and content audits into a clear, ordered action plan.
-Every action must reference the SPECIFIC page and SPECIFIC change — no generic advice.
-Format output cleanly with markdown tables and numbered lists."""
+Build an action plan using ONLY the failing signals (score=0).
+Do not add rows for things that already pass. Be specific about exact page location and change."""
 
-    user = f"""Build a prioritized GEO action plan for this specific page.
+    user = f"""Build a prioritized GEO action plan.
 
-PAGE: {state["llm_context"].get("page_identity",{}).get("url","")}
-CURRENT SCORE: {state["llm_context"].get("ai_visibility_summary",{}).get("final_score","?")} / 100
-WORST SECTIONS: {" → ".join(state["llm_context"].get("priority_order",[]))}
+{facts}
 
-SIGNALS SCORING 0 (must fix): {json.dumps(wa)}
+ONLY these signals need fixing (all others already pass):
+{json.dumps(wa, indent=2)}
 
-TECHNICAL AUDIT FINDINGS:
+TECHNICAL AUDIT:
 {state["technical_analysis"]}
 
-CONTENT AUDIT FINDINGS:
+CONTENT AUDIT:
 {state["content_analysis"]}
 
-## Deliver this exact format:
+## Output this exact format:
 
-### Quick Wins (implement in under 2 hours each)
-| # | Change | Where on page | Score gain | Effort |
-|---|--------|---------------|------------|--------|
-List 4-6 rows. Be specific about WHERE on the page and WHAT to change.
+### Quick Wins (under 2 hours each)
+| # | Exact change | Where on page | Signal fixed | Score gain | Effort |
+|---|-------------|---------------|--------------|------------|--------|
+Only include rows for signals in weak_areas above.
 
-### Structural Improvements (1-5 days each)
-| # | Change | Implementation detail | Score gain | Effort |
-|---|--------|----------------------|------------|--------|
-List 4-6 rows.
+### Structural Improvements (1-5 days)
+| # | Change | Implementation detail | Signal fixed | Score gain | Effort |
+|---|--------|----------------------|--------------|------------|--------|
+Only if there are multi-day fixes needed.
 
 ### Implementation Order
-Number each step. Reference the actual signals from weak_areas above.
-Each step: "Go to [location] → Add/Change [specific thing] → Expected result: [score change]"
+For each step: "Go to [exact location] → [exact change] → Fixes: [signal name] → +X points"
 
 ### Score Projection
-Current: {state["llm_context"].get("ai_visibility_summary",{}).get("final_score","?")} / 100
-After quick wins: X / 100
-After all changes: X / 100
-New band: [predicted band]
+Current: {av.get("final_score","?")} / 100
+After quick wins: [calculate] / 100
+After all changes: [calculate] / 100
+New band: [name]
 
-No generic advice. Every row must name a specific page element."""
+Do not add phantom fixes. Every row must map to a signal in weak_areas."""
 
     state["prioritized_plan"] = call_llm(system, user)
     return state
@@ -216,72 +338,79 @@ No generic advice. Every row must name a specific page element."""
 # Executive Report Builder
 # ==============================================================
 def report_builder(state: GEOState) -> GEOState:
-    ctx  = state["llm_context"]
-    av   = ctx.get("ai_visibility_summary", {})
-    ps   = ctx.get("product_summary", {})
-    pi   = ctx.get("page_identity", {})
-    po   = ctx.get("priority_order", [])
-    wa   = ctx.get("weak_areas", {})
+    ctx = state["llm_context"]
+    av  = ctx.get("ai_visibility_summary", {})
+    ps  = ctx.get("product_summary", {})
+    pi  = ctx.get("page_identity", {})
+    ss  = ctx.get("section_scores", {})
+    po  = ctx.get("priority_order", [])
+    wa  = ctx.get("weak_areas", {})
 
-    system = """You are a GEO optimization advisor writing a report for a product manager or CMO.
-The report must be about THIS SPECIFIC product page and page — not generic AI/SEO advice.
-Every sentence must reference actual data from the audit. Use the exact scores, URLs, and field names.
-Be direct, specific, and actionable. Write like a consultant who has just audited the page."""
+    curr      = ps.get("currency", "INR")
+    sym       = {"INR": "₹", "USD": "$", "GBP": "£", "EUR": "€"}.get(curr, curr)
+    price_str = f"{sym}{ps.get('price', 'N/A')}"
+
+    system = """You are a GEO advisor writing an executive report for a product manager.
+Use ONLY the exact scores and data provided. Do not invent gaps or hallucinate scores.
+If a section scores > 0, it PASSES — do not say it is missing or broken.
+Keep the report grounded, specific, and under 500 words."""
 
     user = f"""Write an executive GEO report for this product page.
 
 PAGE: {pi.get("url","")}
-PRODUCT: {ps.get("name","")} | {ps.get("brand","")} | {ps.get("currency","")} {ps.get("price","")}
-CURRENT AI READINESS: {av.get("final_score","?")} / {av.get("max_possible","100")} ({av.get("ai_readiness_pct","?")}%) — {av.get("readiness_band","")}
-WEAKEST AREAS: {", ".join(po[:3])} (worst first)
-SIGNALS WITH SCORE 0: {json.dumps(wa)}
+PRODUCT: {ps.get("name","")}
+BRAND: {ps.get("brand","")} | PRICE: {price_str} | RATING: {ps.get("rating","N/A")} ({ps.get("review_count","0")} reviews)
+AI READINESS: {av.get("final_score","?")} / {av.get("max_possible","100")} — {av.get("readiness_band","")}
 
-FULL TECHNICAL AUDIT:
+ACTUAL SECTION SCORES (use these exact numbers):
+- Schema markup:  {ss.get("schema","?")} / 20   {"(strong)" if (ss.get("schema") or 0) >= 16 else "(room to improve)"}
+- Entity clarity: {ss.get("entity","?")} / 15   {"(strong)" if (ss.get("entity") or 0) >= 12 else "(room to improve)"}
+- Content depth:  {ss.get("content","?")} / 25  {"(strong)" if (ss.get("content") or 0) >= 20 else "(room to improve)"}
+- Trust signals:  {ss.get("trust","?")} / 20    {"(strong)" if (ss.get("trust") or 0) >= 16 else "(room to improve)"}
+- Extractability: {ss.get("extractability","?")} / 20 {"(strong)" if (ss.get("extractability") or 0) >= 16 else "(room to improve)"}
+
+ONLY THESE SIGNALS SCORE 0 (everything else already passes):
+{json.dumps(wa, indent=2)}
+
+TECHNICAL AUDIT FINDINGS:
 {state["technical_analysis"]}
 
-FULL CONTENT AUDIT:
+CONTENT AUDIT FINDINGS:
 {state["content_analysis"]}
 
-FULL PRIORITY PLAN:
+PRIORITY PLAN:
 {state["prioritized_plan"]}
 
-## Report structure:
+## Write this structure:
 
 ## Executive Summary
-2-3 sentences. Name the product, the exact score, and the #1 reason it scores low.
-Be direct: "The [product] page scores X/100 because [specific reason from data]."
+State the score, band, and what it means in 2-3 sentences. Use the exact score.
+Name the only {len(wa)} missing signals and why they matter.
 
-## Current AI Readiness Assessment
-Score each dimension with the actual number and a one-line plain-English explanation of what that score means for THIS product:
-- Schema: {ctx.get("section_scores",{}).get("schema","?")} / 20 — [explain]
-- Entity: {ctx.get("section_scores",{}).get("entity","?")} / 15 — [explain]  
-- Content: {ctx.get("section_scores",{}).get("content","?")} / 25 — [explain]
-- Trust: {ctx.get("section_scores",{}).get("trust","?")} / 20 — [explain]
-- Extractability: {ctx.get("section_scores",{}).get("extractability","?")} / 20 — [explain]
+## Current AI Readiness
+One line per section using the EXACT scores above.
+Never say a section "scores 0" unless it actually does.
 
-## Top 3 Changes That Will Move The Needle
-For each: name the exact HTML/schema/content change, the specific score gain, and which AI engines will benefit.
-
-## What Happens If You Fix Nothing
-1-2 sentences on the competitive risk: which queries will competitors win, how will AI engines handle this page.
+## Top Priority Fixes
+Only the signals in weak_areas. For each: exact fix, score gain, time estimate.
 
 ## Expected Uplift
-- After quick wins (< 1 week): X%
-- After full implementation: X%
-- Projected new band: [name]
+After fixes: [score] / 100 — [band]
 
-Keep the whole report under 600 words. No filler sentences."""
+Under 400 words. No filler. Reference real product name, price, and brand."""
 
-    state["final_report"] = call_llm(system, user)
+    state["executive_summary"] = call_llm(system, user)
     return state
 
 
 # ==============================================================
 # Build LangGraph Workflow
+# ==============================================================
 def build_geo_graph():
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise ValueError("OPENAI_API_KEY not found in environment variables")
+
     builder = StateGraph(GEOState)
 
     builder.add_node("technical_audit",  technical_auditor)

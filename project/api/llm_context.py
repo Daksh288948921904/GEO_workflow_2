@@ -108,11 +108,13 @@ class LLMContextBuilder:
                 "trust": self.score.get("trust_score"),
                 "extractability": self.score.get("extractability_score"),
             },
+            "breakdowns": self.score.get("breakdowns", {}),
 
             "priority_order": self.get_priority(),
 
             "weak_areas": self.identify_weak_areas(),
 
+            "penalties": self.score.get("penalties", {}),
             "penalties": self.score.get("penalties", {}),
 
             "content_excerpt": self.get_excerpt()
