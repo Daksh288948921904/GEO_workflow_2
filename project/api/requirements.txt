@@ -11,4 +11,8 @@ langgraph
 pydantic
 httpx
 extruct
-readability-lxml 
+readability-lxml
+python-docx
+qdrant-client
+playwright
+playwright-stealth
