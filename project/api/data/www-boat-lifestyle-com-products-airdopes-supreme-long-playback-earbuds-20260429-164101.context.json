@@ -1,0 +1,149 @@
+{
+  "page_identity": {
+    "url": "https://www.boat-lifestyle.com/products/airdopes-supreme-long-playback-earbuds",
+    "title": "boAt Airdopes Supreme | Wireless Earbuds with 50H Long Playback",
+    "meta_description": "Experience superior sound with boAt Airdopes Supreme — 50H playback, AI ENx™, Cinematic Spatial Audio & BEAST™ Mode for ultimate performance."
+  },
+  "product_summary": {
+    "name": "boAt Airdopes Supreme | Wireless Earbuds with 50 Hours Playback, AI ENx™ with Wind Noise Reduction, Cinematic Spatial Audio",
+    "brand": "boAtlifestylein",
+    "price": 1299.0,
+    "currency": "INR",
+    "availability": "https://schema.org/InStock",
+    "rating": "4.78",
+    "review_count": "192"
+  },
+  "content_metrics": {
+    "word_count": 2224,
+    "heading_count": 28,
+    "feature_count": 20,
+    "specification_count": 9
+  },
+  "ai_visibility_summary": {
+    "final_score": 73,
+    "max_possible": 100,
+    "ai_readiness_pct": 73.0,
+    "readiness_band": "Good — Minor Gaps"
+  },
+  "section_scores": {
+    "schema": 14,
+    "entity": 9,
+    "content": 19,
+    "trust": null,
+    "extractability": 8
+  },
+  "breakdowns": {
+    "schema": {
+      "name": 3,
+      "price": 3,
+      "brand": 2,
+      "price_format": 1,
+      "schema_markup": 1,
+      "product_schema": 2,
+      "offers_in_schema": 0,
+      "availability": 1,
+      "currency": 1
+    },
+    "entity": {
+      "name": 2,
+      "brand": 2,
+      "sku": 1,
+      "category": 1,
+      "gtin": 1,
+      "name_quality": 2,
+      "product_group": 0
+    },
+    "content": {
+      "word_count": 6,
+      "headings": 3,
+      "features": 3,
+      "specifications": 3,
+      "faq": 3,
+      "content_signal_ratio": 1
+    },
+    "trust_eeat": {
+      "has_return_policy": 2,
+      "has_warranty_info": 1,
+      "has_shipping_info": 1,
+      "mentions_secure_payment": 1,
+      "has_contact_page": 0,
+      "uses_https": 1,
+      "reviews": 1,
+      "eeat_experience": 0,
+      "eeat_expertise": 0,
+      "eeat_authority": 0,
+      "eeat_trust": 0
+    },
+    "extractability": {
+      "schema_present": 2,
+      "heading_hierarchy": 2,
+      "meta_title": 1,
+      "meta_description": 1,
+      "canonical_url": 1,
+      "og_tags": 0,
+      "hreflang": 0,
+      "not_blocked": 1
+    },
+    "media": {
+      "image_count": 3,
+      "alt_text_coverage": 2,
+      "has_video": 0,
+      "media_diversity": 1
+    },
+    "links": {
+      "internal_links": 3,
+      "external_links": 2,
+      "anchor_quality": 3,
+      "no_broken_links": 2
+    },
+    "comparison": {
+      "comparison_products": 0,
+      "structured_comparison": 0
+    },
+    "topical": {
+      "topic_breadth": 0,
+      "entity_density": 0,
+      "has_explanatory_content": 0
+    }
+  },
+  "priority_order": [
+    "trust",
+    "extractability",
+    "entity",
+    "schema",
+    "content"
+  ],
+  "weak_areas": {
+    "schema": [
+      "offers_in_schema"
+    ],
+    "entity": [
+      "product_group"
+    ],
+    "trust_eeat": [
+      "has_contact_page",
+      "eeat_experience",
+      "eeat_expertise",
+      "eeat_authority",
+      "eeat_trust"
+    ],
+    "extractability": [
+      "og_tags",
+      "hreflang"
+    ],
+    "media": [
+      "has_video"
+    ],
+    "comparison": [
+      "comparison_products",
+      "structured_comparison"
+    ],
+    "topical": [
+      "topic_breadth",
+      "entity_density",
+      "has_explanatory_content"
+    ]
+  },
+  "penalties": {},
+  "content_excerpt": "boAt Airdopes Supreme | Wireless Earbuds with 50H Long Playback Skip to content Get Extra 5% Off On Prepaid Orders | Code: BOATHEAD | Shop Now! Get Extra 5% Off On Prepaid Orders | Code: BOATHEAD | Shop Now Categories True Wireless Earbuds Neckbands Smart Watches Headphones Wireless Speakers Soundbars Party Speakers Power Banks Dashcams Projectors Gaming Series Chargers and Cables Wired Earphones Limited Edition boAt Personalisation Corporate Orders Gifting Store More Daily Deals Blogs Refer & Earn Careers Store Locator boAt Community Navigation boAt Lifestyle Newsletter Search \"Speakers\" Most Key features: The product and silicon cover will be delivered in a single brown box..The silicon cover color will match the product color to ensure optimal appearance and fit. Customization or selection of alternate cover colors is not available..Only true wireless earbuds are eligible for replacement, covers are non returnable.Images displayed are for representational purposes only. The actual color of the silicon cover may vary slightly..When you select a color variant and add the product to the cart, a matching cover will be added automatically. You can remove it from the cart if needed.."
+}

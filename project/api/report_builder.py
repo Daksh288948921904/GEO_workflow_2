@@ -1,14 +1,4 @@
-"""
-report_builder.py
-=================
-Generates a polished GENY GEO Report as a .docx file from the
-data returned by the LangGraph pipeline + scoring engine.
 
-Usage (in main.py):
-    from report_builder import build_report_docx
-    doc = build_report_docx(context, score_data, geo_result)
-    doc.save("report.docx")  # or stream via BytesIO
-"""
 
 import re
 from docx import Document

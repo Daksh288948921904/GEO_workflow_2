@@ -30,11 +30,7 @@ def call_llm(system_prompt: str, user_prompt: str) -> str:
 
 
 def extract_facts(ctx: dict) -> str:
-    """
-    Build a complete, grounded fact sheet for the LLM.
-    Every field the LLM might reference is pre-formatted here
-    so it never has to guess or hallucinate values.
-    """
+
     pi   = ctx.get("page_identity", {})
     ps   = ctx.get("product_summary", {})
     cm   = ctx.get("content_metrics", {})
@@ -157,9 +153,7 @@ PAGE TEXT SAMPLE:
 """.strip()
 
 
-# ==============================================================
-# Technical Auditor
-# ==============================================================
+
 def technical_auditor(state: GEOState) -> GEOState:
     facts = extract_facts(state["llm_context"])
     wa    = state["llm_context"].get("weak_areas", {})
@@ -206,9 +200,7 @@ TRUST SIGNAL GUIDANCE:
     return state
 
 
-# ==============================================================
-# Content Strategist
-# ==============================================================
+
 def content_strategist(state: GEOState) -> GEOState:
     facts = extract_facts(state["llm_context"])
     ctx   = state["llm_context"]
@@ -280,9 +272,8 @@ Never write "INR " or empty values. Use: {price_str}, {rating_str}."""
     return state
 
 
-# ==============================================================
-# Prioritizer
-# ==============================================================
+
+
 def prioritizer(state: GEOState) -> GEOState:
     facts = extract_facts(state["llm_context"])
     ctx   = state["llm_context"]
@@ -334,9 +325,7 @@ Do not add phantom fixes. Every row must map to a signal in weak_areas."""
     return state
 
 
-# ==============================================================
-# Executive Report Builder
-# ==============================================================
+
 def report_builder(state: GEOState) -> GEOState:
     ctx = state["llm_context"]
     av  = ctx.get("ai_visibility_summary", {})
@@ -403,9 +392,7 @@ Under 400 words. No filler. Reference real product name, price, and brand."""
     return state
 
 
-# ==============================================================
-# Build LangGraph Workflow
-# ==============================================================
+
 def build_geo_graph():
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:

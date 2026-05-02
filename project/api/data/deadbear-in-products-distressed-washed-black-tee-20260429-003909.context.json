@@ -1,0 +1,153 @@
+{
+  "page_identity": {
+    "url": "https://deadbear.in/products/distressed-washed-black-tee",
+    "title": "Distressed Washed Black Tee\n – DEADBEAR",
+    "meta_description": "A heavyweight washed black tee with ripped detailing. Lined inside to hold its shape. "
+  },
+  "product_summary": {
+    "name": "Distressed Washed Black Tee",
+    "brand": "dead-bear-india",
+    "price": "3990.00",
+    "currency": "INR",
+    "availability": "http://schema.org/InStock",
+    "rating": null,
+    "review_count": null
+  },
+  "content_metrics": {
+    "word_count": 406,
+    "heading_count": 5,
+    "feature_count": 2,
+    "specification_count": 2
+  },
+  "ai_visibility_summary": {
+    "final_score": 56,
+    "max_possible": 100,
+    "ai_readiness_pct": 56.0,
+    "readiness_band": "Fair — Needs Improvement"
+  },
+  "section_scores": {
+    "schema": 12,
+    "entity": 7,
+    "content": 10,
+    "trust": null,
+    "extractability": 7
+  },
+  "breakdowns": {
+    "schema": {
+      "name": 3,
+      "price": 3,
+      "brand": 2,
+      "price_format": 1,
+      "schema_markup": 1,
+      "product_schema": 0,
+      "offers_in_schema": 0,
+      "availability": 1,
+      "currency": 1
+    },
+    "entity": {
+      "name": 2,
+      "brand": 2,
+      "sku": 1,
+      "category": 1,
+      "gtin": 0,
+      "name_quality": 1,
+      "product_group": 0
+    },
+    "content": {
+      "word_count": 2,
+      "headings": 2,
+      "features": 1,
+      "specifications": 2,
+      "faq": 2,
+      "content_signal_ratio": 1
+    },
+    "trust_eeat": {
+      "has_return_policy": 2,
+      "has_warranty_info": 0,
+      "has_shipping_info": 1,
+      "mentions_secure_payment": 0,
+      "has_contact_page": 1,
+      "uses_https": 1,
+      "reviews": 0,
+      "eeat_experience": 0,
+      "eeat_expertise": 0,
+      "eeat_authority": 0,
+      "eeat_trust": 0
+    },
+    "extractability": {
+      "schema_present": 2,
+      "heading_hierarchy": 1,
+      "meta_title": 1,
+      "meta_description": 1,
+      "canonical_url": 1,
+      "og_tags": 0,
+      "hreflang": 0,
+      "not_blocked": 1
+    },
+    "media": {
+      "image_count": 3,
+      "alt_text_coverage": 2,
+      "has_video": 0,
+      "media_diversity": 1
+    },
+    "links": {
+      "internal_links": 3,
+      "external_links": 1,
+      "anchor_quality": 3,
+      "no_broken_links": 2
+    },
+    "comparison": {
+      "comparison_products": 0,
+      "structured_comparison": 0
+    },
+    "topical": {
+      "topic_breadth": 0,
+      "entity_density": 0,
+      "has_explanatory_content": 0
+    }
+  },
+  "priority_order": [
+    "trust",
+    "entity",
+    "extractability",
+    "content",
+    "schema"
+  ],
+  "weak_areas": {
+    "schema": [
+      "product_schema",
+      "offers_in_schema"
+    ],
+    "entity": [
+      "gtin",
+      "product_group"
+    ],
+    "trust_eeat": [
+      "has_warranty_info",
+      "mentions_secure_payment",
+      "reviews",
+      "eeat_experience",
+      "eeat_expertise",
+      "eeat_authority",
+      "eeat_trust"
+    ],
+    "extractability": [
+      "og_tags",
+      "hreflang"
+    ],
+    "media": [
+      "has_video"
+    ],
+    "comparison": [
+      "comparison_products",
+      "structured_comparison"
+    ],
+    "topical": [
+      "topic_breadth",
+      "entity_density",
+      "has_explanatory_content"
+    ]
+  },
+  "penalties": {},
+  "content_excerpt": "Distressed Washed Black Tee – DEADBEAR Skip to content CASH ON DELIVERY AVAILABLE NEW DROP : DISTRESSED COLLECTION FEEL IT TO BELIEVE IT FREE SHIPPING PAN INDIA NEW DROPS Tops Tshirts Shirts TANKS Hoodies Sweatshirts Bottoms Shorts Cargo Pants Joggers Babybear Tshirts Hoodies DISTRESSED COLLECTION CO-ORDS EXCHANGE/RETURN REQUEST Our Story Instagram NEW DROPS Tops Tshirts Shirts TANKS Hoodies Sweatshirts Bottoms Shorts Cargo Pants Joggers Babybear Tshirts Hoodies DISTRESSED COLLECTION CO-ORDS EXCHANGE/RETURN REQUEST Our Story Instagram More Account Other sign in options Sign in Orders Profile A Key features: Terms & Conditions.RETURNS & EXCHANGES Specifications: Other sign in options: Sign in. Orders: Profile"
+}

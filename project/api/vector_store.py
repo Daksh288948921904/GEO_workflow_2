@@ -11,8 +11,8 @@ from qdrant_client.models import (
 from dotenv import load_dotenv
 load_dotenv()
 
-EMBEDDING_MODEL="text_embedding-3-large"
-EMBEDDING_DIM=1536
+EMBEDDING_MODEL="text-embedding-3-large"
+EMBEDDING_DIM=3072
 COLLECTION_NAME = "geny_html_chunks"
 QDRANT_URL      = os.getenv("QDRANT_URL", "http://localhost:6333")
 
@@ -31,10 +31,10 @@ def _get_qdrant() -> QdrantClient:
         _qdrant_client = QdrantClient(url=QDRANT_URL)
     return _qdrant_client
 def ensure_collection():
-    client=_get_qdrant
+    client=_get_qdrant()
     collections = [c.name for c in client.get_collections().collections]
-    if COLLECTION_NAME in collections:
-        client.create_collections(
+    if COLLECTION_NAME not in collections:
+        client.create_collection(
             collection_name=COLLECTION_NAME,
             vectors_config=VectorParams(
                 size=EMBEDDING_DIM,
@@ -43,7 +43,17 @@ def ensure_collection():
         )
         print(f"[Qdrant] Created collection: {COLLECTION_NAME}")
     else:
-        print(f"[Qdrant] Collection exists: {COLLECTION_NAME}")
+        info = client.get_collection(COLLECTION_NAME)
+        existing_dim = info.config.params.vectors.size
+        if existing_dim != EMBEDDING_DIM:
+            client.delete_collection(COLLECTION_NAME)
+            client.create_collection(
+                collection_name=COLLECTION_NAME,
+                vectors_config=VectorParams(size=EMBEDDING_DIM, distance=Distance.COSINE),
+            )
+            print(f"[Qdrant] Recreated collection (dim {existing_dim}→{EMBEDDING_DIM}): {COLLECTION_NAME}")
+        else:
+            print(f"[Qdrant] Collection exists: {COLLECTION_NAME}")
 
 def delete_page_chunks(page_url:str):
     client=_get_qdrant()
@@ -56,7 +66,7 @@ def delete_page_chunks(page_url:str):
     print(f"[Qdrant] Deleted existing chunks for: {page_url}")
 
 def embed_texts(texts:List[str])->List[List[float]]:
-    client=_get_openai
+    client=_get_openai()
     all_embeddings=[]
     batch_size=200
     for i in range(0,len(texts),batch_size):
@@ -65,7 +75,7 @@ def embed_texts(texts:List[str])->List[List[float]]:
             model=EMBEDDING_MODEL,
             input=batch,
         )
-        all_embeddings.extend([d.embeddings for d in response.data])
+        all_embeddings.extend([d.embedding for d in response.data])
     return all_embeddings
 def embed_single(text: str) -> List[float]:
     return embed_texts([text])[0]
@@ -74,7 +84,7 @@ def index_chunks(chunks:list,page_url:str)->int:
     if not chunks:
         return 0
     ensure_collection()
-    delete_page_chunks()
+    delete_page_chunks(page_url)
     texts=[]
     for chunk in chunks:
         prefix_parts = [chunk.semantic_role]
@@ -118,14 +128,15 @@ def index_chunks(chunks:list,page_url:str)->int:
 def retrieve_chunks( query: str, page_url: str, top_k: int = 3, score_threshold: float = 0.3,) -> List[Dict[str, Any]]:
     ensure_collection()
     query_embedding=embed_single(query)
-    results=_get_qdrant().search(
+    response=_get_qdrant().query_points(
         collection_name=COLLECTION_NAME,
-        query_vector=query_embedding,
-        query_filter=filter(must=[FieldCondition(key="page_url", match=MatchValue(value=page_url))]
-        ),
+        query=query_embedding,
+        query_filter=Filter(must=[FieldCondition(key="page_url", match=MatchValue(value=page_url))]),
         limit=top_k,
-        score_threshold=score_threshold
+        score_threshold=score_threshold,
+        with_payload=True,
     )
+    results = response.points
     return [
         {
             "chunk_id":      hit.payload["chunk_id"],

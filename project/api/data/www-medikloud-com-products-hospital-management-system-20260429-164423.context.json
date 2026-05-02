@@ -1,0 +1,170 @@
+{
+  "page_identity": {
+    "url": "https://www.medikloud.com/products/hospital-management-system",
+    "title": "Clinic & Hospital Management System (HMS SaaS) | MediKloud | MediKloud",
+    "meta_description": "Deploy an easy-to-use hospital management SaaS in 24 hours. Connect your clinic's OPD, billing, and pharmacy workflows instantly with zero training."
+  },
+  "product_summary": {
+    "name": "",
+    "brand": "",
+    "price": null,
+    "currency": "",
+    "availability": "",
+    "rating": null,
+    "review_count": null
+  },
+  "content_metrics": {
+    "word_count": 1127,
+    "heading_count": 60,
+    "feature_count": 0,
+    "specification_count": 1
+  },
+  "ai_visibility_summary": {
+    "final_score": 28,
+    "max_possible": 100,
+    "ai_readiness_pct": 28.0,
+    "readiness_band": "Critical — Not AI-Ready"
+  },
+  "section_scores": {
+    "schema": 2,
+    "entity": 0,
+    "content": 13,
+    "trust": null,
+    "extractability": 8
+  },
+  "breakdowns": {
+    "schema": {
+      "name": 0,
+      "price": 0,
+      "brand": 0,
+      "price_format": 0,
+      "schema_markup": 1,
+      "product_schema": 0,
+      "offers_in_schema": 1,
+      "availability": 0,
+      "currency": 0
+    },
+    "entity": {
+      "name": 0,
+      "brand": 0,
+      "sku": 0,
+      "category": 0,
+      "gtin": 0,
+      "name_quality": 0,
+      "product_group": 0
+    },
+    "content": {
+      "word_count": 5,
+      "headings": 3,
+      "features": 0,
+      "specifications": 1,
+      "faq": 3,
+      "content_signal_ratio": 1
+    },
+    "trust_eeat": {
+      "has_return_policy": 2,
+      "has_warranty_info": 0,
+      "has_shipping_info": 0,
+      "mentions_secure_payment": 1,
+      "has_contact_page": 0,
+      "uses_https": 1,
+      "reviews": 0,
+      "eeat_experience": 0,
+      "eeat_expertise": 0,
+      "eeat_authority": 0,
+      "eeat_trust": 0
+    },
+    "extractability": {
+      "schema_present": 2,
+      "heading_hierarchy": 2,
+      "meta_title": 1,
+      "meta_description": 1,
+      "canonical_url": 1,
+      "og_tags": 0,
+      "hreflang": 0,
+      "not_blocked": 1
+    },
+    "media": {
+      "image_count": 2,
+      "alt_text_coverage": 2,
+      "has_video": 0,
+      "media_diversity": 1
+    },
+    "links": {
+      "internal_links": 3,
+      "external_links": 1,
+      "anchor_quality": 3,
+      "no_broken_links": 2
+    },
+    "comparison": {
+      "comparison_products": 0,
+      "structured_comparison": 0
+    },
+    "topical": {
+      "topic_breadth": 0,
+      "entity_density": 0,
+      "has_explanatory_content": 0
+    }
+  },
+  "priority_order": [
+    "entity",
+    "trust",
+    "schema",
+    "extractability",
+    "content"
+  ],
+  "weak_areas": {
+    "schema": [
+      "name",
+      "price",
+      "brand",
+      "price_format",
+      "product_schema",
+      "availability",
+      "currency"
+    ],
+    "entity": [
+      "name",
+      "brand",
+      "sku",
+      "category",
+      "gtin",
+      "name_quality",
+      "product_group"
+    ],
+    "content": [
+      "features"
+    ],
+    "trust_eeat": [
+      "has_warranty_info",
+      "has_shipping_info",
+      "has_contact_page",
+      "reviews",
+      "eeat_experience",
+      "eeat_expertise",
+      "eeat_authority",
+      "eeat_trust"
+    ],
+    "extractability": [
+      "og_tags",
+      "hreflang"
+    ],
+    "media": [
+      "has_video"
+    ],
+    "comparison": [
+      "comparison_products",
+      "structured_comparison"
+    ],
+    "topical": [
+      "topic_breadth",
+      "entity_density",
+      "has_explanatory_content"
+    ]
+  },
+  "penalties": {
+    "missing_price": -5,
+    "missing_product_name": -8
+  },
+  "content_excerpt": "Clinic & Hospital Management System (HMS SaaS) | MediKloud | MediKloud Skip to content Products Solutions About Blogs Book a Demo 100% Secure · Zero Training · High-Volume OPD Hospital Management. Fast, Smart & Simple. For Independent Clinics. Run your entire facility from any device. Built exclusively for doctor-owned clinics, MediKloud HMS connects your reception, OPD, and pharmacy into one zero-friction workflow. Experience HMS Optimized ROI Zero Revenue Leakage 24/7 Operations Hassle-Free Pharmacy MediKloud OS Live Patient Journey End-to-End Reception Queue Consult Billing Pharmacy Walk-in Specifications: Wait: 4 mins"
+}

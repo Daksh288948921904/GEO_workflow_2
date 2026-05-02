@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { createPortal } from "react-dom";
 
 const API = "http://localhost:8000";
 
@@ -254,6 +255,54 @@ body::before {
   content: ''; position: absolute; inset: -2px; border-radius: 50%;
   background: inherit; opacity: 0.25; animation: breathe 2.5s ease infinite;
 }
+
+/* ── Download modal ──────────────────────────── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 900;
+  background: rgba(8,8,7,0.82); backdrop-filter: blur(14px);
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeIn 0.18s ease both; padding: 20px;
+}
+.modal-card {
+  background: var(--z7); border: 1px solid var(--z4);
+  border-radius: var(--r14); width: 100%; max-width: 460px;
+  position: relative; overflow: hidden;
+  animation: scaleIn 0.26s cubic-bezier(0.16,1,0.3,1) both;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.7), 0 0 0 1px rgba(200,169,110,0.06);
+}
+
+/* ── Console code block ──────────────────────── */
+.console-block {
+  background: var(--z9); border: 1px solid var(--z5);
+  border-radius: var(--r10); overflow: hidden; position: relative;
+}
+.console-hdr {
+  display: flex; align-items: center; gap: 6px;
+  padding: 9px 16px; border-bottom: 1px solid var(--z5);
+  background: var(--z8);
+}
+.console-body {
+  font-family: var(--mono); font-size: 12px; color: var(--z0);
+  line-height: 1.85; padding: 18px 20px;
+  white-space: pre-wrap; word-break: break-all; margin: 0;
+  max-height: 300px; overflow-y: auto;
+}
+.copy-btn {
+  margin-left: auto; background: var(--z6); border: 1px solid var(--z4);
+  border-radius: var(--r6); padding: 4px 12px;
+  color: var(--z2); font-family: var(--mono); font-size: 8.5px;
+  letter-spacing: 0.1em; cursor: pointer; transition: all 0.2s;
+  text-transform: uppercase; flex-shrink: 0;
+}
+.copy-btn:hover { background: var(--z4); color: var(--z0); border-color: var(--z3); }
+.copy-btn.copied { background: var(--jadeb); border-color: var(--jade); color: var(--jade); }
+
+/* ── Rec card ────────────────────────────────── */
+.rec-card {
+  border: 1px solid var(--z5); border-radius: var(--r10);
+  overflow: hidden; transition: border-color 0.2s;
+}
+.rec-card:hover { border-color: var(--z4); }
 `;
 
 function injectCSS() {
@@ -1072,10 +1121,308 @@ function ScoreView({ scoreData, onGeo }) {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // GEO VIEW
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-function GeoView({ data, scoreData, filename }) {
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// DOWNLOAD MODAL
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function DownloadModal({ onClose, onDownload, downloading, onGetCode }) {
+  return (
+    <div className="modal-overlay" onClick={e=>{if(e.target===e.currentTarget)onClose();}}>
+      <div className="modal-card">
+        <div style={{height:2,background:"linear-gradient(90deg,transparent,var(--g5) 25%,var(--g3) 60%,transparent)"}}/>
+        <div style={{padding:"28px 32px 22px",borderBottom:"1px solid var(--z5)"}}>
+          <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between"}}>
+            <div>
+              <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
+                <div className="gdot" style={{background:"var(--g5)"}}/>
+                <span className="label-g">Export Report</span>
+              </div>
+              <div className="display" style={{fontSize:22,color:"var(--z0)",marginBottom:6}}>What would you like to do?</div>
+              <div style={{fontFamily:"var(--sans)",fontSize:13,color:"var(--z2)",fontWeight:300,lineHeight:1.7}}>Download the full report or generate live console fixes.</div>
+            </div>
+            <button onClick={onClose}
+              style={{background:"var(--z6)",border:"1px solid var(--z5)",borderRadius:"var(--r6)",width:32,height:32,display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",color:"var(--z2)",fontSize:18,lineHeight:1,flexShrink:0,marginLeft:16,transition:"all 0.2s"}}
+              onMouseEnter={e=>{e.currentTarget.style.background="var(--z5)";e.currentTarget.style.color="var(--z0)";}}
+              onMouseLeave={e=>{e.currentTarget.style.background="var(--z6)";e.currentTarget.style.color="var(--z2)";}}>×</button>
+          </div>
+        </div>
+        <div style={{padding:"22px 32px",display:"flex",flexDirection:"column",gap:12}}>
+          <button onClick={onDownload} disabled={downloading}
+            style={{display:"flex",alignItems:"center",gap:16,padding:"18px 20px",background:"var(--z6)",border:"1px solid var(--z5)",borderRadius:"var(--r10)",cursor:downloading?"not-allowed":"pointer",transition:"all 0.2s",textAlign:"left",width:"100%",opacity:downloading?0.6:1}}
+            onMouseEnter={e=>{if(!downloading){e.currentTarget.style.borderColor="var(--z3)";e.currentTarget.style.background="var(--z5)";e.currentTarget.style.transform="translateY(-1px)";}}}
+            onMouseLeave={e=>{e.currentTarget.style.borderColor="var(--z5)";e.currentTarget.style.background="var(--z6)";e.currentTarget.style.transform="none";}}>
+            <div style={{width:40,height:40,borderRadius:"var(--r6)",background:"var(--z5)",border:"1px solid var(--z4)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,fontSize:18,color:"var(--z0)"}}>↓</div>
+            <div style={{flex:1}}>
+              <div style={{fontFamily:"var(--sans)",fontSize:14,color:"var(--z0)",fontWeight:400,marginBottom:3}}>Download .docx Report</div>
+              <div style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--z3)",letterSpacing:"0.06em"}}>JSON-LD snippets · Score analysis · Implementation guide</div>
+            </div>
+            {downloading&&<Spin size={14} color="var(--z2)"/>}
+          </button>
+          <button onClick={onGetCode}
+            style={{display:"flex",alignItems:"center",gap:16,padding:"18px 20px",background:"var(--gf)",border:"1px solid var(--gs)",borderRadius:"var(--r10)",cursor:"pointer",transition:"all 0.2s",textAlign:"left",width:"100%"}}
+            onMouseEnter={e=>{e.currentTarget.style.borderColor="var(--gx)";e.currentTarget.style.background="var(--gm)";e.currentTarget.style.transform="translateY(-1px)";}}
+            onMouseLeave={e=>{e.currentTarget.style.borderColor="var(--gs)";e.currentTarget.style.background="var(--gf)";e.currentTarget.style.transform="none";}}>
+            <div style={{width:40,height:40,borderRadius:"var(--r6)",background:"var(--gm)",border:"1px solid var(--gs)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,fontSize:18,color:"var(--g4)"}}>◈</div>
+            <div style={{flex:1}}>
+              <div style={{fontFamily:"var(--sans)",fontSize:14,color:"var(--g4)",fontWeight:400,marginBottom:3}}>Get Implementation Code</div>
+              <div style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--g3)",letterSpacing:"0.06em",opacity:0.7}}>Paste your page source · Get console-ready JS fixes</div>
+            </div>
+            <svg width="14" height="14" viewBox="0 0 14 14" style={{color:"var(--g4)",flexShrink:0}}><polyline points="3,2 11,7 3,12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+          </button>
+        </div>
+        <div style={{padding:"14px 32px",borderTop:"1px solid var(--z6)",background:"var(--z9)"}}>
+          <div style={{fontFamily:"var(--mono)",fontSize:8.5,color:"var(--z3)",letterSpacing:"0.08em"}}>GENY · GEO Intelligence Engine · v5.0</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// IMPLEMENT INPUT VIEW
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function ImplementInputView({ onSubmit, loading, pageUrl }) {
+  const [html, setHtml] = useState("");
+  const [err, setErr] = useState("");
+
+  function submit() {
+    if (!html.trim()) { setErr("Please paste your page source code first."); return; }
+    if (html.trim().length < 200) { setErr("Source seems too short — paste the full HTML of the page."); return; }
+    setErr(""); onSubmit(html);
+  }
+
+  return (
+    <div style={{animation:"fadeUp 0.5s cubic-bezier(0.16,1,0.3,1) both"}}>
+      <div style={{marginBottom:32}}>
+        <div style={{display:"flex",alignItems:"center",gap:14,marginBottom:18}}>
+          <div style={{width:32,height:1,background:"var(--g5)"}}/>
+          <span style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--g5)",letterSpacing:"0.18em",textTransform:"uppercase"}}>Step 4 · Implementation</span>
+        </div>
+        <h2 className="display" style={{fontSize:"clamp(28px,4vw,42px)",color:"var(--z0)",marginBottom:12,lineHeight:1.1}}>Paste Your Page Source</h2>
+        <p style={{fontFamily:"var(--sans)",fontSize:15,color:"var(--z2)",lineHeight:1.8,maxWidth:560,fontWeight:300}}>
+          We'll match each GEO fix to the exact DOM element and generate browser console scripts — ready to copy and run.
+        </p>
+      </div>
+
+      <div className="panel" style={{padding:"18px 24px",borderRadius:"var(--r10)",marginBottom:24}}>
+        <div style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--z2)",letterSpacing:"0.12em",textTransform:"uppercase",marginBottom:14}}>How to get your page source</div>
+        <div style={{display:"flex",gap:0,flexWrap:"wrap"}}>
+          {[
+            {n:"1",t:"Open your product page",d:"in Chrome, Firefox, or Safari"},
+            {n:"2",t:"Right-click anywhere",d:"on the page background"},
+            {n:"3",t:'Click "View Page Source"',d:"or press Ctrl+U / ⌘+U"},
+            {n:"4",t:"Select All & Copy",d:"Ctrl+A → Ctrl+C"},
+          ].map((s,i,arr)=>(
+            <div key={s.n} style={{display:"flex",alignItems:"flex-start",gap:10,padding:"6px 16px 6px 0",flex:"1 1 180px"}}>
+              <div style={{width:22,height:22,borderRadius:"50%",background:"var(--gm)",border:"1px solid var(--gs)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
+                <span style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--g4)",fontWeight:500}}>{s.n}</span>
+              </div>
+              <div>
+                <div style={{fontFamily:"var(--sans)",fontSize:12.5,color:"var(--z0)",fontWeight:400,marginBottom:2}}>{s.t}</div>
+                <div style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--z3)",letterSpacing:"0.04em"}}>{s.d}</div>
+              </div>
+              {i<arr.length-1&&<div style={{alignSelf:"center",color:"var(--z4)",fontSize:11,marginLeft:"auto",paddingLeft:8,flexShrink:0}}>→</div>}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="panel" style={{borderRadius:"var(--r14)",overflow:"hidden",marginBottom:16}}>
+        <div style={{padding:"12px 20px",borderBottom:"1px solid var(--z5)",background:"var(--z7)",display:"flex",alignItems:"center",gap:8}}>
+          {["#ff5f56","#ffbd2e","#27c93f"].map((c,i)=><div key={i} style={{width:10,height:10,borderRadius:"50%",background:c,opacity:0.6}}/>)}
+          <span style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--z3)",letterSpacing:"0.12em",marginLeft:6,textTransform:"uppercase"}}>HTML Source</span>
+          {html.trim().length>100&&(
+            <span style={{marginLeft:"auto",fontFamily:"var(--mono)",fontSize:8.5,color:"var(--jade)",letterSpacing:"0.08em"}}>
+              {(html.length/1024).toFixed(1)} KB pasted
+            </span>
+          )}
+        </div>
+        <textarea
+          value={html}
+          onChange={e=>{setHtml(e.target.value);setErr("");}}
+          placeholder={"<!DOCTYPE html>\n<html>\n  <head>...\n\nPaste your full page source here..."}
+          style={{width:"100%",minHeight:300,padding:"20px 22px",background:"var(--z9)",color:"var(--z0)",fontFamily:"var(--mono)",fontSize:12,lineHeight:1.75,border:"none",outline:"none",resize:"vertical",caretColor:"var(--g5)",letterSpacing:"0.01em",display:"block"}}
+        />
+      </div>
+
+      {err&&<div style={{border:"1px solid var(--crimsonb)",background:"var(--crimsonf)",padding:"10px 16px",marginBottom:16,borderRadius:"var(--r6)",fontFamily:"var(--sans)",fontSize:13,color:"var(--crimson)",animation:"fadeIn 0.2s ease both"}}>{err}</div>}
+
+      {pageUrl&&(
+        <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:20,padding:"9px 14px",background:"var(--z7)",border:"1px solid var(--z5)",borderRadius:"var(--r6)"}}>
+          <div className="gdot" style={{background:"var(--cobalt)"}}/>
+          <span style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--z2)",letterSpacing:"0.06em",flexShrink:0}}>Applying fixes for:</span>
+          <span style={{fontFamily:"var(--mono)",fontSize:9.5,color:"var(--cobalt)",wordBreak:"break-all"}}>{pageUrl}</span>
+        </div>
+      )}
+
+      <div style={{display:"flex",alignItems:"center",gap:14}}>
+        <RippleBtn onClick={submit} disabled={loading}>
+          {loading?<><Spin size={14} color="var(--z8)"/> Generating…</>:<>◈ Generate Console Code</>}
+        </RippleBtn>
+        <span style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--z3)",letterSpacing:"0.06em"}}>Takes ~30–60s</span>
+      </div>
+    </div>
+  );
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// IMPLEMENT DONE VIEW — helpers
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function CopyBtn({ code }) {
+  const [copied, setCopied] = useState(false);
+  function copy() {
+    navigator.clipboard.writeText(code).then(()=>{ setCopied(true); setTimeout(()=>setCopied(false),2000); });
+  }
+  return <button className={`copy-btn${copied?" copied":""}`} onClick={copy}>{copied?"✓ Copied":"Copy"}</button>;
+}
+
+function ConsoleBlock({ code }) {
+  return (
+    <div className="console-block">
+      <div className="console-hdr">
+        {["#ff5f56","#ffbd2e","#27c93f"].map((c,i)=><div key={i} style={{width:10,height:10,borderRadius:"50%",background:c,opacity:0.55}}/>)}
+        <span style={{fontFamily:"var(--mono)",fontSize:8.5,color:"var(--z3)",letterSpacing:"0.12em",textTransform:"uppercase",marginLeft:6}}>JavaScript · Browser Console</span>
+        <CopyBtn code={code}/>
+      </div>
+      <pre className="console-body">{code}</pre>
+    </div>
+  );
+}
+
+const PRI_STYLE={
+  high:  {bg:"var(--crimsonf)",border:"var(--crimsonb)",color:"var(--crimson)"},
+  medium:{bg:"var(--amberf)",  border:"var(--amberb)",  color:"var(--amber)"},
+  low:   {bg:"var(--jadef)",   border:"var(--jadeb)",   color:"var(--jade)"},
+};
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// IMPLEMENT DONE VIEW
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function ImplementDoneView({ data }) {
+  const [open, setOpen] = useState(null);
+  const rewrites = data?.rewrites || [];
+  const high   = rewrites.filter(r=>r.recommendation?.priority==="high").length;
+  const medium = rewrites.filter(r=>r.recommendation?.priority==="medium").length;
+  const low    = rewrites.filter(r=>r.recommendation?.priority==="low").length;
+
+  const allCode = rewrites.map((r,i)=>
+    `// ── Fix ${i+1}: ${r.recommendation?.title||"Untitled"} ──\n${r.console_js||""}`
+  ).join("\n\n");
+
+  return (
+    <div style={{animation:"fadeUp 0.5s cubic-bezier(0.16,1,0.3,1) both"}}>
+      {/* Header panel */}
+      <div className="panel ca" style={{borderRadius:"var(--r14)",overflow:"hidden",marginBottom:24}}>
+        <div style={{height:2,background:"linear-gradient(90deg,transparent,var(--g5) 25%,var(--g3) 50%,var(--g5) 75%,transparent)"}}/>
+        <div style={{padding:"28px 32px",background:"linear-gradient(135deg,var(--z7) 0%,rgba(200,169,110,0.04) 100%)"}}>
+          <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",flexWrap:"wrap",gap:20}}>
+            <div>
+              <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:12}}>
+                <div className="gdot" style={{background:"var(--jade)"}}/>
+                <span className="label-g">Implementation Code · Ready</span>
+              </div>
+              <h2 className="display" style={{fontSize:"clamp(20px,3vw,28px)",color:"var(--z0)",marginBottom:8,lineHeight:1.1}}>Console Scripts Generated</h2>
+              <p style={{fontFamily:"var(--sans)",fontSize:13.5,color:"var(--z2)",lineHeight:1.75,maxWidth:440,fontWeight:300}}>
+                Each script selects the exact DOM element and applies your GEO fix. Paste directly into your browser console.
+              </p>
+            </div>
+            <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
+              {[{v:high,l:"High",c:"var(--crimson)",b:"var(--crimsonb)",f:"var(--crimsonf)"},{v:medium,l:"Medium",c:"var(--amber)",b:"var(--amberb)",f:"var(--amberf)"},{v:low,l:"Low",c:"var(--jade)",b:"var(--jadeb)",f:"var(--jadef)"}].map(s=>(
+                <div key={s.l} style={{padding:"12px 18px",background:s.f,border:`1px solid ${s.b}`,borderRadius:"var(--r10)",textAlign:"center",minWidth:72}}>
+                  <div className="display" style={{fontSize:26,color:s.c,lineHeight:1}}>{s.v}</div>
+                  <div style={{fontFamily:"var(--mono)",fontSize:8.5,color:s.c,marginTop:4,letterSpacing:"0.1em",opacity:0.8}}>{s.l.toUpperCase()}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div style={{padding:"13px 32px",background:"var(--z9)",borderTop:"1px solid var(--z5)",display:"flex",alignItems:"center",gap:16,flexWrap:"wrap"}}>
+          <span style={{fontFamily:"var(--mono)",fontSize:8.5,color:"var(--z3)",letterSpacing:"0.1em",textTransform:"uppercase",flexShrink:0}}>How to apply:</span>
+          {["1. Open page in Chrome","2. Press F12 → Console","3. Paste the script","4. Press Enter → Done"].map((s,i)=>(
+            <div key={i} style={{display:"flex",alignItems:"center",gap:6}}>
+              {i>0&&<div style={{width:3,height:3,borderRadius:"50%",background:"var(--z4)"}}/>}
+              <span style={{fontFamily:"var(--mono)",fontSize:8.5,color:"var(--z2)",letterSpacing:"0.04em"}}>{s}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Recommendation cards */}
+      <div style={{display:"flex",flexDirection:"column",gap:10,marginBottom:24}}>
+        {rewrites.map((rw,i)=>{
+          const rec=rw.recommendation||{};
+          const pri=rec.priority||"low";
+          const ps=PRI_STYLE[pri]||PRI_STYLE.low;
+          const isOpen=open===i;
+          const isNew=rw.chunk_meta?.type==="new_addition";
+          return (
+            <div key={i} className="rec-card" style={{borderColor:isOpen?"var(--z4)":"var(--z5)"}}>
+              <div onClick={()=>setOpen(isOpen?null:i)}
+                style={{padding:"16px 20px",display:"flex",alignItems:"flex-start",gap:14,cursor:"pointer",background:isOpen?"var(--z7)":"var(--z6)",transition:"background 0.2s"}}
+                onMouseEnter={e=>{if(!isOpen)e.currentTarget.style.background="var(--z7)";}}
+                onMouseLeave={e=>{if(!isOpen)e.currentTarget.style.background="var(--z6)";}}>
+                <div style={{width:28,height:28,borderRadius:"var(--r6)",background:"var(--z5)",border:"1px solid var(--z4)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
+                  <span style={{fontFamily:"var(--mono)",fontSize:10,color:"var(--z2)",fontWeight:500}}>{String(i+1).padStart(2,"0")}</span>
+                </div>
+                <div style={{flex:1,minWidth:0}}>
+                  <div style={{display:"flex",alignItems:"center",gap:7,marginBottom:6,flexWrap:"wrap"}}>
+                    <span style={{fontFamily:"var(--mono)",fontSize:8,letterSpacing:"0.12em",textTransform:"uppercase",padding:"3px 8px",borderRadius:"var(--r3)",background:ps.bg,border:`1px solid ${ps.border}`,color:ps.color}}>{pri}</span>
+                    {rec.section_type&&<span className="tag tz" style={{fontSize:8,letterSpacing:"0.08em",textTransform:"uppercase"}}>{rec.section_type}</span>}
+                    {isNew&&<span className="tag tc" style={{fontSize:8,letterSpacing:"0.06em"}}>new element</span>}
+                  </div>
+                  <div style={{fontFamily:"var(--sans)",fontSize:14,color:"var(--z0)",fontWeight:400,marginBottom:4,lineHeight:1.3}}>{rec.title||"Untitled Fix"}</div>
+                  <div style={{fontFamily:"var(--sans)",fontSize:12.5,color:"var(--z2)",lineHeight:1.6,fontWeight:300}}>{rec.description||""}</div>
+                </div>
+                <div style={{flexShrink:0,marginLeft:8,transition:"transform 0.22s",transform:isOpen?"rotate(180deg)":"none"}}>
+                  <svg width="14" height="14" viewBox="0 0 14 14"><polyline points="2,4 7,10 12,4" fill="none" stroke="var(--z3)" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                </div>
+              </div>
+              {isOpen&&(
+                <div style={{borderTop:"1px solid var(--z5)",padding:"18px 20px",background:"var(--z9)",animation:"fadeDown 0.2s ease both"}}>
+                  {rw.match_score>0&&(
+                    <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
+                      <span style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--z3)",letterSpacing:"0.08em",flexShrink:0}}>MATCH</span>
+                      <div style={{flex:1,height:2,background:"var(--z5)",borderRadius:1,maxWidth:140}}>
+                        <div style={{height:"100%",width:`${Math.round(rw.match_score*100)}%`,background:"var(--g5)",borderRadius:1}}/>
+                      </div>
+                      <span style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--g4)"}}>{Math.round(rw.match_score*100)}%</span>
+                    </div>
+                  )}
+                  {rw.chunk_meta?.dom_path&&(
+                    <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:14,padding:"8px 12px",background:"var(--z7)",border:"1px solid var(--z5)",borderRadius:"var(--r6)"}}>
+                      <span style={{fontFamily:"var(--mono)",fontSize:8.5,color:"var(--z3)",letterSpacing:"0.08em",flexShrink:0}}>TARGET</span>
+                      <span style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--cobalt)",wordBreak:"break-all"}}>{rw.chunk_meta.dom_path}</span>
+                    </div>
+                  )}
+                  <ConsoleBlock code={rw.console_js||"// No script generated"} />
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Run all */}
+      {rewrites.length>0&&(
+        <div style={{padding:"20px 24px",background:"var(--z7)",border:"1px solid var(--z5)",borderRadius:"var(--r10)",display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:16}}>
+          <div>
+            <div style={{fontFamily:"var(--sans)",fontSize:14,color:"var(--z0)",fontWeight:400,marginBottom:4}}>Run All Scripts at Once</div>
+            <div style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--z3)",letterSpacing:"0.06em"}}>Combined script applies every fix in a single console paste</div>
+          </div>
+          <CopyBtn code={allCode}/>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// GEO VIEW
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function GeoView({ data, scoreData, filename, onGetCode }) {
   const [sec,setSec]=useState("summary");
   const [downloading,setDownloading]=useState(false);
   const [dlDone,setDlDone]=useState(false);
+  const [showModal,setShowModal]=useState(false);
   if (!data) return null;
   const summary=data.executive_summary||data.summary||"";
   const technical=data.technical_analysis||"";
@@ -1179,15 +1526,23 @@ function GeoView({ data, scoreData, filename }) {
               <div className="gdot" style={{background:"var(--g5)"}}/>
               <span className="label-g">Full Report Ready</span>
             </div>
-            <div className="display" style={{fontSize:20,color:"var(--z0)",marginBottom:6}}>Download Complete .docx Report</div>
-            <div style={{fontFamily:"var(--sans)",fontSize:13.5,color:"var(--z2)",lineHeight:1.75,maxWidth:420,fontWeight:300}}>JSON-LD code snippets, implementation guide, score projection roadmap.</div>
+            <div className="display" style={{fontSize:20,color:"var(--z0)",marginBottom:6}}>Export Your GEO Report</div>
+            <div style={{fontFamily:"var(--sans)",fontSize:13.5,color:"var(--z2)",lineHeight:1.75,maxWidth:420,fontWeight:300}}>Download the .docx report or get console-ready JavaScript fixes for your page.</div>
             {dlDone&&<div style={{fontFamily:"var(--mono)",fontSize:9,color:"var(--jade)",marginTop:10,display:"flex",alignItems:"center",gap:6,letterSpacing:"0.1em"}}>✓ DOWNLOAD COMPLETE</div>}
           </div>
-          <RippleBtn onClick={download} disabled={downloading}>
-            {downloading?<><Spin size={16} color="var(--z8)"/> Generating…</>:<>↓ Download .docx</>}
-          </RippleBtn>
+          <RippleBtn onClick={()=>setShowModal(true)}>↓ Export Report</RippleBtn>
         </div>
       </div>
+
+      {showModal&&createPortal(
+        <DownloadModal
+          onClose={()=>setShowModal(false)}
+          onDownload={()=>{ download(); setShowModal(false); }}
+          downloading={downloading}
+          onGetCode={()=>{ setShowModal(false); onGetCode(); }}
+        />,
+        document.body
+      )}
     </div>
   );
 }
@@ -1244,6 +1599,7 @@ export default function App() {
   const [error,setError]=useState("");
   const [elapsed,setElapsed]=useState(0);
   const [dykIdx,setDykIdx]=useState(0);
+  const [implementData,setImplementData]=useState(null);
 
   async function analyze() {
     if (!url.trim()) return;
@@ -1279,11 +1635,23 @@ export default function App() {
       setGeoStep(GEO_STEPS.length);setGeoData(d);await sleep(300);setPhase("geo_done");
     } catch(e) { clearInterval(st);clearInterval(et);clearInterval(dy);setError(e.message);setPhase("score"); }
   }
-  function reset() { setPhase("input");setUrl("");setFilename("");setCrawlData(null);setScoreData(null);setGeoData(null);setError(""); }
+  function reset() { setPhase("input");setUrl("");setFilename("");setCrawlData(null);setScoreData(null);setGeoData(null);setImplementData(null);setError(""); }
 
-  const CRUMBS=[{l:"Crawl"},{l:"Score"},{l:"Report"}];
-  const crumbIdx=["crawled","scoring"].includes(phase)?0:["score","geo_loading"].includes(phase)?1:phase==="geo_done"?2:-1;
-  const showCrumbs=["crawled","scoring","score","geo_loading","geo_done"].includes(phase);
+  async function implement(html) {
+    const pageUrl=crawlData?.data?.page_info?.url||url;
+    setError("");setPhase("implement_loading");
+    try {
+      const r1=await fetch(`${API}/index_page`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({page_url:pageUrl,html})});
+      if (!r1.ok) throw new Error(`Indexing failed (HTTP ${r1.status})`);
+      const r2=await fetch(`${API}/apply_rewrites`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({filename})});
+      if (!r2.ok) throw new Error(`Script generation failed (HTTP ${r2.status})`);
+      const d=await r2.json();setImplementData(d);await sleep(300);setPhase("implement_done");
+    } catch(e) { setError(e.message);setPhase("implement_input"); }
+  }
+
+  const CRUMBS=[{l:"Crawl"},{l:"Score"},{l:"Report"},{l:"Implement"}];
+  const crumbIdx=["crawled","scoring"].includes(phase)?0:["score","geo_loading"].includes(phase)?1:phase==="geo_done"?2:["implement_input","implement_loading","implement_done"].includes(phase)?3:-1;
+  const showCrumbs=["crawled","scoring","score","geo_loading","geo_done","implement_input","implement_loading","implement_done"].includes(phase);
 
   return (
     <div style={{minHeight:"100vh",background:"var(--z8)",display:"flex",flexDirection:"column"}}>
@@ -1536,7 +1904,42 @@ export default function App() {
           {phase==="geo_done"&&(
             <div>
               <button className="btn-ghost" onClick={()=>setPhase("score")} style={{marginBottom:24}}>← Score View</button>
-              <GeoView data={geoData} scoreData={scoreData} filename={filename}/>
+              <GeoView data={geoData} scoreData={scoreData} filename={filename} onGetCode={()=>setPhase("implement_input")}/>
+            </div>
+          )}
+
+          {phase==="implement_input"&&(
+            <div>
+              <button className="btn-ghost" onClick={()=>setPhase("geo_done")} style={{marginBottom:24}}>← GEO Report</button>
+              <ImplementInputView onSubmit={implement} loading={false} pageUrl={crawlData?.data?.page_info?.url||url}/>
+            </div>
+          )}
+
+          {phase==="implement_loading"&&(
+            <div style={{maxWidth:560,animation:"fadeIn 0.35s ease both"}}>
+              <div style={{display:"flex",gap:18,alignItems:"flex-start",marginBottom:32}}>
+                <Spin size={28}/>
+                <div>
+                  <div className="display" style={{fontSize:24,color:"var(--z0)",marginBottom:6}}>Generating Console Scripts</div>
+                  <div style={{fontFamily:"var(--mono)",fontSize:9.5,color:"var(--z2)",letterSpacing:"0.04em"}}>Indexing HTML chunks · Matching elements · Writing JavaScript</div>
+                </div>
+              </div>
+              <div className="panel" style={{padding:"22px 28px",borderRadius:"var(--r14)"}}>
+                <Steps steps={[
+                  {label:"Parsing HTML into semantic chunks",detail:"headers · product info · specs · faq..."},
+                  {label:"Embedding and indexing in Qdrant",detail:"vector similarity search..."},
+                  {label:"Matching recommendations to elements",detail:"semantic + role-based retrieval..."},
+                  {label:"Writing console JavaScript",detail:"selectors · outerHTML · schema injection..."},
+                  {label:"Packaging scripts",detail:"IIFE · try/catch · copy-ready..."},
+                ]} cur={3}/>
+              </div>
+            </div>
+          )}
+
+          {phase==="implement_done"&&(
+            <div>
+              <button className="btn-ghost" onClick={()=>setPhase("implement_input")} style={{marginBottom:24}}>← Paste New Source</button>
+              <ImplementDoneView data={implementData}/>
             </div>
           )}
         </main>

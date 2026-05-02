@@ -78,13 +78,14 @@ def _compute_depth(tag:Tag)->int:
 
 def _make_chunk_id(html:str, dom_path:str)->str:
     raw=f"{dom_path}::{html[:500]}"
-    return hashlib.md5(raw.encode().hexdigest()[:12])
+    return hashlib.md5(raw.encode()).hexdigest()[:12]
 
 def chunk_html(html:str, page_url:str=" ")->List[HTMLChunk]:
     soup=BeautifulSoup(html,"lxml")
     for tag in soup(["script","style","noscript","svg","link","meta"]):
         tag.decompose()
-        chunks:List[HTMLChunk]=[]
+    chunks:List[HTMLChunk]=[]
+
     def _recurse(tag:Tag):
         if not isinstance(tag,Tag):
             return
@@ -97,13 +98,14 @@ def chunk_html(html:str, page_url:str=" ")->List[HTMLChunk]:
                 _create_chunk(tag)
         elif tag.name in ("table", "dl", "details", "ul", "ol", "form"):
             _create_chunk(tag)
+
     def _create_chunk(tag:Tag):
         inner_html=str(tag)
         text=tag.get_text(separator=" ",strip=True)
         if len(text)<MIN_TEXT_LENGTH:
             return
         dom_path=_build_dom_path(tag)
-        child_tags = [c.name for c in tag.children if isinstance(c, Tag)]    
+        child_tags = [c.name for c in tag.children if isinstance(c, Tag)]
         chunk = HTMLChunk(
             chunk_id=_make_chunk_id(inner_html, dom_path),
             html=inner_html,
@@ -119,19 +121,20 @@ def chunk_html(html:str, page_url:str=" ")->List[HTMLChunk]:
             page_url=page_url,
         )
         chunks.append(chunk)
-        body=soup.find("body")
-        if body:
-            for child in body.children:
-                if isinstance(child,Tag):
-                    _recurse(child)
-        else:
-            for child in soup.children:
-                if isinstance(child, Tag):
-                    _recurse(child)
-        return chunks
+
+    body=soup.find("body")
+    if body:
+        for child in body.children:
+            if isinstance(child,Tag):
+                _recurse(child)
+    else:
+        for child in soup.children:
+            if isinstance(child, Tag):
+                _recurse(child)
+    return chunks
 
 def print_chunk_summary(chunks: List[HTMLChunk]):
-    """Debug helper — print chunk overview."""
+    
     print(f"\n{'='*60}")
     print(f"Total chunks: {len(chunks)}")
     print(f"{'='*60}")

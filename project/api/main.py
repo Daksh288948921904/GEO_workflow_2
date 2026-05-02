@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, File, UploadFile, Form
 from pydantic import BaseModel
 import uvicorn
 import json
@@ -18,7 +18,7 @@ load_dotenv()
 
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
-
+from rag_pipeline import index_page, apply_recommendations, search_page_chunks
 app = FastAPI(title="Product Crawler Webpage")
 app.add_middleware(
     CORSMiddleware,
@@ -29,13 +29,21 @@ app.add_middleware(
 
 DATA_FOLDER = "data"
 os.makedirs(DATA_FOLDER, exist_ok=True)
-
+class SearchRequest(BaseModel):
+    page_url: str
+    query: str
+    top_k: int = 5
 
 class CrawlRequest(BaseModel):
     url: str
 
 class ScoreRequest(BaseModel):
     filename: str
+
+class IndexPageRequest(BaseModel):
+    page_url: str | None = None
+    html: str | None = None
+    filename: str | None = None   # alternative: load HTML from a saved crawl file
 
 
 def generate_filename(url: str):
@@ -232,3 +240,106 @@ async def download_report(body: ScoreRequest):
         media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
         headers={"Content-Disposition": 'attachment; filename="GENY_Report.docx"'}
     )
+    
+@app.post("/index_page")
+def index_page_endpoint(request: IndexPageRequest):
+    html     = request.html
+    page_url = request.page_url
+
+    # --- fallback: load from saved crawl file --------------------------------
+    if not html and request.filename:
+        file_path  = os.path.join(DATA_FOLDER, request.filename)
+        crawl_data = _load_json(file_path)
+        html       = crawl_data.get("raw_html") or crawl_data.get("html")
+        if not html:
+            raise HTTPException(
+                status_code=400,
+                detail="Crawl file has no stored HTML. Provide raw HTML directly via the 'html' field.",
+            )
+        if not page_url:
+            page_url = crawl_data.get("page_info", {}).get("url", "")
+
+    if not html or not html.strip():
+        raise HTTPException(status_code=400, detail="html cannot be empty")
+    if not page_url or not page_url.strip():
+        raise HTTPException(status_code=400, detail="page_url cannot be empty")
+
+    result = index_page(html, page_url, debug=False)
+
+    return {
+        "message":        f"Indexed {result['total_chunks']} chunks",
+        "page_url":        result["page_url"],
+        "total_chunks":    result["total_chunks"],
+        "chunks_by_role":  result["chunks_by_role"],
+    }
+@app.post("/index_page_file")
+async def index_page_file_endpoint(
+    page_url: str = Form(...),
+    html_file: UploadFile = File(...),
+):
+    """Upload HTML as a file — use this in Swagger UI to avoid JSON encoding issues."""
+    html = (await html_file.read()).decode("utf-8", errors="replace")
+    if not html.strip():
+        raise HTTPException(status_code=400, detail="html file is empty")
+    if not page_url.strip():
+        raise HTTPException(status_code=400, detail="page_url cannot be empty")
+
+    result = index_page(html, page_url, debug=False)
+    return {
+        "message":        f"Indexed {result['total_chunks']} chunks",
+        "page_url":        result["page_url"],
+        "total_chunks":    result["total_chunks"],
+        "chunks_by_role":  result["chunks_by_role"],
+    }
+
+@app.post("/apply_rewrites")
+def apply_rewrites_endpoint(request: ScoreRequest):
+    # Load crawl data
+    file_path  = os.path.join(DATA_FOLDER, request.filename)
+    crawl_data = _load_json(file_path)
+    page_url   = crawl_data.get("page_info", {}).get("url", "")
+ 
+    # Load GEO report
+    geo_filename = request.filename.replace(".json", ".geo.json")
+    geo_path     = os.path.join(DATA_FOLDER, geo_filename)
+    if not os.path.exists(geo_path):
+        raise HTTPException(
+            status_code=400,
+            detail="GEO report not found. Run /geo_recommendation first."
+        )
+    geo_report = _load_json(geo_path)
+ 
+    # Load LLM context for product data
+    context_filename = request.filename.replace(".json", ".context.json")
+    context_path     = os.path.join(DATA_FOLDER, context_filename)
+    llm_context = _load_json(context_path) if os.path.exists(context_path) else None
+ 
+    # Run RAG rewrite pipeline
+    result = apply_recommendations(
+        geo_report=geo_report,
+        page_url=page_url,
+        llm_context=llm_context,
+    )
+ 
+    # Save rewrites
+    rewrite_filename = request.filename.replace(".json", ".rewrites.json")
+    rewrite_path     = os.path.join(DATA_FOLDER, rewrite_filename)
+    _save_json(rewrite_path, result)
+ 
+    return {
+        "message":        f"Generated {result['total_rewrites']} console scripts",
+        "rewrite_file":   rewrite_filename,
+        "total_rewrites": result["total_rewrites"],
+        "rewrites":       result["rewrites"],
+    }
+@app.post("/search_chunks")
+def search_chunks_endpoint(request: SearchRequest):
+    results = search_page_chunks(
+        page_url=request.page_url,
+        query=request.query,
+        top_k=request.top_k,
+    )
+    return {
+        "query":   request.query,
+        "results": results,
+    }

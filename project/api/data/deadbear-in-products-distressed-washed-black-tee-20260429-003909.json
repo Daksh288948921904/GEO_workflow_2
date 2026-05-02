@@ -1,0 +1,494 @@
+{
+  "page_info": {
+    "url": "https://deadbear.in/products/distressed-washed-black-tee",
+    "final_url": "https://deadbear.in/products/distressed-washed-black-tee",
+    "status_code": 200,
+    "canonical_url": "https://deadbear.in/products/distressed-washed-black-tee",
+    "title": "Distressed Washed Black Tee\n – DEADBEAR",
+    "meta_description": "A heavyweight washed black tee with ripped detailing. Lined inside to hold its shape. ",
+    "https": true,
+    "load_time_ms": 29987,
+    "page_type": "PRODUCT",
+    "crawl_timestamp": "2026-04-28T19:09:09.112111"
+  },
+  "product": {
+    "name": "Distressed Washed Black Tee",
+    "brand": "dead-bear-india",
+    "sku": "9616802808048",
+    "gtin": "",
+    "price": "3990.00",
+    "currency": "INR",
+    "availability": "http://schema.org/InStock",
+    "rating": null,
+    "review_count": null,
+    "category": "T-Shirts"
+  },
+  "content": {
+    "headings": [
+      {
+        "level": "h3",
+        "text": "You may also like"
+      },
+      {
+        "level": "h3",
+        "text": "Distressed Navy Tee"
+      },
+      {
+        "level": "h3",
+        "text": "Distressed Black Tee 3.0"
+      },
+      {
+        "level": "h3",
+        "text": "Ultra Basics Tee Black"
+      },
+      {
+        "level": "h3",
+        "text": "Distressed Black Tee 2.0"
+      }
+    ],
+    "features": [
+      "Terms & Conditions",
+      "RETURNS & EXCHANGES"
+    ],
+    "specifications": {
+      "Other sign in options": "Sign in",
+      "Orders": "Profile"
+    },
+    "word_count": 406,
+    "faq": [
+      {
+        "question": "Product Details",
+        "answer": "UNISEX300 GSMFITS OVERSIZEDSCREEN PRINTRIPPED DETAILING WITH LINING INSIDE"
+      },
+      {
+        "question": "Product Care",
+        "answer": "HAND WASH ONLYREVERSE IRONDO NOT BLEACHLAY FLAT TO DRYCOLD WASH ONLY"
+      },
+      {
+        "question": "DELIVERY & RETURNS",
+        "answer": "ALL ORDERS ARE CAREFULLY PROCESSED AND DISPATCHED WITHIN 24–48 HOURS.FOR INFORMATION REGARDING EXCHANGES AND RETURNS, PLEASE ACCESS THE LINK BELOW.EXCHANGES & RETURNS POLICY"
+      },
+      {
+        "question": "EXCHANGE/RETURN REQUESTEXCHANGE/RETURN REQUEST",
+        "answer": "Exchange/Return Request"
+      }
+    ],
+    "images": {
+      "total_images": 69,
+      "images_with_alt": 65,
+      "alt_text_coverage_pct": 94,
+      "images": [
+        {
+          "src": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407",
+          "alt": "NEW DROPS",
+          "has_alt": true
+        },
+        {
+          "src": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407",
+          "alt": "Tops",
+          "has_alt": true
+        },
+        {
+          "src": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407",
+          "alt": "Tshirts",
+          "has_alt": true
+        },
+        {
+          "src": "https://deadbear.in/cdn/shop/files/375858B8-2BB5-47F0-999F-28741108004A.jpg?v=1775037769",
+          "alt": "Shirts",
+          "has_alt": true
+        },
+        {
+          "src": "https://deadbear.in/cdn/shop/files/Artboard1copy7_e0cb5934-d6ce-4828-a951-d87208ed8427.jpg?v=1775138634",
+          "alt": "TANKS",
+          "has_alt": true
+        },
+        {
+          "src": "https://deadbear.in/cdn/shop/files/EDAAB23A-42D7-451C-8283-49F5A244FFCD.jpg?v=1764733114",
+          "alt": "Hoodies",
+          "has_alt": true
+        },
+        {
+          "src": "https://deadbear.in/cdn/shop/files/Artboard6_7ab3d107-32fb-4149-ad4e-b76058132792.jpg?v=1766133800",
+          "alt": "Sweatshirts",
+          "has_alt": true
+        },
+        {
+          "src": "https://deadbear.in/cdn/shop/files/736A97A2-B9F5-4C6A-B691-D23BE5522F2D.jpg?v=1705489427",
+          "alt": "Bottoms",
+          "has_alt": true
+        },
+        {
+          "src": "https://deadbear.in/cdn/shop/files/19E8E7A1-4F57-4BE4-9875-BBB4DBB9827A.jpg?v=1756529449",
+          "alt": "Shorts",
+          "has_alt": true
+        },
+        {
+          "src": "https://deadbear.in/cdn/shop/files/IMG-7040.jpg?v=1750428236",
+          "alt": "Cargo Pants",
+          "has_alt": true
+        }
+      ]
+    },
+    "topical_depth": {
+      "topical_depth_ratio": 0.33,
+      "unique_entities": 134,
+      "total_words": 406
+    }
+  },
+  "schema_data": [
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "DEADBEAR",
+      "logo": "https://deadbear.in/cdn/shop/files/dead-logo-removebg-preview.png?v=1705430660&width=500",
+      "url": "https://deadbear.in"
+    },
+    {
+      "@context": "http://schema.org/",
+      "@id": "/products/distressed-washed-black-tee#product",
+      "@type": "ProductGroup",
+      "brand": {
+        "@type": "Brand",
+        "name": "dead-bear-india"
+      },
+      "category": "T-Shirts",
+      "description": "A heavyweight washed black tee with ripped detailing. Lined inside to hold its shape. ",
+      "hasVariant": [
+        {
+          "@id": "/products/distressed-washed-black-tee?variant=47968015253744#variant",
+          "@type": "Product",
+          "image": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407&width=1920",
+          "name": "Distressed Washed Black Tee - XXXS",
+          "offers": {
+            "@id": "/products/distressed-washed-black-tee?variant=47968015253744#offer",
+            "@type": "Offer",
+            "availability": "http://schema.org/InStock",
+            "price": "3990.00",
+            "priceCurrency": "INR",
+            "url": "https://deadbear.in/products/distressed-washed-black-tee?variant=47968015253744"
+          }
+        },
+        {
+          "@id": "/products/distressed-washed-black-tee?variant=47968015286512#variant",
+          "@type": "Product",
+          "image": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407&width=1920",
+          "name": "Distressed Washed Black Tee - XXS",
+          "offers": {
+            "@id": "/products/distressed-washed-black-tee?variant=47968015286512#offer",
+            "@type": "Offer",
+            "availability": "http://schema.org/InStock",
+            "price": "3990.00",
+            "priceCurrency": "INR",
+            "url": "https://deadbear.in/products/distressed-washed-black-tee?variant=47968015286512"
+          }
+        },
+        {
+          "@id": "/products/distressed-washed-black-tee?variant=47968015319280#variant",
+          "@type": "Product",
+          "image": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407&width=1920",
+          "name": "Distressed Washed Black Tee - XS",
+          "offers": {
+            "@id": "/products/distressed-washed-black-tee?variant=47968015319280#offer",
+            "@type": "Offer",
+            "availability": "http://schema.org/InStock",
+            "price": "3990.00",
+            "priceCurrency": "INR",
+            "url": "https://deadbear.in/products/distressed-washed-black-tee?variant=47968015319280"
+          }
+        },
+        {
+          "@id": "/products/distressed-washed-black-tee?variant=47968015352048#variant",
+          "@type": "Product",
+          "image": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407&width=1920",
+          "name": "Distressed Washed Black Tee - S",
+          "offers": {
+            "@id": "/products/distressed-washed-black-tee?variant=47968015352048#offer",
+            "@type": "Offer",
+            "availability": "http://schema.org/InStock",
+            "price": "3990.00",
+            "priceCurrency": "INR",
+            "url": "https://deadbear.in/products/distressed-washed-black-tee?variant=47968015352048"
+          }
+        },
+        {
+          "@id": "/products/distressed-washed-black-tee?variant=47968015384816#variant",
+          "@type": "Product",
+          "image": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407&width=1920",
+          "name": "Distressed Washed Black Tee - M",
+          "offers": {
+            "@id": "/products/distressed-washed-black-tee?variant=47968015384816#offer",
+            "@type": "Offer",
+            "availability": "http://schema.org/OutOfStock",
+            "price": "3990.00",
+            "priceCurrency": "INR",
+            "url": "https://deadbear.in/products/distressed-washed-black-tee?variant=47968015384816"
+          }
+        },
+        {
+          "@id": "/products/distressed-washed-black-tee?variant=47968015417584#variant",
+          "@type": "Product",
+          "image": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407&width=1920",
+          "name": "Distressed Washed Black Tee - L",
+          "offers": {
+            "@id": "/products/distressed-washed-black-tee?variant=47968015417584#offer",
+            "@type": "Offer",
+            "availability": "http://schema.org/OutOfStock",
+            "price": "3990.00",
+            "priceCurrency": "INR",
+            "url": "https://deadbear.in/products/distressed-washed-black-tee?variant=47968015417584"
+          }
+        },
+        {
+          "@id": "/products/distressed-washed-black-tee?variant=47968015450352#variant",
+          "@type": "Product",
+          "image": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407&width=1920",
+          "name": "Distressed Washed Black Tee - XL",
+          "offers": {
+            "@id": "/products/distressed-washed-black-tee?variant=47968015450352#offer",
+            "@type": "Offer",
+            "availability": "http://schema.org/OutOfStock",
+            "price": "3990.00",
+            "priceCurrency": "INR",
+            "url": "https://deadbear.in/products/distressed-washed-black-tee?variant=47968015450352"
+          }
+        },
+        {
+          "@id": "/products/distressed-washed-black-tee?variant=47968015483120#variant",
+          "@type": "Product",
+          "image": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407&width=1920",
+          "name": "Distressed Washed Black Tee - XXL",
+          "offers": {
+            "@id": "/products/distressed-washed-black-tee?variant=47968015483120#offer",
+            "@type": "Offer",
+            "availability": "http://schema.org/OutOfStock",
+            "price": "3990.00",
+            "priceCurrency": "INR",
+            "url": "https://deadbear.in/products/distressed-washed-black-tee?variant=47968015483120"
+          }
+        },
+        {
+          "@id": "/products/distressed-washed-black-tee?variant=47968015515888#variant",
+          "@type": "Product",
+          "image": "https://deadbear.in/cdn/shop/files/backcopy5.jpg?v=1756456407&width=1920",
+          "name": "Distressed Washed Black Tee - XXXL",
+          "offers": {
+            "@id": "/products/distressed-washed-black-tee?variant=47968015515888#offer",
+            "@type": "Offer",
+            "availability": "http://schema.org/OutOfStock",
+            "price": "3990.00",
+            "priceCurrency": "INR",
+            "url": "https://deadbear.in/products/distressed-washed-black-tee?variant=47968015515888"
+          }
+        }
+      ],
+      "name": "Distressed Washed Black Tee",
+      "productGroupID": "9616802808048",
+      "url": "https://deadbear.in/products/distressed-washed-black-tee"
+    }
+  ],
+  "schema_completeness": {
+    "score": 64,
+    "present": [
+      "name",
+      "image",
+      "offers",
+      "offers.url",
+      "offers.price",
+      "offers.priceCurrency",
+      "offers.availability"
+    ],
+    "missing": [
+      "description",
+      "brand",
+      "aggregateRating",
+      "reviews.review"
+    ],
+    "has_product_schema": true
+  },
+  "media_richness": {
+    "has_video": false,
+    "video_count": 0,
+    "videos": []
+  },
+  "eeat_signals": {
+    "has_author": false,
+    "author_name": null,
+    "has_reviewed_by": false,
+    "reviewer_name": null,
+    "date_published": null,
+    "date_modified": null,
+    "has_citations": false,
+    "citation_count": 0,
+    "citation_links": []
+  },
+  "comparative": {
+    "has_comparisons": false,
+    "comparison_mention_count": 0,
+    "competitor_mentions": []
+  },
+  "links": {
+    "internal": [
+      {
+        "url": "https://deadbear.in/collections/new-drops",
+        "anchor_text": "NEW DROPS"
+      },
+      {
+        "url": "https://deadbear.in/collections/t-shirt",
+        "anchor_text": "Tshirts"
+      },
+      {
+        "url": "https://deadbear.in/collections/shirts",
+        "anchor_text": "Shirts"
+      },
+      {
+        "url": "https://deadbear.in/collections/tanks",
+        "anchor_text": "TANKS"
+      },
+      {
+        "url": "https://deadbear.in/collections/hoodie",
+        "anchor_text": "Hoodies"
+      },
+      {
+        "url": "https://deadbear.in/collections/sweatshirt",
+        "anchor_text": "Sweatshirts"
+      },
+      {
+        "url": "https://deadbear.in/collections/shorts",
+        "anchor_text": "Shorts"
+      },
+      {
+        "url": "https://deadbear.in/collections/cargos",
+        "anchor_text": "Cargo Pants"
+      },
+      {
+        "url": "https://deadbear.in/collections/joggers",
+        "anchor_text": "Joggers"
+      },
+      {
+        "url": "https://deadbear.in/collections/babybear-tee",
+        "anchor_text": "Tshirts"
+      },
+      {
+        "url": "https://deadbear.in/collections/babybear-hoodie",
+        "anchor_text": "Hoodies"
+      },
+      {
+        "url": "https://deadbear.in/collections/distressed-collection",
+        "anchor_text": "DISTRESSED COLLECTION"
+      },
+      {
+        "url": "https://deadbear.in/collections/co-ords",
+        "anchor_text": "CO-ORDS"
+      },
+      {
+        "url": "https://deadbear.in/pages/about-us",
+        "anchor_text": "Our Story"
+      },
+      {
+        "url": "https://deadbear.in/collections/bottoms",
+        "anchor_text": "Bottoms"
+      },
+      {
+        "url": "https://deadbear.in/collections/babybear",
+        "anchor_text": "Babybear"
+      },
+      {
+        "url": "https://deadbear.in/",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://deadbear.in/customer_authentication/login?return_to=%2Fproducts%2Fdistressed-washed-black-tee&locale=en&ui_hint=full",
+        "anchor_text": "Other sign in optionsSign in"
+      },
+      {
+        "url": "https://deadbear.in/account",
+        "anchor_text": "Orders"
+      },
+      {
+        "url": "https://deadbear.in/account/addresses",
+        "anchor_text": "Profile"
+      },
+      {
+        "url": "https://deadbear.in/customer_authentication/redirect?locale=en&region_country=IN",
+        "anchor_text": "LOG IN"
+      },
+      {
+        "url": "https://deadbear.in/collections/all",
+        "anchor_text": "Continue shopping"
+      },
+      {
+        "url": "https://deadbear.in/products/distressed-washed-black-tee?variant=47968015253744",
+        "anchor_text": "Distressed Washed Black Tee"
+      },
+      {
+        "url": "https://deadbear.in/pages/delivery-and-returns",
+        "anchor_text": "EXCHANGES & RETURNS POLICY"
+      },
+      {
+        "url": "https://deadbear.in/products/distressed-navy-tee?variant=49506514272496",
+        "anchor_text": "Distressed Navy Tee"
+      },
+      {
+        "url": "https://deadbear.in/products/distressed-black-tee-3-0?variant=49506582233328",
+        "anchor_text": "Distressed Black Tee 3.0"
+      },
+      {
+        "url": "https://deadbear.in/products/ultra-basics-tee-black?variant=48918961127664",
+        "anchor_text": "Ultra Basics Tee Black"
+      },
+      {
+        "url": "https://deadbear.in/products/distressed-black-tee-2-0?variant=48098862137584",
+        "anchor_text": "Distressed Black Tee 2.0"
+      },
+      {
+        "url": "https://deadbear.in/collections/best-sellers",
+        "anchor_text": "Discover"
+      },
+      {
+        "url": "https://deadbear.in/pages/deadbear-contact-us",
+        "anchor_text": "Contact Us"
+      },
+      {
+        "url": "https://deadbear.in/pages/terms-and-conditions",
+        "anchor_text": "Terms & Conditions"
+      },
+      {
+        "url": "https://deadbear.in/pages/privacy-policy",
+        "anchor_text": "Privacy Policy"
+      },
+      {
+        "url": "https://deadbear.in/apps/return_prime",
+        "anchor_text": "Exchange/Return Request"
+      }
+    ],
+    "external": [
+      {
+        "url": "https://dead-bear-india.myshopify.com/apps/return_prime",
+        "anchor_text": "EXCHANGE/RETURN REQUEST"
+      },
+      {
+        "url": "https://www.instagram.com/deadbear.in/",
+        "anchor_text": "Instagram"
+      }
+    ]
+  },
+  "trust_signals": {
+    "has_return_policy": true,
+    "has_refund_policy": false,
+    "has_warranty_info": false,
+    "has_shipping_info": true,
+    "has_cancellation_policy": false,
+    "uses_https": true,
+    "mentions_secure_payment": false,
+    "has_cod_option": true,
+    "has_contact_page": true,
+    "has_about_page": true,
+    "mentions_phone": true,
+    "mentions_email": false,
+    "mentions_reviews": false,
+    "mentions_testimonials": false,
+    "official_store_claim": false
+  },
+  "clean_text": "Distressed Washed Black Tee – DEADBEAR Skip to content CASH ON DELIVERY AVAILABLE NEW DROP : DISTRESSED COLLECTION FEEL IT TO BELIEVE IT FREE SHIPPING PAN INDIA NEW DROPS Tops Tshirts Shirts TANKS Hoodies Sweatshirts Bottoms Shorts Cargo Pants Joggers Babybear Tshirts Hoodies DISTRESSED COLLECTION CO-ORDS EXCHANGE/RETURN REQUEST Our Story Instagram NEW DROPS Tops Tshirts Shirts TANKS Hoodies Sweatshirts Bottoms Shorts Cargo Pants Joggers Babybear Tshirts Hoodies DISTRESSED COLLECTION CO-ORDS EXCHANGE/RETURN REQUEST Our Story Instagram More Account Other sign in options Sign in Orders Profile Account Other sign in options Sign in Orders Profile TOTAL ITEMS IN CART: 0 0 YOUR CART IS EMPTY HAVE AN ACCOUNT? LOG IN TO CHECK OUT FASTER. Continue shopping Skip to product information 1 2 3 4 5 6 7 8 9 Close Distressed Washed Black Tee Distressed Washed Black Tee Rs. 3,990 Document or ₹ 1330 /month (3 months) & Cards Accepted | 0 Extra Cost | VIEW SIZE GUIDE Size XXXS XXXS XXS XS S M L XL XXL XXXL SELECT A SIZE Added Description A heavyweight washed black tee with ripped detailing. Lined inside to hold its shape. Product Details UNISEX 300 GSM FITS OVERSIZED SCREEN PRINT RIPPED DETAILING WITH LINING INSIDE Product Care HAND WASH ONLY REVERSE IRON DO NOT BLEACH LAY FLAT TO DRY COLD WASH ONLY DELIVERY & RETURNS ALL ORDERS ARE CAREFULLY PROCESSED AND DISPATCHED WITHIN 24–48 HOURS. FOR INFORMATION REGARDING EXCHANGES AND RETURNS, PLEASE ACCESS THE LINK BELOW. EXCHANGES & RETURNS POLICY Distressed Washed Black Tee Rs. 3,990 Select a size × SIZE: VIEW SIZE GUIDE XXXS XXS XS S M L XL XXL XXXL You may also like Distressed Navy Tee Add Added QUICK VIEW Distressed Navy Tee Rs. 3,990 Distressed Navy Tee Rs. 3,990 Distressed Black Tee 3.0 Add Added QUICK VIEW Distressed Black Tee 3.0 Rs. 3,990 Distressed Black Tee 3.0 Rs. 3,990 Ultra Basics Tee Black Add Added QUICK VIEW Ultra Basics Tee Black Rs. 2,490 Ultra Basics Tee Black Rs. 2,490 Distressed Black Tee 2.0 Add Added QUICK VIEW Distressed Black Tee 2.0 Rs. 3,990 Distressed Black Tee 2.0 Rs. 3,990 BABYBEAR TSHIRTS HOODIES TOPS TSHIRTS SHIRTS TANKS HOODIE SWEATSHIRTS BOTTOMS CARGO PANTS SHORTS JOGGERS CO-ORDS STAY UPDATED WITH DEADBEAR Email SUBMIT DEADBEAR DEADBEAR Our Story Discover Contact Us POLICIES POLICIES Terms & Conditions Privacy Policy RETURNS & EXCHANGES EXCHANGE/RETURN REQUEST EXCHANGE/RETURN REQUEST Exchange/Return Request FOLLOW US FOLLOW US Instagram © 2026 DEADBEAR Search Clear View all"
+}

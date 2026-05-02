@@ -26,27 +26,25 @@ class AIScoringEngine:
             "og_title": raw_page.get("og_title"),
             "robots": raw_page.get("robots"),
         }
-    # ------------------------------------------------------------------ 
-    #  Section 1 — Schema Completeness                     
-    # ------------------------------------------------------------------ 
+
     def score_schema(self) -> dict:
         b = {}
  
-        # Core product fields (8 pts)
+        
         b["name"] = 3 if self.product.get("name") else 0
         b["price"] = 3 if self.product.get("price") else 0
         b["brand"] = 2 if self.product.get("brand") else 0
  
-        # Price format validity (1 pt)
+        
         price = str(self.product.get("price", ""))
         b["price_format"] = 1 if re.match(r"^\d+(\.\d{1,2})?$", price) else 0
  
-        # Structured data presence (4 pts)
+       
         if self.schema:
             types = [s.get("@type", "") for s in self.schema if isinstance(s, dict)]
             b["schema_markup"] = 1 if types else 0
             b["product_schema"] = 2 if "Product" in types else 0
-            # Bonus: aggregateRating or offers inside schema
+      
             has_offers = any(
                 isinstance(s.get("offers"), (dict, list))
                 for s in self.schema if isinstance(s, dict)
@@ -57,7 +55,6 @@ class AIScoringEngine:
             b["product_schema"] = 0
             b["offers_in_schema"] = 0
  
-        # Secondary identifiers (2 pts)
         b["availability"] = 1 if self.product.get("availability") else 0
         b["currency"] = 1 if self.product.get("currency") else 0
  
@@ -166,7 +163,7 @@ class AIScoringEngine:
     def score_trust_and_eeat(self) -> dict:
         b = {}
  
-        # --- Classic trust (7 pts) ---
+
         trust_checks = {
             "has_return_policy": 2,
             "has_warranty_info": 1,
@@ -197,18 +194,17 @@ class AIScoringEngine:
         else:
             b["reviews"] = 0
  
-        # --- EEAT signals (5 pts) ---
-        # Experience: user-generated content, first-person narratives
+        
         b["eeat_experience"] = min(
             2,
             (1 if self.eeat.get("has_user_content") else 0)
             + (1 if self.eeat.get("has_first_person") else 0),
         )
-        # Expertise: author bio, credentials mentioned
+        
         b["eeat_expertise"] = 1 if self.eeat.get("has_author_bio") or self.eeat.get("has_credentials") else 0
-        # Authoritativeness: citations, outbound expert links
+        
         b["eeat_authority"] = 1 if self.eeat.get("has_citations") or self.eeat.get("has_expert_links") else 0
-        # Trustworthiness: about page, privacy policy
+        
         b["eeat_trust"] = 1 if self.eeat.get("has_about_page") or self.eeat.get("has_privacy_policy") else 0
  
         score = min(sum(b.values()), 15)
@@ -231,16 +227,16 @@ class AIScoringEngine:
         else:
             b["heading_hierarchy"] = 0
  
-        # Meta tags
+
         b["meta_title"] = 1 if self.meta.get("title") else 0
         b["meta_description"] = 1 if self.meta.get("description") else 0
         b["canonical_url"] = 1 if self.meta.get("canonical") else 0
         b["og_tags"] = 1 if self.meta.get("og_title") or self.meta.get("og_image") else 0
  
-        # Hreflang (international reach)
+
         b["hreflang"] = 1 if self.meta.get("hreflang") else 0
  
-        # Robots — not blocked from AI crawlers
+
         robots = self.meta.get("robots", "")
         is_blocked = robots and ("noindex" in robots.lower() or "nosnippet" in robots.lower())
         b["not_blocked"] = 1 if not is_blocked else 0
@@ -273,17 +269,17 @@ class AIScoringEngine:
         else:
             b["image_count"] = 0
  
-        # Alt text coverage
+
         if images_list:
             alt_ratio = len(images_with_alt) / len(images_list)
             b["alt_text_coverage"] = 2 if alt_ratio >= 0.8 else (1 if alt_ratio >= 0.4 else 0)
         else:
             b["alt_text_coverage"] = 0
  
-        # Video presence
+
         b["has_video"] = 2 if self.media.get("has_video") else 0
  
-        # Media diversity (images + video + 360° + infographics etc.)
+
         media_types = self.media.get("media_types", [])
         if len(media_types) >= 3:
             b["media_diversity"] = 3
@@ -292,7 +288,7 @@ class AIScoringEngine:
         elif len(media_types) >= 1:
             b["media_diversity"] = 1
         else:
-            # Fallback: at least images exist
+            
             b["media_diversity"] = 1 if img_count > 0 else 0
  
         score = min(sum(b.values()), 10)
@@ -304,7 +300,6 @@ class AIScoringEngine:
         internal = self.links.get("internal", [])
         external = self.links.get("external", [])
  
-        # Internal links — helps AI understand site structure
         if len(internal) >= 10:
             b["internal_links"] = 3
         elif len(internal) >= 5:
@@ -313,8 +308,7 @@ class AIScoringEngine:
             b["internal_links"] = 1
         else:
             b["internal_links"] = 0
- 
-        # External / outbound links — signals authority
+   
         if len(external) >= 3:
             b["external_links"] = 2
         elif len(external) >= 1:
@@ -322,7 +316,7 @@ class AIScoringEngine:
         else:
             b["external_links"] = 0
  
-        # Anchor text quality — descriptive anchors help context
+        
         all_links = internal + external
         descriptive = [
             lnk for lnk in all_links
@@ -340,7 +334,7 @@ class AIScoringEngine:
         else:
             b["anchor_quality"] = 0
  
-        # Broken link absence — assume crawler flags these
+      
         broken = self.links.get("broken", [])
         b["no_broken_links"] = 2 if not broken else 0
  
@@ -359,7 +353,6 @@ class AIScoringEngine:
         else:
             b["comparison_products"] = 0
  
-        # Comparison table / structured comparison data
         has_comp_table = any(
             isinstance(c, dict) and c.get("has_structured_comparison")
             for c in comps
@@ -372,7 +365,7 @@ class AIScoringEngine:
     def score_topical_depth(self) -> dict:
         b = {}
  
-        # Topical coverage — how many related subtopics the page addresses
+        
         topics = self.topical.get("topics_covered", [])
         if len(topics) >= 5:
             b["topic_breadth"] = 2
@@ -381,7 +374,7 @@ class AIScoringEngine:
         else:
             b["topic_breadth"] = 0
  
-        # Semantic keyword density / entity mentions
+        
         entities = self.topical.get("entities_mentioned", [])
         if len(entities) >= 8:
             b["entity_density"] = 2
@@ -390,15 +383,13 @@ class AIScoringEngine:
         else:
             b["entity_density"] = 0
  
-        # Contextual depth — does the page explain WHY, not just WHAT
+        
         b["has_explanatory_content"] = 1 if self.topical.get("has_explanatory_content") else 0
  
         score = min(sum(b.values()), 5)
         return {"score": score, "max": 5, "breakdown": b}
     
-    # ------------------------------------------------------------------ 
-    #  PENALTIES          
-    # ------------------------------------------------------------------ 
+    
     def _compute_penalties(self) -> dict:
         penalties = {}
  
@@ -415,16 +406,16 @@ class AIScoringEngine:
         if wc < 100:
             penalties["thin_content"] = -8
  
-        # Blocked by robots
+ 
         robots = self.meta.get("robots", "")
         if robots and "noindex" in robots.lower():
             penalties["noindex_blocked"] = -10
  
-        # Duplicate / missing canonical
+        
         if not self.meta.get("canonical"):
             penalties["missing_canonical"] = -2
  
-        # No images at all
+        
         images_block = self.content.get("images", {})
         images_list = (
             images_block.get("images", [])
@@ -434,7 +425,7 @@ class AIScoringEngine:
         if not images_list:
             penalties["no_images"] = -3
  
-        # Excessive boilerplate (clean text < 30% of raw)
+        
         clean_len = len(self.clean_text)
         raw_len = self.content.get("raw_text_length", clean_len or 1)
         if raw_len > 200 and clean_len / raw_len < 0.3:
@@ -453,9 +444,7 @@ class AIScoringEngine:
             return "Poor — Significant Issues"
         return "Critical — Not AI-Ready"
 
-    # ------------------------------------------------------------------ 
-    #  MASTER COMPUTE                                                      
-    # ------------------------------------------------------------------ 
+    
     def compute_score(self) -> dict:
         schema = self.score_schema()
         entity = self.score_entity_clarity()
@@ -477,7 +466,7 @@ class AIScoringEngine:
         percentage = round((final_score / max_score) * 100, 2)
  
         results = {
-            # Section scores
+         
             "schema_score": schema["score"],
             "entity_score": entity["score"],
             "content_score": content["score"],
@@ -487,7 +476,7 @@ class AIScoringEngine:
             "links_score": links["score"],
             "comparison_score": comparisons["score"],
             "topical_score": topical["score"],
-            # Section maxes (for frontend radars / bars)
+            
             "section_maxes": {
                 "schema": schema["max"],
                 "entity": entity["max"],

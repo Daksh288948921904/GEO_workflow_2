@@ -1,0 +1,156 @@
+{
+  "page_identity": {
+    "url": "https://www.sony.co.in/headphones/products/wf-1000xm5?sku=wf1000xm5-pzin",
+    "title": "WF-1000XM5 | Wireless Noise Cancelling | Headphones | Sony India",
+    "meta_description": "Discover the WF-1000XM5 from Sony.The WF-1000XM5 feature cutting-edge technology to deliver premium sound quality and the most advanced noise cancelling performance on the market. Real-time audio processors and high-performance mics power the specially designed driver unit Dynamic Driver X, for wide frequency reproduction, deep bass and clear vocals. They are designed to immerse you in a sound so good, it feels like you're in the studio with your favourite artists. The WF-1000XM5 headphones raise the bar for distraction-free listening and clarity."
+  },
+  "product_summary": {
+    "name": "WF-1000XM5 Wireless Noise Cancelling Headphones",
+    "brand": "SONY",
+    "price": "29990.00",
+    "currency": "",
+    "availability": "",
+    "rating": "4.1",
+    "review_count": 536
+  },
+  "content_metrics": {
+    "word_count": 1551,
+    "heading_count": 34,
+    "feature_count": 9,
+    "specification_count": 3
+  },
+  "ai_visibility_summary": {
+    "final_score": 61,
+    "max_possible": 100,
+    "ai_readiness_pct": 61.0,
+    "readiness_band": "Fair — Needs Improvement"
+  },
+  "section_scores": {
+    "schema": 10,
+    "entity": 7,
+    "content": 14,
+    "trust": null,
+    "extractability": 8
+  },
+  "breakdowns": {
+    "schema": {
+      "name": 3,
+      "price": 3,
+      "brand": 2,
+      "price_format": 1,
+      "schema_markup": 1,
+      "product_schema": 0,
+      "offers_in_schema": 0,
+      "availability": 0,
+      "currency": 0
+    },
+    "entity": {
+      "name": 2,
+      "brand": 2,
+      "sku": 1,
+      "category": 0,
+      "gtin": 0,
+      "name_quality": 2,
+      "product_group": 0
+    },
+    "content": {
+      "word_count": 5,
+      "headings": 3,
+      "features": 3,
+      "specifications": 2,
+      "faq": 0,
+      "content_signal_ratio": 1
+    },
+    "trust_eeat": {
+      "has_return_policy": 0,
+      "has_warranty_info": 0,
+      "has_shipping_info": 0,
+      "mentions_secure_payment": 1,
+      "has_contact_page": 1,
+      "uses_https": 1,
+      "reviews": 1,
+      "eeat_experience": 0,
+      "eeat_expertise": 0,
+      "eeat_authority": 0,
+      "eeat_trust": 0
+    },
+    "extractability": {
+      "schema_present": 2,
+      "heading_hierarchy": 2,
+      "meta_title": 1,
+      "meta_description": 1,
+      "canonical_url": 1,
+      "og_tags": 0,
+      "hreflang": 0,
+      "not_blocked": 1
+    },
+    "media": {
+      "image_count": 3,
+      "alt_text_coverage": 2,
+      "has_video": 2,
+      "media_diversity": 1
+    },
+    "links": {
+      "internal_links": 3,
+      "external_links": 2,
+      "anchor_quality": 3,
+      "no_broken_links": 2
+    },
+    "comparison": {
+      "comparison_products": 0,
+      "structured_comparison": 0
+    },
+    "topical": {
+      "topic_breadth": 0,
+      "entity_density": 0,
+      "has_explanatory_content": 0
+    }
+  },
+  "priority_order": [
+    "trust",
+    "entity",
+    "extractability",
+    "schema",
+    "content"
+  ],
+  "weak_areas": {
+    "schema": [
+      "product_schema",
+      "offers_in_schema",
+      "availability",
+      "currency"
+    ],
+    "entity": [
+      "category",
+      "gtin",
+      "product_group"
+    ],
+    "content": [
+      "faq"
+    ],
+    "trust_eeat": [
+      "has_return_policy",
+      "has_warranty_info",
+      "has_shipping_info",
+      "eeat_experience",
+      "eeat_expertise",
+      "eeat_authority",
+      "eeat_trust"
+    ],
+    "extractability": [
+      "og_tags",
+      "hreflang"
+    ],
+    "comparison": [
+      "comparison_products",
+      "structured_comparison"
+    ],
+    "topical": [
+      "topic_breadth",
+      "entity_density",
+      "has_explanatory_content"
+    ]
+  },
+  "penalties": {},
+  "content_excerpt": "WF-1000XM5 | Wireless Noise Cancelling | Headphones | Sony India TVs & Home Cinema Audio Gaming Gear Cameras Cloud Service Car Audio View All Media, Storage & Cables Professional Products & Solutions PlayStation Support Sony and the Environment Support Search My Sony TVs & Home Cinema TVs Discover TVs All TVs OLED Mini LED Full Array LED All LEDs Google TV Home Theatre & Soundbars Discover Home Theatre & Soundbars Soundbars Home Theatre Systems Optional Speakers Home Theatre Speakers Neckband Speakers Projectors Discover Projectors Audio Headphones Discover Headphones Truly Wireless Headband I Key features: Noise cancelling.Design and Wearability.New Listening Style.Intuitive Operation.1Quoted MRP is for 1 unit of the product. Prices are subject to change without prior notice..3This product is also known as WF-1000XM5.SIN,WF-1000XM5.BIN,WF1000XM5/PZIN Specifications: Open/Close: HeadphonesHeadphonesWF-1000XM5HeadphonesDiscover HeadphonesDiscoverProductsProductsTruly WirelessHeadbandIn-EarOff-EarGamingProNoise CancellingWirelessAccessoriesAccessoriesCompareCompare."
+}

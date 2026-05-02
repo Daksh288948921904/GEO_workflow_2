@@ -8,9 +8,7 @@ class LLMContextBuilder:
         self.page = crawl_data.get("page_info", {})
         self.content=crawl_data.get("content",{})
         self.trust = crawl_data.get("trust_signals", {})
-    #======================================================================
-    #It finds which scoring signals got 0 points and groups them by section
-    #======================================================================
+    
     def identify_weak_areas(self)->dict[str,list[str]]:
         weak={}
         breakdown = self.score.get("breakdowns", {})
@@ -19,9 +17,7 @@ class LLMContextBuilder:
             if missing:
                 weak[section] = missing
         return weak
-    #=======================================================================
-    # Identify Priority Order 
-    #=======================================================================
+   
     def get_priority(self)->List[str]:
         sections = {
             "schema": self.score.get("schema_score", 0),
@@ -31,9 +27,8 @@ class LLMContextBuilder:
             "extractability": self.score.get("extractability_score", 0),
         }
         return sorted(sections,key=sections.get)
-    #==========================================================================
-    #extract short content
-    #==========================================================================
+    
+   
     def get_excerpt(self, limit:int=1200)->str:
         sections=[]
         #clean text
@@ -65,9 +60,7 @@ class LLMContextBuilder:
             else:
                 combined = truncated
         return combined
-    #==================================================================
-    # For Building LLM Context
-    #==================================================================
+    
     def build_context(self) -> dict:
 
         context = {
